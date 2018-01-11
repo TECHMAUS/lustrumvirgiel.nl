@@ -1,0 +1,240 @@
+/** Color functions */
+$gala-invert:               findColorInvert($gala-primary);
+$wispo-invert:              findColorInvert($wispo-primary);
+$lustrumweek-invert:        findColorInvert($lustrumweek-primary);
+$piekweek-invert:           findColorInvert($piekweek-primary);
+$lustrum-productie-invert:  findColorInvert($lustrum-productie-primary);
+
+.gala-background {
+  background-color: $gala-primary !important;
+}
+
+.wispo-background {
+  background-color: $wispo-primary !important;
+}
+
+.lustrumweek-background {
+  background-color: $lustrumweek-primary !important;
+}
+
+.piekweek-background {
+  background-color: $piekweek-primary !important;
+}
+
+.lustrum-productie-background {
+  background-color: $lustrum-productie-primary !important;
+}
+
+/** 2dp elevation modified */
+.z-depth-1 {
+  box-shadow:
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 3px 1px -2px rgba(0, 0, 0, 0.12),
+    0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+/** 6dp elevation modified */
+.z-depth-2 {
+  box-shadow:
+    0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+/** 12dp elevation modified */
+.z-depth-3 {
+  box-shadow:
+    0 8px 17px 2px rgba(0, 0, 0, 0.14),
+    0 3px 14px 2px rgba(0, 0, 0, 0.12),
+    0 5px 5px -3px rgba(0, 0, 0, 0.2);
+}
+
+/** Dropshadow in paragraphs */
+.dropcap > p:first-child::first-letter {
+  float: left;
+  font-family: "BLOCKCHAIN", serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 6rem;
+  line-height: 4rem;
+  padding: 0 8px 8px 0;
+}
+
+.noscroll {
+  overflow: hidden;
+}
+
+@include desktop {
+  body:not(.has-hero) > .section {
+    margin-top: 70px;
+  }
+}
+
+@include touch {
+  .hero-body {
+    padding-top: 60px;
+  }
+}
+
+main {
+  > div {
+    margin-bottom: 3rem;
+  }
+
+  .section-title {
+    margin-bottom: $gap-large;
+    padding-bottom: 2px;
+    border-bottom: 5px solid $lustrumweek-primary;
+
+    h2,
+    h1 {
+      color: $primary;
+      font-weight: bold;
+      margin: 0 !important;
+    }
+  }
+}
+
+// Used on elements where long email addresses are expected
+.has-word-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+// Social icons used throughout the site
+.social-touch-zone {
+  height: 48px;
+  width: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  .social-links {
+    height: 25px;
+    max-width: 25px;
+    color: $white;
+    pointer-events: none;
+
+    @include desktop {
+      width: 30px;
+      max-height: 30px;
+      height: auto;
+    }
+  }
+}
+
+.icon {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center center;
+  margin-right: 6px;
+}
+
+.has-hero .quick-facts {
+  .card {
+    @include tablet {
+      top: -100px;
+      margin-bottom: -60px;
+    }
+
+    background-color: $black;
+
+    .fact:not(:last-child) {
+      margin-bottom: 0.75rem;
+    }
+  }
+}
+
+.news-card {
+  .card {
+    background: transparent;
+    position: relative;
+    border-radius: 2px;
+    border: 1px solid #ededed;
+
+    &::after {
+      content: "";
+      background-image: url("../images/front-page/lustrum_pattern.svg");
+      background-repeat: repeat;
+      background-size: 200px;
+      background-color: $black;
+      opacity: 0.4;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      z-index: -2;
+    }
+
+    .entry-image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: $black;
+      background-position: 50% 50%;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(transparentize($black, 0.25) 20%, transparent 40%);
+      }
+
+      .entry-meta {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        left: 1.5rem;
+
+        .meta-item {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          .has-sticky-tag {
+            transform: rotate(4deg);
+          }
+
+          .icon {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+
+    .entry-title {
+      text-decoration: underline;
+    }
+
+    .entry-summary {
+      hr {
+        background-color: lighten($dark-blue-bg, 20%);
+        margin: 0.5rem auto;
+      }
+
+      .post-categories,
+      .read-more-tag {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        span:not(:last-child) {
+          margin-right: 0.5rem;
+        }
+
+        span {
+          line-height: 120%;
+        }
+
+        span a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

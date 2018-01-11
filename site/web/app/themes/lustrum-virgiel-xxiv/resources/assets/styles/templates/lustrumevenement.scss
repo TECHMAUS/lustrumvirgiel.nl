@@ -1,0 +1,58 @@
+body.template-lustrumevenement {
+  .hero {
+    h1 {
+      @include blockchain;
+
+      letter-spacing: 0.75rem;
+
+      @include declare-font-size-all(4rem, 7rem, 8rem, 10rem, 12rem);
+
+      span {
+        display: inline-block;
+        position: relative;
+      }
+
+      @include set-gravity-letters('.char',
+      '1'   2px   -10deg,
+      '2'   -2px  5deg,
+      '3'   3px   -5deg,
+      '4'   -4px  3deg,
+      '5'   6px   -3deg,
+      '6'   8px   -2deg,
+      '7'   -5px  3deg,
+      '8'   0     -2deg,
+      '9'   -8px  4deg,
+      '10'  1px   -2deg,
+      '11'  -2px  5deg,
+      '12'  -2px  5deg,
+      '13'  -2px  5deg,
+      '14'  -2px  5deg,
+      '15'  -2px  5deg,
+      '16'  -2px  5deg,
+      '17'  -2px  5deg
+    );
+    }
+
+    h2 {
+      @include tablet {
+        max-width: 66.6667%;
+      }
+    }
+  }
+
+  &.lustrum-productie {
+    .hero {
+      h1 {
+        line-height: 115%;
+      }
+    }
+  }
+
+  @include config-event-quick-facts(
+    'gala'              $gala-primary,
+    'wintersport'       $wispo-primary,
+    'lustrumweek'       $lustrumweek-primary,
+    'piekweek'          $piekweek-primary,
+    'lustrum-productie' $lustrum-productie-primary
+  );
+}

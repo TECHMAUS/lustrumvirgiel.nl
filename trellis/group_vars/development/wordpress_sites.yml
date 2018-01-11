@@ -1,0 +1,21 @@
+# Documentation: https://roots.io/trellis/docs/local-development-setup/
+# `wordpress_sites` options: https://roots.io/trellis/docs/wordpress-sites
+# Define accompanying passwords/secrets in group_vars/development/vault.yml
+
+wordpress_sites:
+  lustrumvirgiel.nl:
+    site_hosts:
+      - canonical: lustrumvirgiel.dev
+        redirects:
+          - www.lustrumvirgiel.dev
+    local_path: ../site # path targeting local Bedrock site directory (relative to Ansible root)
+    admin_email: online@lustrumvirgiel.nl
+    multisite:
+      enabled: false
+    ssl:
+      enabled: true
+      provider: self-signed
+    cache:
+      enabled: false
+    site_title: 24ᵉ Lustrum der KSV Sanctus Virgilius
+    admin_user: online

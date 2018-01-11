@@ -1,0 +1,51 @@
+@import "common/variables";
+
+// Set own initial variables
+// Update background color
+$body-background-color: $dark-blue-bg;
+
+/** Import necessary Bulma files */
+@import "~bulma/sass/utilities/_all";
+@import "~bulma/sass/base/_all";
+@import "~bulma/sass/elements/button";
+@import "~bulma/sass/elements/container";
+@import "~bulma/sass/elements/content";
+@import "~bulma/sass/elements/form";
+@import "~bulma/sass/elements/icon";
+@import "~bulma/sass/elements/image";
+@import "~bulma/sass/elements/table";
+@import "~bulma/sass/elements/tag";
+@import "~bulma/sass/components/card";
+@import "~bulma/sass/components/level";
+@import "~bulma/sass/components/pagination";
+@import "~bulma/sass/grid/_all";
+@import "~bulma/sass/layout/_all";
+
+/**
+ * Import npm dependencies
+ *
+ * Prefix your imports with `~` to grab from node_modules/
+ * @see https://github.com/webpack-contrib/sass-loader#imports
+ */
+// @import "~some-node-module";
+
+/** Import theme styles */
+@import "common/mixins";
+@import "common/global";
+@import '~bulma-timeline';
+@import url("https://use.typekit.net/bnu0cor.css");
+@import "components/buttons";
+@import "components/forms";
+@import "components/wp-classes";
+@import "components/titles";
+@import "components/navigation";
+@import "layouts/header";
+@import "layouts/sidebar";
+@import "layouts/footer";
+@import "layouts/posts";
+@import "layouts/tinymce";
+@import "templates/index";
+@import "templates/front-page";
+@import "templates/home";
+@import "templates/jaaroverzicht";
+@import "templates/lustrumevenement";

@@ -1,0 +1,39 @@
+.button {
+  font-weight: bold;
+}
+
+.button-gala {
+  background-color: $gala-primary;
+  color: $gala-invert;
+
+  &:hover {
+    color: darken($gala-primary, 10%);
+  }
+}
+
+.button-wispo {
+  background-color: $wispo-primary;
+  color: $wispo-invert;
+
+  &:hover {
+    color: darken($wispo-primary, 10%);
+  }
+}
+
+.button-lustrumweek {
+  background-color: $lustrumweek-primary;
+  color: $lustrumweek-invert;
+
+  &:hover {
+    color: lighten($lustrumweek-primary, 10%);
+  }
+}
+
+.button-piekweek {
+  background-color: $piekweek-primary;
+  color: $piekweek-invert;
+
+  &:hover {
+    color: darken($piekweek-primary, 10%);
+  }
+}

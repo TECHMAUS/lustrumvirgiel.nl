@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/site/vendor/squizlabs/php_codesniffer" />
+      <path value="$PROJECT_DIR$/site/vendor/roots/wp-password-bcrypt" />
+      <path value="$PROJECT_DIR$/site/vendor/johnpbloch/wordpress" />
+      <path value="$PROJECT_DIR$/site/vendor/johnpbloch/wordpress-core-installer" />
+      <path value="$PROJECT_DIR$/site/vendor/philippbaschke/acf-pro-installer" />
+      <path value="$PROJECT_DIR$/site/vendor/composer" />
+      <path value="$PROJECT_DIR$/site/vendor/oscarotero/env" />
+      <path value="$PROJECT_DIR$/site/vendor/vlucas/phpdotenv" />
+    </include_path>
+  </component>
+</project>

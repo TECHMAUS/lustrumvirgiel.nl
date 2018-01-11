@@ -1,0 +1,176 @@
+#sidenav-main {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 4; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: black;
+  overflow-y: scroll;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.3s; /* 0.3 second transition effect to slide in the sidenav */
+
+  nav {
+    padding: $gap;
+  }
+
+  header.side-menu-open & {
+    @include desktop {
+      width: 350px;
+    }
+
+    width: 100%;
+
+    #page-overlay {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  #page-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  .menu-header {
+    .nav-close {
+      line-height: 28px;
+      font-size: 3.5rem;
+    }
+
+    .logo-header-menu {
+      display: block;
+      margin: $gap auto;
+      max-width: 80px;
+      height: auto;
+    }
+  }
+
+  .menu-items {
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+
+      .menu-item {
+        margin: 6px 0;
+
+        .menu-gala a {
+          color: $gala-primary;
+        }
+
+        .menu-wintersport a {
+          color: $wispo-primary;
+        }
+
+        .menu-lustrumweek a {
+          color: $lustrumweek-primary;
+        }
+
+        .menu-lustrum-productie a {
+          color: $lustrum-productie-primary;
+        }
+
+        .menu-piekweek a {
+          color: $piekweek-primary;
+        }
+
+        /* The navigation menu links */
+        a {
+          font-weight: bold;
+          color: white;
+          font-size: 1.5rem;
+          text-decoration: none;
+          display: inline-flex;
+
+          /* When you mouse over the navigation links, change their color */
+          &:hover {
+            color: $wispo-primary;
+          }
+        }
+
+        &.menu-item-has-children {
+          > a {
+            position: relative;
+            padding-right: 32px;
+
+            &::after {
+              top: 50%;
+              right: 0;
+              height: 1rem;
+              width: 1rem;
+              content: "";
+              background-size: contain;
+              transform: translateY(-50%);
+              background-image: url("../images/common/menu-plus.svg");
+              transition: transform 0.3s;
+              font-size: 3rem;
+              position: absolute;
+            }
+          }
+
+          .sub-menu {
+            display: none;
+
+            > .menu-item a {
+              padding-left: 32px;
+            }
+          }
+
+          &.submenu-open {
+            .sub-menu {
+              display: block;
+            }
+
+            a::after {
+              transform: translateY(-50%) rotate(45deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .menu-footer {
+    margin: 40px 0;
+
+    hr {
+      height: 2px;
+      background-color: $wispo-primary;
+      width: 100%;
+      margin: $gap-large auto;
+    }
+
+    .search-form {
+      justify-content: center;
+
+      .search-submit {
+        background-color: $wispo-primary;
+      }
+    }
+
+    .social {
+      margin: $gap-large auto;
+
+      .social-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+

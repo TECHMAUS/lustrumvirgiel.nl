@@ -1,0 +1,62 @@
+footer {
+  background-color: $black;
+  background-image: url("../images/common/footer-space-background.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #ededed;
+  position: relative;
+
+  strong {
+    color: #95989a;
+  }
+
+  .column {
+    .widget-title,
+    .menu-item-has-children > a {
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      color: #95989a;
+      font-size: 1.25rem;
+    }
+
+    #menu-footer-menu {
+      .sub-menu a {
+        font-size: 1.2rem;
+        color: #ededed;
+        text-transform: uppercase;
+        margin-bottom: 0.5rem;
+      }
+
+      .menu-item-has-children:not(:first-child) {
+        margin-top: $gap;
+      }
+    }
+
+    .widget:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .widget_social {
+      p {
+        display: inline-flex;
+        background: $wispo-primary;
+        padding: 0.2em 0.5em;
+        margin-bottom: 0.5rem;
+      }
+
+      .social-icons-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  .footer-bottom {
+    p {
+      line-height: 120%;
+    }
+  }
+}

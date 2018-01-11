@@ -1,0 +1,43 @@
+.post-template-default {
+  .hero {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      background-color: $black;
+      opacity: 0.3;
+    }
+
+    h1 {
+      display: inline-flex;
+      padding: 0.2rem 0.5rem;
+      background-color: black;
+    }
+  }
+
+  .quick-facts .card {
+    .tag:not(:last-child) {
+      margin-right: 0.25rem;
+    }
+  }
+}
+
+.hero h1,
+.hero::before,
+.quick-facts .card {
+  @include lustrum-background-colors('body.single-post.category-',
+  'gala &'              $gala-primary,
+  'wintersport &'       $wispo-primary,
+  'lustrumweek &'       $lustrumweek-primary,
+  'lustrum-productie &' $lustrum-productie-primary,
+  'piekweek &'          $piekweek-primary
+);
+}

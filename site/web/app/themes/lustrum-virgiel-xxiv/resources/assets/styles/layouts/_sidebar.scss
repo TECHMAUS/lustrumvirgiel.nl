@@ -1,0 +1,120 @@
+.sidebar {
+  .widget {
+    padding: $gap-large 0;
+    position: relative;
+
+    &:nth-of-type(odd) .widget-title {
+      transform: rotate(-2deg);
+    }
+
+    &:nth-of-type(even) .widget-title {
+      transform: rotate(2deg);
+    }
+
+    @include lustrum-background-colors('&:nth-of-type(5n+',
+    '1) .widget-title'              $lustrumweek-primary,
+    '2) .widget-title'              $gala-primary,
+    '3) .widget-title'              $piekweek-primary,
+    '4) .widget-title'              $wispo-primary,
+    '5) .widget-title'              $lustrum-productie-primary
+  );
+
+    .widget-title {
+      display: inline-flex;
+      padding: 0.25rem 0.5rem;
+      flex-direction: row;
+      align-items: center;
+      color: $primary;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+
+    &:not(:last-of-type)::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 0;
+      height: 2px;
+      width: 80%;
+      border-bottom: 1px solid lighten($dark-blue-bg, 20%);
+    }
+
+    &.widget_recent_entries ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      background: transparent;
+      counter-reset: numbered-list;
+
+      li {
+        position: relative;
+        padding-top: 0.25em;
+        padding-bottom: 0.25em;
+        counter-increment: numbered-list;
+
+        a {
+          display: block;
+          color: $white;
+          padding-left: 40px;
+          white-space: normal;
+          line-height: 1.5em;
+          text-transform: uppercase;
+          text-decoration: underline;
+          font-weight: bold;
+
+          &:hover {
+            color: #2db198;
+          }
+
+          &::before {
+            display: block;
+            content: counter(numbered-list) ".";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 26px;
+            height: 32px;
+            margin-top: -16px;
+            background: $piekweek-primary;
+            color: findColorInvert($piekweek-primary);
+            text-align: center;
+            font-size: 18px;
+            line-height: 32px;
+            font-weight: bold;
+          }
+        }
+
+        .post-date {
+          display: block;
+          color: white;
+          padding-left: 40px;
+          white-space: normal;
+          line-height: 1em;
+          text-transform: uppercase;
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    &.widget_polls-widget {
+      .button {
+        display: inline-flex;
+        border: 1px solid transparent;
+        padding: calc(0.375em - 1px)  0.75em calc(0.375em - 1px);
+      }
+    }
+
+    &.widget_search {
+      @include mobile {
+        .search-form {
+          justify-content: center;
+        }
+      }
+
+      .search-submit {
+        background-color: $lustrumweek-primary;
+      }
+    }
+  }
+}

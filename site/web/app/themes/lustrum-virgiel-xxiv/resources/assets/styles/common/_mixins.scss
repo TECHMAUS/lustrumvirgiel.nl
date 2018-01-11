@@ -1,0 +1,68 @@
+@mixin blockchain() {
+  font-family: "BLOCKCHAIN", serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin config-event-quick-facts($event-classes...) {
+  @each $i in $event-classes {
+    &.#{nth($i, 1)} {
+      section.hero {
+        background-color: nth($i, 2);
+      }
+
+      .quick-facts {
+        .card {
+          background-color: nth($i, 2);
+        }
+      }
+    }
+  }
+}
+
+@mixin set-gravity-letters($prefix, $letters...) {
+  @each $i in $letters {
+    #{$prefix}#{nth($i, 1)} {
+      top: nth($i, 2);
+      transform: rotate(#{nth($i, 3)});
+    }
+  }
+}
+
+@mixin place-confetti($prefix, $confetti...) {
+  @each $i in $confetti {
+    #{$prefix}#{nth($i, 1)} {
+      top: nth($i, 2);
+      left: nth($i, 3);
+    }
+  }
+}
+
+@mixin lustrum-background-colors($prefix, $commissies...) {
+  @each $i in $commissies {
+    #{$prefix}#{nth($i, 1)} {
+      background-color: nth($i, 2);
+    }
+  }
+}
+
+@mixin declare-font-size-all($mobile, $tablet, $desktop, $widescreen, $fullhd) {
+  @include mobile {
+    font-size: $mobile;
+  }
+
+  @include tablet {
+    font-size: $tablet;
+  }
+
+  @include desktop {
+    font-size: $desktop;
+  }
+
+  @include widescreen {
+    font-size: $widescreen;
+  }
+
+  @include fullhd {
+    font-size: $fullhd;
+  }
+}

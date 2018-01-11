@@ -1,0 +1,103 @@
+.site-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: $black;
+  transition: all 0.5s ease-in;
+
+  @include tablet {
+    padding: 4px $gap;
+  }
+
+  @include mobile {
+    .level-left,
+    .level-right {
+      padding: 2px;
+      margin: 0 4px;
+    }
+
+    .brand-title {
+      height: 20px;
+      color: $wispo-invert;
+    }
+  }
+
+  .header-bar {
+    align-items: center;
+
+    .level-right {
+      height: 42px;
+      width: 42px;
+      transition: all 0.5s ease-in;
+
+      a {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .logo-sticker {
+      height: 100%;
+      width: 100%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    @include mobile {
+      align-items: center;
+      flex-wrap: wrap;
+
+      .level-right {
+        height: 40px;
+        width: 40px;
+      }
+
+      .brand-title {
+        order: 1;
+        line-height: 150%;
+        flex-basis: 100%;
+        background-color: $wispo-primary;
+      }
+    }
+  }
+
+  .header-toggle {
+    border: 0 solid;
+    background-color: transparent;
+    color: $white;
+
+    .header-toggleLabel {
+      line-height: 16px;
+    }
+  }
+
+  .header-toggleBurger {
+    @include hamburger($gap);
+
+    margin-right: 8px;
+  }
+
+  .brand-title {
+    color: $white;
+  }
+
+  @include desktop {
+    &.hero-header {
+      background-color: transparent;
+
+      .header-bar {
+        align-items: flex-start;
+        padding-top: $gap;
+
+        .level-right {
+          height: 120px;
+          width: 120px;
+        }
+      }
+    }
+  }
+}
+
