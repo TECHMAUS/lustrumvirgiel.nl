@@ -1,6 +1,6 @@
 // import external dependencies
 import 'jquery';
-import 'tilt.js';
+import 'tilt.js/dest/tilt.jquery.js';
 import 'lettering.js';
 
 // Import everything from autoload

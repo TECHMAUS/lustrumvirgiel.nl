@@ -7,7 +7,7 @@
   },
   "publicPath": "/app/themes/lustrum-virgiel-xxiv",
   "devUrl": "https://lustrumvirgiel.dev",
-  "proxyUrl": "https://192.168.178.10:3000",
+  "proxyUrl": "https://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",
