@@ -146,3 +146,25 @@ add_action('after_setup_theme', function () {
 	// Community translations can be found at https://github.com/roots/sage-translations
 	load_theme_textdomain('sage', get_template_directory() . '/lang');
 });
+
+add_action( 'load-themes.php', function (){
+	global $pagenow;
+
+	// gets the author role
+	$role = get_role( 'author' );
+
+	if ( 'themes.php' == $pagenow && isset( $_GET['activated'] ) ){ // Test if theme is activated
+		// Theme is activated
+
+		// This only works, because it accesses the class instance.
+		// would allow the author to edit others' posts for current theme only
+		$role->add_cap( 'edit_published_pages' );
+		$role->remove_cap( 'publish_posts' );
+	}
+	else {
+		// Theme is deactivated
+		// Remove the capability when theme is deactivated
+		$role->remove_cap( 'edit_published_pages' );
+		$role->add_cap( 'publish_posts' );
+	}
+});

@@ -3,7 +3,6 @@
 vendor/roles
 *.py[co]
 *.retry
-database_backup/*
 
 # Created by https://www.gitignore.io/api/phpstorm
 
