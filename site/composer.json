@@ -126,6 +126,18 @@
           "composer/installers": "^1.0"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "ithemes/ithemes-security-pro",
+        "version": "4.7.3",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/ithemes-security-pro-4.7.3.zip"
+        }
+      }
     }
   ],
   "require": {
@@ -138,9 +150,11 @@
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
     "wpackagist-plugin/wp-polls": "^2.73",
     "roots/soil": "^3.7",
+    "ithemes/ithemes-security-pro": "^4.7.3",
     "wpackagist-plugin/amazon-s3-and-cloudfront": "^1.2",
     "wpackagist-plugin/amazon-web-services": "^1.0",
     "wpackagist-plugin/tinymce-advanced": "^4.6",
+    "wpackagist-plugin/onesignal-free-web-push-notifications": "^1.16",
     "enviragallery/envira-gallery": "^1.7"
   },
   "require-dev": {
