@@ -63,10 +63,8 @@ $lustrum-productie-invert:  findColorInvert($lustrum-productie-primary);
   overflow: hidden;
 }
 
-@include desktop {
-  body:not(.has-hero) > .section {
-    margin-top: 70px;
-  }
+body:not(.has-hero) > .section {
+  margin-top: 70px;
 }
 
 @include touch {

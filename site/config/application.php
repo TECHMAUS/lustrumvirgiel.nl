@@ -99,8 +99,6 @@ define( 'WPOS3_SETTINGS', serialize( array(
 	'region' => 'eu-west-1',
 	// Automatically copy files to S3 on upload
 	'copy-to-s3' => true,
-	// Rewrite file URLs to S3
-	'serve-from-s3' => false,
 	// S3 URL format to use ('path', 'cloudfront')
 	'domain' => 'cloudfront',
 	// Custom domain if 'domain' set to 'cloudfront'

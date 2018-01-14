@@ -100,6 +100,7 @@
     &.widget_polls-widget {
       .button {
         display: inline-flex;
+        margin-top: $gap;
         border: 1px solid transparent;
         padding: calc(0.375em - 1px)  0.75em calc(0.375em - 1px);
       }

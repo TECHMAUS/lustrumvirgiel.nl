@@ -1,0 +1,49 @@
+body:not(.home):not(.blog) .content main {
+  .table-overflow {
+    overflow-x: auto;
+  }
+
+  min-height: 120px;
+
+  h2 {
+    display: inline-flex;
+    padding: 8px;
+    border: 3px solid $piekweek-primary;
+    font-weight: bold;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  h3 {
+    display: inline-flex;
+    font-weight: bold;
+    padding-bottom: 4px;
+    border-bottom: 3px solid $lustrumweek-primary;
+  }
+
+  table tr:hover {
+    background-color: $lustrumweek-primary;
+  }
+}
+
+.content {
+  /* centers the pagination on the page */
+  .envira-pagination {
+    text-align: center;
+  }
+
+  .envira-download-all {
+    float: right;
+    margin: 0.5rem 0;
+    color: $wispo-primary;
+  }
+
+  .envira-tags-filter-list {
+    clear: both;
+    margin-bottom: 10px;
+    list-style: none;
+    list-style-type: none;
+  }
+}

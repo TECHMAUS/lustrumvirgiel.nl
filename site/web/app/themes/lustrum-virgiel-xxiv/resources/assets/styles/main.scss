@@ -1,9 +1,5 @@
 @import "common/variables";
 
-// Set own initial variables
-// Update background color
-$body-background-color: $dark-blue-bg;
-
 /** Import necessary Bulma files */
 @import "~bulma/sass/utilities/_all";
 @import "~bulma/sass/base/_all";
@@ -35,6 +31,7 @@ $body-background-color: $dark-blue-bg;
 @import '~bulma-timeline';
 @import url("https://use.typekit.net/bnu0cor.css");
 @import "components/buttons";
+@import "components/content";
 @import "components/forms";
 @import "components/wp-classes";
 @import "components/titles";

@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('hero')
-    <section class="hero" @if(get_the_post_thumbnail_url()) style="background: url('{{ the_post_thumbnail_url() }}') center center;" @endif>
+    <section class="hero" @if(get_the_post_thumbnail_url()) style="background-image: url('{{ the_post_thumbnail_url() }}');" @endif>
         <div class="hero-body">
             <div class="container">
                 <h1 class="is-uppercase fancy_title has-text-centered-mobile">{!! App::title() !!}</h1>

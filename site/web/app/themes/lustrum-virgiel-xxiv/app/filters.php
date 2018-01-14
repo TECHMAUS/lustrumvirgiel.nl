@@ -101,7 +101,7 @@ add_filter('sage/display_sidebar', function ($display) {
 		is_archive(),
 		is_search(),
 		is_single(),
-		is_page('evenementen'),
+		is_page_template('default'),
 		// ... more types
 	]);
 
@@ -114,4 +114,10 @@ add_filter('next_posts_link_attributes', function () {
 
 add_filter('previous_posts_link_attributes', function () {
 	return 'class="next-post button button-piekweek has-text-white is-pulled-left"';
+});
+
+add_filter('the_content', function ($content) {
+	return preg_replace_callback('~<table.*?</table>~is', function($match) {
+		return '<div class="table-overflow">' . $match[0] . '</div>';
+	}, $content);
 });

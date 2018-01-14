@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1a95c04662b054ae2b888c8b3eceec00",
+    "content-hash": "8dd513c47cf06fb8c4f14220924609e4",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -177,8 +177,10 @@
                 "enviragallery/envira-downloads": "^1.2.0",
                 "enviragallery/envira-dynamic": "^1.4.1",
                 "enviragallery/envira-instagram": "^1.3.0",
+                "enviragallery/envira-pagination": "^1.5.3",
                 "enviragallery/envira-social": "^1.4.1",
-                "enviragallery/envira-tags": "^1.6.2"
+                "enviragallery/envira-tags": "^1.6.2",
+                "enviragallery/envira-videos": "^1.3.1"
             },
             "type": "wordpress-plugin"
         },
@@ -188,6 +190,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-instagram-1.3.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "enviragallery/envira-pagination",
+            "version": "1.5.3",
+            "dist": {
+                "type": "zip",
+                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-pagination-1.5.3.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -210,6 +223,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-tags-1.6.2.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "enviragallery/envira-videos",
+            "version": "1.3.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-videos-1.3.1.zip",
                 "reference": null,
                 "shasum": null
             },
