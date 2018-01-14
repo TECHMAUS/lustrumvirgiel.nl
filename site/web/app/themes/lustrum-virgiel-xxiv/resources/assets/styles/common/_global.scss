@@ -182,25 +182,25 @@ main {
         bottom: 0;
         background: linear-gradient(transparentize($black, 0.25) 20%, transparent 40%);
       }
+    }
 
-      .entry-meta {
-        position: absolute;
-        top: 1rem;
-        right: 1.5rem;
-        left: 1.5rem;
+    .entry-meta {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      left: 1.5rem;
 
-        .meta-item {
-          display: flex;
-          flex-direction: row;
-          align-items: center;
+      .meta-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
 
-          .has-sticky-tag {
-            transform: rotate(4deg);
-          }
+        .has-sticky-tag {
+          transform: rotate(4deg);
+        }
 
-          .icon {
-            margin-right: 8px;
-          }
+        .icon {
+          margin-right: 8px;
         }
       }
     }
