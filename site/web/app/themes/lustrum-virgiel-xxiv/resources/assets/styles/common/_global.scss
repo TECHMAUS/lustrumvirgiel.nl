@@ -31,14 +31,18 @@
 }
 
 /** Dropshadow in paragraphs */
-.dropcap > p:first-child::first-letter {
-  float: left;
-  font-family: "BLOCKCHAIN", serif;
-  font-weight: normal;
-  -webkit-font-smoothing: antialiased;
-  font-size: 6rem;
-  line-height: 4rem;
-  padding: 0 8px 8px 0;
+.dropcap > p:first-of-type {
+  font-weight: bold;
+
+  &::first-letter {
+    float: left;
+    font-family: "BLOCKCHAIN", serif;
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased;
+    font-size: 6rem;
+    line-height: 4rem;
+    padding: 0 8px 8px 0;
+  }
 }
 
 .noscroll {

@@ -13,29 +13,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library name="PHP" type="php">
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/site/vendor/composer" />
-          <root url="file://$MODULE_DIR$/site/vendor/johnpbloch/wordpress" />
-          <root url="file://$MODULE_DIR$/site/vendor/johnpbloch/wordpress-core-installer" />
-          <root url="file://$MODULE_DIR$/site/vendor/oscarotero/env" />
-          <root url="file://$MODULE_DIR$/site/vendor/philippbaschke/acf-pro-installer" />
-          <root url="file://$MODULE_DIR$/site/vendor/roots/wp-password-bcrypt" />
-          <root url="file://$MODULE_DIR$/site/vendor/squizlabs/php_codesniffer" />
-          <root url="file://$MODULE_DIR$/site/vendor/vlucas/phpdotenv" />
-        </CLASSES>
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/site/vendor/composer" />
-          <root url="file://$MODULE_DIR$/site/vendor/johnpbloch/wordpress" />
-          <root url="file://$MODULE_DIR$/site/vendor/johnpbloch/wordpress-core-installer" />
-          <root url="file://$MODULE_DIR$/site/vendor/oscarotero/env" />
-          <root url="file://$MODULE_DIR$/site/vendor/philippbaschke/acf-pro-installer" />
-          <root url="file://$MODULE_DIR$/site/vendor/roots/wp-password-bcrypt" />
-          <root url="file://$MODULE_DIR$/site/vendor/squizlabs/php_codesniffer" />
-          <root url="file://$MODULE_DIR$/site/vendor/vlucas/phpdotenv" />
-        </SOURCES>
-      </library>
-    </orderEntry>
   </component>
 </module>

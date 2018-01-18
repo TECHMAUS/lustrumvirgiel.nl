@@ -128,14 +128,12 @@
 }
 
 main {
-  .introduction {
-    .quick-links {
-      margin-top: 1.5rem;
+  .quick-links {
+    margin-top: 1.5rem;
 
-      .button:not(:last-child) {
-        margin-right: 0.5rem;
-        margin-bottom: 1rem;
-      }
+    .button:not(:last-child) {
+      margin-right: 0.5rem;
+      margin-bottom: 1rem;
     }
   }
 }

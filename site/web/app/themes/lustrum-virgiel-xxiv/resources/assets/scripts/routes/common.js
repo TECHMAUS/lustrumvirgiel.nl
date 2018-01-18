@@ -29,5 +29,6 @@ export default {
         $(function() {
             $('.lazy').lazy();
         });
+        $(".entry-content-asset").fitVids();
     },
 };

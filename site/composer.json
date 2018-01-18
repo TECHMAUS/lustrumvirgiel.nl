@@ -111,17 +111,15 @@
       "type": "package",
       "package": {
         "name": "enviragallery/envira-gallery",
-        "version": "1.7.1",
+        "version": "1.7.2",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-gallery-1.7.1.zip"
+          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-gallery-1.7.2.zip"
         },
         "require": {
           "enviragallery/envira-instagram": "^1.3.0",
           "enviragallery/envira-social": "^1.4.1",
-          "enviragallery/envira-dynamic": "^1.4.1",
-          "enviragallery/envira-videos": "^1.3.1",
           "enviragallery/envira-pagination": "^1.5.3",
           "composer/installers": "^1.0"
         }

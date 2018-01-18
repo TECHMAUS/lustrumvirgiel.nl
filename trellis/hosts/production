@@ -4,7 +4,7 @@
 production_host ansible_host=lustrumvirgiel.nl
 
 [production]
-your_server_hostname
+production_host
 
 [web]
-your_server_hostname
+production_host
