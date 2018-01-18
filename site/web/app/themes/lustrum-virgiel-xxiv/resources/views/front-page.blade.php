@@ -6,14 +6,14 @@
 
         </div>
         <div class="hero-part hero-body is-paddingless scattered-4d">
-            <img src="@asset('images/front-page/confetti/confetti-4d-neutraal.svg')" class="confetti-svg" alt="confetti" />
-            <img src="@asset('images/front-page/confetti/confetti-kubus-wispo.svg')" class="confetti-svg" alt="confetti" />
-            <img src="@asset('images/front-page/confetti/confetti-lijn-lustrumweken.svg')" class="confetti-svg" alt="confetti" />
-            <img src="@asset('images/front-page/confetti/confetti-lijn-piekweken.svg')" class="confetti-svg" alt="confetti" />
-            <img src="@asset('images/front-page/confetti/confetti-vierkant-wispo.svg')" class="confetti-svg" alt="confetti" />
-            <img src="@asset('images/front-page/confetti/confetti-vierkanten-neutraal-gala.svg')" class="confetti-svg" alt="confetti" />
+            <img data-src="@asset('images/front-page/confetti/confetti-4d-neutraal.svg')" class="confetti-svg lazy" />
+            <img data-src="@asset('images/front-page/confetti/confetti-kubus-wispo.svg')" class="confetti-svg lazy" />
+            <img data-src="@asset('images/front-page/confetti/confetti-lijn-lustrumweken.svg')" class="confetti-svg lazy" />
+            <img data-src="@asset('images/front-page/confetti/confetti-lijn-piekweken.svg')" class="confetti-svg lazy" />
+            <img data-src="@asset('images/front-page/confetti/confetti-vierkant-wispo.svg')" class="confetti-svg lazy" />
+            <img data-src="@asset('images/front-page/confetti/confetti-vierkanten-neutraal-gala.svg')" class="confetti-svg lazy" />
             <div class="container is-fluid has-text-centered">
-                <div class="">
+                <div>
                     <span id="scattered-1">4</span>
                     <span id="scattered-2">e</span>
                 </div>
@@ -49,9 +49,9 @@
                 </div>
             </div>
         </div>
-        <div class="background-image" style="background-image: url('{{ the_post_thumbnail_url($size = 'large') }}')"></div>
+        <div class="background-image lazy" data-src="{{ the_post_thumbnail_url($size = 'large') }}"></div>
     </section>
-    <section class="section action-banner">
+    <section class="section action-banner lazy" data-src="@asset('images/front-page/lustrum_pattern.svg')">
         <div class="container">
             <div class="level has-text-centered">
                 <h3 class="is-size-4 is-size-5-mobile has-text-white is-uppercase has-text-weight-bold level-left">{{ the_field('action_banner_text') }}</h3>

@@ -26,5 +26,8 @@ export default {
         $('.menu-item-has-children > a').click(function(){
             $(this).parent().toggleClass("submenu-open");
         });
+        $(function() {
+            $('.lazy').lazy();
+        });
     },
 };

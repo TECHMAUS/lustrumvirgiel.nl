@@ -67,25 +67,13 @@
       .menu-item {
         margin: 6px 0;
 
-        .menu-gala a {
-          color: $gala-primary;
-        }
-
-        .menu-wintersport a {
-          color: $wispo-primary;
-        }
-
-        .menu-lustrumweek a {
-          color: $lustrumweek-primary;
-        }
-
-        .menu-lustrum-productie a {
-          color: $lustrum-productie-primary;
-        }
-
-        .menu-piekweek a {
-          color: $piekweek-primary;
-        }
+        @include lustrum-colors('&.menu-',
+        'gala a'              $gala-primary,
+        'wintersport a'       $wispo-primary,
+        'lustrumweek a'       $lustrumweek-primary,
+        'lustrum-productie a' $lustrum-productie-primary,
+        'piekweek a'          $piekweek-primary
+      );
 
         /* The navigation menu links */
         a {

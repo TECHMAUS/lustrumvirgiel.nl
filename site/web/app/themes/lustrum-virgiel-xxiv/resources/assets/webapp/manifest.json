@@ -1,0 +1,62 @@
+{
+  "name": "Lustrum Virgiel XXIV",
+  "short_name": "Virgiel XXIV",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#1e9bd7",
+  "background_color": "#12141f",
+  "lang": "nl-NL",
+  "description": "Website van het 24e Lustrum der KSV Sanctus Virgilius.",
+  "icons": [
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen72.png",
+      "sizes": "72x72",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen96.png",
+      "sizes": "96x96",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen168.png",
+      "sizes": "168x168",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen384.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/app/themes/lustrum-virgiel-xxiv/dist/images/touch/xxiv-homescreen1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ]
+}

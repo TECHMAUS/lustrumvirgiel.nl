@@ -2,6 +2,7 @@
 import 'jquery';
 import 'tilt.js/dest/tilt.jquery.js';
 import 'lettering.js';
+import 'jquery-lazy';
 
 // Import everything from autoload
 import "./autoload/**/*"

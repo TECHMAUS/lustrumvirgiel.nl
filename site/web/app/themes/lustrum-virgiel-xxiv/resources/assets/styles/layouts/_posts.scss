@@ -1,5 +1,9 @@
 .post-template-default {
   .hero {
+    @include touch {
+      margin-top: 60px;
+    }
+
     position: relative;
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,6 +28,11 @@
   }
 
   .quick-facts .card {
+    .fact .has-subtitle {
+      display: flex;
+      flex-direction: column;
+    }
+
     .tag:not(:last-child) {
       margin-right: 0.25rem;
     }

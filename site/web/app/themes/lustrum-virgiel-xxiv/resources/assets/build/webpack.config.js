@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyGlobsPlugin = require('copy-globs-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const config = require('./config');
 
@@ -172,6 +173,9 @@ let webpackConfig = {
         eslint: { failOnWarning: false, failOnError: true },
       },
     }),
+    new CopyWebpackPlugin([
+        { from: 'webapp/manifest.json' },
+    ]),
     new StyleLintPlugin({
       failOnError: !config.enabled.watcher,
       syntax: 'scss',

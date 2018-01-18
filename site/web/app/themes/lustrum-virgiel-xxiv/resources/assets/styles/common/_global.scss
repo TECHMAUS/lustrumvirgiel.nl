@@ -1,29 +1,10 @@
-/** Color functions */
-$gala-invert:               findColorInvert($gala-primary);
-$wispo-invert:              findColorInvert($wispo-primary);
-$lustrumweek-invert:        findColorInvert($lustrumweek-primary);
-$piekweek-invert:           findColorInvert($piekweek-primary);
-$lustrum-productie-invert:  findColorInvert($lustrum-productie-primary);
-
-.gala-background {
-  background-color: $gala-primary !important;
-}
-
-.wispo-background {
-  background-color: $wispo-primary !important;
-}
-
-.lustrumweek-background {
-  background-color: $lustrumweek-primary !important;
-}
-
-.piekweek-background {
-  background-color: $piekweek-primary !important;
-}
-
-.lustrum-productie-background {
-  background-color: $lustrum-productie-primary !important;
-}
+@include lustrum-background-colors('',
+'.gala-background'              $gala-primary,
+'.wispo-background'             $wispo-primary,
+'.lustrumweek-background'       $lustrumweek-primary,
+'.lustrum-productie-background' $lustrum-productie-primary,
+'.piekweek-background'          $piekweek-primary
+);
 
 /** 2dp elevation modified */
 .z-depth-1 {
@@ -53,6 +34,7 @@ $lustrum-productie-invert:  findColorInvert($lustrum-productie-primary);
 .dropcap > p:first-child::first-letter {
   float: left;
   font-family: "BLOCKCHAIN", serif;
+  font-weight: normal;
   -webkit-font-smoothing: antialiased;
   font-size: 6rem;
   line-height: 4rem;
@@ -132,9 +114,11 @@ main {
 
 .has-hero .quick-facts {
   .card {
-    @include tablet {
+    margin-bottom: $gap-large;
+
+    @include desktop {
       top: -100px;
-      margin-bottom: -60px;
+      margin-bottom: -80px;
     }
 
     background-color: $black;

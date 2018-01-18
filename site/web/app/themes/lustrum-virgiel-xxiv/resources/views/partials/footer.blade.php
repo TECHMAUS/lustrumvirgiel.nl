@@ -1,4 +1,4 @@
-<footer class="section content-info">
+<footer class="page-footer section content-info lazy" data-src="@asset('images/common/footer-space-background.jpg')">
   <div class="container">
     <div class="columns">
       <div class="column has-text-centered-mobile">
@@ -27,7 +27,7 @@
         @if(has_custom_logo())
           <div class="level-item">
             <figure class="image is-48x48">
-              <img src="{{ wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'full' )[0] }}" />
+              <img class="lazy" data-src="{{ wp_get_attachment_image_src( get_theme_mod( 'custom_logo' ) , 'thumbnail' )[0] }}" />
             </figure>
           </div>
           <div class="level-item">
@@ -39,7 +39,7 @@
       <div class="level-right">
         <a href="https://www.techmaus.nl/" target="_blank" rel="noopener" class="level-item">
           <figure class="image is-48x48">
-            <img src="@asset('images/common/techmaus-footer.png')" alt="TECHMAUS - Website Ontwikkeling, Grafisch Design, IT-ondersteuning" />
+            <img class="lazy" data-src="@asset('images/common/techmaus-footer.png')" alt="TECHMAUS - Website Ontwikkeling, Grafisch Design, IT-ondersteuning" />
           </figure>
         </a>
       </div>

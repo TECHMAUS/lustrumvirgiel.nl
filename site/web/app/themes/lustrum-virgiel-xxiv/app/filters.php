@@ -100,8 +100,6 @@ add_filter('sage/display_sidebar', function ($display) {
 		is_home(),
 		is_archive(),
 		is_search(),
-		is_single(),
-		is_page_template('default'),
 		// ... more types
 	]);
 
@@ -109,11 +107,11 @@ add_filter('sage/display_sidebar', function ($display) {
 });
 
 add_filter('next_posts_link_attributes', function () {
-	return 'class="prev-post button button-piekweek has-text-white is-pulled-right"';
+	return 'class="prev-post pagination-previous"';
 });
 
 add_filter('previous_posts_link_attributes', function () {
-	return 'class="next-post button button-piekweek has-text-white is-pulled-left"';
+	return 'class="next-post pagination-next"';
 });
 
 add_filter('the_content', function ($content) {

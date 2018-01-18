@@ -1,6 +1,31 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="manifest" href="@asset('manifest.json')">
+
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Virgiel XXIV">
+  <meta name="apple-mobile-web-app-title" content="Virgiel XXIV">
+  <meta name="theme-color" content="#1e9bd7">
+  <meta name="msapplication-navbutton-color" content="#1e9bd7">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+
+  <link rel="icon" type="image/png" sizes="48x48" href="@asset('images/touch/xxiv-homescreen48.png')">
+  <link rel="apple-touch-icon" type="image/png" sizes="48x48" href="@asset('images/touch/xxiv-homescreen48.png')">
+  <link rel="icon" type="image/png" sizes="72x72" href="@asset('images/touch/xxiv-homescreen72.png')">
+  <link rel="apple-touch-icon" type="image/png" sizes="72x72" href="@asset('images/touch/xxiv-homescreen72.png')">
+  <link rel="icon" type="image/png" sizes="96x96" href="@asset('images/touch/xxiv-homescreen96.png')">
+  <link rel="apple-touch-icon" type="image/png" sizes="96x96" href="@asset('images/touch/xxiv-homescreen96.png')">
+  <link rel="icon" type="image/png" sizes="144x144" href="@asset('images/touch/xxiv-homescreen144.png')">
+  <link rel="apple-touch-icon" type="image/png" sizes="144x144" href="@asset('images/touch/xxiv-homescreen144.png')">
+  <link rel="icon" type="image/png" sizes="168x168" href="@asset('images/touch/xxiv-homescreen168.png')">
+  <link rel="apple-touch-icon" type="image/png" sizes="168x168" href="@asset('images/touch/xxiv-homescreen168.png')">
+  <link rel="icon" type="image/png" sizes="192x192" href="@asset('images/touch/xxiv-homescreen192.png')">
+  <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="@asset('images/touch/xxiv-homescreen192.png')">
+
   @php(wp_head())
 </head>

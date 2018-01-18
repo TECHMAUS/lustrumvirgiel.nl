@@ -11,6 +11,11 @@ class App extends Controller
         return get_bloginfo('name');
     }
 
+    public static function currentUrl() {
+	    global $wp;
+	    return home_url(add_query_arg(array(),$wp->request));
+    }
+
     public static function title()
     {
         if (is_home()) {
@@ -42,4 +47,17 @@ class App extends Controller
 	    $daysleft=floor($diff/(60*60*24));
 	    return "$daysleft";
     }
+
+	public static function wps_yoast_breadcrumb_bulma() {
+		if ( function_exists( 'yoast_breadcrumb' ) ) {
+			$breadcrumb = yoast_breadcrumb(
+				'<nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs"><ul class="is-marginless"><li>',
+				'</li></ul></nav>',
+				false
+			);
+			echo str_replace( '»', '</li><li>', $breadcrumb );
+		} else {
+			echo '<ul class="breadcrumb"><li>Missing function "yoast_breadcrumb"</li></ul>';
+		}
+	}
 }

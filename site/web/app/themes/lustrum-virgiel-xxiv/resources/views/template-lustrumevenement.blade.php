@@ -5,7 +5,7 @@
 @extends('layouts.app')
 
 @section('hero')
-    <section class="hero" @if(get_the_post_thumbnail_url()) style="background-image: url('{{ the_post_thumbnail_url() }}');" @endif>
+    <section class="hero lazy" @if(get_the_post_thumbnail_url()) data-src="{{ the_post_thumbnail_url() }}" @endif>
         <div class="hero-body">
             <div class="container">
                 <h1 class="is-uppercase fancy_title has-text-centered-mobile">{!! App::title() !!}</h1>
@@ -38,6 +38,8 @@
             </div>
         </div>
     </div>
+    @include('partials.social-share-buttons')
+
     @if (App\display_sidebar())
         @include('partials.sidebar')
     @endif

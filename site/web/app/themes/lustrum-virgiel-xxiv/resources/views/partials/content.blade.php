@@ -2,7 +2,7 @@
   <div class="card">
     @if(get_the_post_thumbnail_url() && get_post_type() == 'post')
       <a href="{{ the_permalink() }}" class="has-text-white">
-        <div class="card-image entry-image image is-2by1" style="background-image: url({{ the_post_thumbnail_url() }})">
+        <div class="card-image entry-image image is-2by1 lazy" data-src="{{ the_post_thumbnail_url() }}">
           @include('partials/entry-meta')
         </div>
       </a>

@@ -13,18 +13,17 @@
     <div class="columns is-multiline">
         @php($count = 0)
         @while (have_posts()) @php(the_post())
-            @if($count == 0 )
                 <div class="column is-full">
-            @else
-                <div class="column is-half">
-            @endif
                   @include('partials.content')
                 </div>
             @php($count++)
         @endwhile
     </div>
 
-    {!! get_the_posts_navigation() !!}
+    <footer class="single-footer">
+        {!! get_the_posts_navigation() !!}
+    </footer>
+
 @endsection
 
 @section('sidebar')

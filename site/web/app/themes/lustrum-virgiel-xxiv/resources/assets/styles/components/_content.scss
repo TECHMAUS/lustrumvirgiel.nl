@@ -1,4 +1,5 @@
-body:not(.home):not(.blog) .content main {
+body.single .content main,
+body.page:not(.home):not(.archive):not(.search):not(.blog) .content main {
   .table-overflow {
     overflow-x: auto;
   }
@@ -14,6 +15,10 @@ body:not(.home):not(.blog) .content main {
     &:first-of-type {
       margin-top: 0;
     }
+  }
+
+  .entry-content p:first-of-type {
+    font-weight: bold;
   }
 
   h3 {
@@ -32,6 +37,57 @@ body:not(.home):not(.blog) .content main {
   /* centers the pagination on the page */
   .envira-pagination {
     text-align: center;
+    margin-top: $gap-large;
+  }
+
+  /* styles the pagination on the page */
+  span.page-numbers.dots {
+    display: inline-block;
+    padding: 10px;
+    background-color: #363f48;
+    border-radius: 3px;
+    color: #fff;
+  }
+
+  .envira-pagination a.page-numbers {
+    display: inline-block;
+    padding: 10px;
+    background-color: #363f48;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.2s ease-in 0s;
+    color: #fff;
+  }
+
+  .envira-pagination a.page-numbers:hover {
+    background-color: #ccc;
+    color: #363f48;
+  }
+
+  .envira-pagination span.page-numbers.current {
+    display: inline-block;
+    padding: 10px;
+    background-color: #ccc;
+    border-radius: 3px;
+    color: #363f48;
+  }
+
+  /* styles the previous and next links */
+  .envira-pagination a.prev.page-numbers,
+  .envira-pagination a.next.page-numbers {
+    display: inline-block;
+    padding: 10px;
+    background-color: #363f48;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.2s ease-in 0s;
+    color: #fff;
+  }
+
+  .envira-pagination a.prev.page-numbers:hover,
+  .envira-pagination a.next.page-numbers:hover {
+    background-color: #ccc;
+    color: #363f48;
   }
 
   .envira-download-all {
@@ -45,5 +101,88 @@ body:not(.home):not(.blog) .content main {
     margin-bottom: 10px;
     list-style: none;
     list-style-type: none;
+  }
+
+  .breadcrumb li {
+    margin: 0;
+
+    &:last-of-type span {
+      padding: 0.5em 0.75em;
+    }
+  }
+
+  .social-share {
+    display: flex;
+    flex-flow: row wrap;
+
+    .share-button {
+      color: #fff;
+
+      &:not(:last-of-type) {
+        margin: 0 8px 8px 0;
+      }
+
+      svg {
+        fill: #fff;
+        width: 19px;
+        height: 19px;
+        margin-right: 5px;
+      }
+
+      &.facebook {
+        background-color: #4a66b7;
+
+        &:hover {
+          background-color: darken(#4a66b7, 10%);
+        }
+      }
+
+      &.whatsapp {
+        background-color: #25d366;
+
+        &:hover {
+          background-color: darken(#25d366, 10%);
+        }
+      }
+    }
+  }
+
+  footer.single-footer {
+    margin: $gap-large 0;
+
+    .pagination-previous,
+    .pagination-next {
+      max-width: 100%;
+    }
+
+    .pagination-previous::before {
+      content: "\2039";
+      margin-right: 4px;
+      font-size: 150%;
+    }
+
+    .pagination-next::after {
+      content: "\203A";
+      margin-left: 4px;
+      font-size: 150%;
+    }
+
+    @include tablet {
+      .pagination-previous,
+      .pagination-next {
+        max-width: 48%;
+      }
+    }
+
+    .pagination a,
+    .posts-navigation a {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+
+      &:not(:hover) {
+        color: $primary;
+      }
+    }
   }
 }

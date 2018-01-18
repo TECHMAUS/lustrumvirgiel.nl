@@ -45,6 +45,27 @@
   }
 }
 
+@mixin lustrum-colors($prefix, $commissies...) {
+  @each $i in $commissies {
+    #{$prefix}#{nth($i, 1)} {
+      color: nth($i, 2);
+    }
+  }
+}
+
+@mixin lustrum-buttons($prefix, $commissies...) {
+  @each $i in $commissies {
+    #{$prefix}#{nth($i, 1)} {
+      background-color: nth($i, 2);
+      color: findColorInvert(nth($i, 2));
+
+      &:hover {
+        color: #{nth($i, 3)}(#{nth($i, 2)}, 10%);
+      }
+    }
+  }
+}
+
 @mixin declare-font-size-all($mobile, $tablet, $desktop, $widescreen, $fullhd) {
   @include mobile {
     font-size: $mobile;

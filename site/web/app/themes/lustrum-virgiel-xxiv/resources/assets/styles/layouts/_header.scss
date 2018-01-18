@@ -20,7 +20,7 @@
 
     .brand-title {
       height: 20px;
-      color: $wispo-invert;
+      color: findColorInvert($wispo-primary);
     }
   }
 

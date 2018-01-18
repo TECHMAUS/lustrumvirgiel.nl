@@ -206,7 +206,7 @@ function my_dynamic_sidebar_params( $params ) {
 
 	if( $image ) {
 
-		$params[0]['before_title'] = $params[0]['before_title'] . '<span class="icon" style="background-image:url(' . $image . ')"></span>';
+		$params[0]['before_title'] = $params[0]['before_title'] . '<span class="icon lazy" data-src="' . $image . '"></span>';
 	}
 
 	// return
