@@ -27,7 +27,7 @@ class FrontPage extends Controller {
 
 		elseif ( $sq->post_count < $posts_total ) :
 
-			$num_posts = $posts_total - $sq_count;
+			$num_posts = $posts_total - $sq->post_count;
 
 			/** Query the non-sticky posts */
 			$args = array(
