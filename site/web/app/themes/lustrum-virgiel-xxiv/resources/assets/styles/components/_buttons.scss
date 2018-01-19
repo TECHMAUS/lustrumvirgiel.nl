@@ -3,9 +3,9 @@
 }
 
 @include lustrum-buttons('.button-',
-'gala'              $gala-primary               'darken',
-'wintersport'       $wispo-primary              'darken',
-'lustrumweek'       $lustrumweek-primary        'lighten',
-'lustrum-productie' $lustrum-productie-primary  'darken',
-'piekweek'          $piekweek-primary           'darken'
+'gala'              $gala-primary               ,
+'wintersport'       $wispo-primary              ,
+'lustrumweek'       $lustrumweek-primary        ,
+'lustrum-productie' $lustrum-productie-primary  ,
+'piekweek'          $piekweek-primary
 );

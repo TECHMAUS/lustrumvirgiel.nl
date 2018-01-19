@@ -60,7 +60,7 @@
       color: findColorInvert(nth($i, 2));
 
       &:hover {
-        color: #{nth($i, 3)}(#{nth($i, 2)}, 10%);
+        color: darken(nth($i, 2), 10%);
       }
     }
   }
