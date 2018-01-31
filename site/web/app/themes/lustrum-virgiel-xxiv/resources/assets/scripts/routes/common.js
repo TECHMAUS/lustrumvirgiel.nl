@@ -14,21 +14,44 @@ export default {
                 }
             });
         }
+
         $(".fancy_title").lettering('words').children('span').lettering();
+
         $('.nav-close, #page-overlay').click(function(){
             $('header').removeClass("side-menu-open");
             $('html').removeClass("noscroll");
         });
+
         $('.header-toggle').click(function(){
             $('header').addClass("side-menu-open");
             $('html').addClass("noscroll");
         });
+
         $('.menu-item-has-children > a').click(function(){
             $(this).parent().toggleClass("submenu-open");
         });
+
         $(function() {
             $('.lazy').lazy();
         });
+
         $(".entry-content-asset").fitVids();
+
+        $('.event-schedule').schedule({
+            showLocations: true,
+            keepAccordionsOpen: false,
+            openFirstAccordion: false,
+        });
+
+        $('#days-carousel').tcodeslick({
+            slidesToShow: 7,
+            slidesToScroll: 7,
+            infinite: false,
+            prevArrow: '<a href="#" class="slick-prev"></a>',
+            nextArrow: '<a href="#" class="slick-next"></a>',
+            speed: 800,
+            easing: 'swing',
+        });
+
     },
 };

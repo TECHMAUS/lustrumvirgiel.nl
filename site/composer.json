@@ -136,6 +136,18 @@
           "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/ithemes-security-pro-4.7.3.zip"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "envato/event-scheduler",
+        "version": "1.2.6",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/event-scheduler-1.2.6.zip"
+        }
+      }
     }
   ],
   "require": {
@@ -154,7 +166,8 @@
     "wpackagist-plugin/onesignal-free-web-push-notifications": "^1.16",
     "wpackagist-plugin/wordpress-seo": "^6.1",
     "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^2.0",
-    "enviragallery/envira-gallery": "^1.7"
+    "enviragallery/envira-gallery": "^1.7",
+    "envato/event-scheduler": "^1.2"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
