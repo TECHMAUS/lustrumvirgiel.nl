@@ -13,7 +13,7 @@
     <div class="columns is-multiline">
         @php($count = 0)
         @while (have_posts()) @php(the_post())
-                <div class="column is-full">
+                <div class="column is-half">
                   @include('partials.content')
                 </div>
             @php($count++)

@@ -125,6 +125,10 @@
   background-repeat: repeat;
   background-size: 150px;
   margin-bottom: $gap;
+
+  @include mobile {
+    padding: 2rem 16px;
+  }
 }
 
 main {

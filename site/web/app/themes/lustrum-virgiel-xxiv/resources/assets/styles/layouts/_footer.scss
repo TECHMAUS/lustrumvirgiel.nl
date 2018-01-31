@@ -17,6 +17,10 @@ footer.page-footer {
       margin-bottom: 0.5rem;
       color: #95989a;
       font-size: 1.25rem;
+
+      @include mobile {
+        font-size: 1.1rem;
+      }
     }
 
     #menu-footer-menu {
@@ -25,6 +29,10 @@ footer.page-footer {
         color: #ededed;
         text-transform: uppercase;
         margin-bottom: 0.5rem;
+
+        @include mobile {
+          font-size: 1rem;
+        }
       }
 
       .menu-item-has-children:not(:first-child) {
