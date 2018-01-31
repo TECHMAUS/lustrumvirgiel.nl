@@ -16,6 +16,11 @@
     @while(have_posts()) @php(the_post())
             @include('partials.content-single')
     @endwhile
+
+    @if(!get_field('disable_fb_comments'))
+    <div class="fb-comments" data-href="{{ App::currentUrl() }}" data-width="100%" data-numposts="10" data-order-by="social" data-colorscheme="dark"></div>
+    @endif
+
 @endsection
 
 @section('sidebar')

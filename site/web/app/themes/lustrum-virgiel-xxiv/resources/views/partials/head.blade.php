@@ -13,6 +13,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="msapplication-starturl" content="/">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no, user-scalable=yes">
+  <meta property="fb:app_id" content="148485092478258" />
 
   <link rel="icon" type="image/png" sizes="48x48" href="@asset('images/touch/xxiv-homescreen48.png')">
   <link rel="apple-touch-icon" type="image/png" sizes="48x48" href="@asset('images/touch/xxiv-homescreen48.png')">
