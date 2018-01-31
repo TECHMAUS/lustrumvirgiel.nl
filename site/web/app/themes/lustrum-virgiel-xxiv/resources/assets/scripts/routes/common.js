@@ -37,21 +37,23 @@ export default {
 
         $(".entry-content-asset").fitVids();
 
-        $('.event-schedule').schedule({
-            showLocations: true,
-            keepAccordionsOpen: false,
-            openFirstAccordion: false,
-        });
+        if ($.isFunction($.fn.schedule) && $.isFunction($.fn.tcodeslick)) {
+            $('.event-schedule').schedule({
+                showLocations: true,
+                keepAccordionsOpen: false,
+                openFirstAccordion: false,
+            });
 
-        $('#days-carousel').tcodeslick({
-            slidesToShow: 7,
-            slidesToScroll: 7,
-            infinite: false,
-            prevArrow: '<a href="#" class="slick-prev"></a>',
-            nextArrow: '<a href="#" class="slick-next"></a>',
-            speed: 800,
-            easing: 'swing',
-        });
+            $('#days-carousel').tcodeslick({
+                slidesToShow: 7,
+                slidesToScroll: 7,
+                infinite: false,
+                prevArrow: '<a href="#" class="slick-prev"></a>',
+                nextArrow: '<a href="#" class="slick-next"></a>',
+                speed: 800,
+                easing: 'swing',
+            });
+        }
 
     },
 };
