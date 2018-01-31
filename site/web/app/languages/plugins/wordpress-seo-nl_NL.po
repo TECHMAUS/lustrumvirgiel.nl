@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Yoast SEO - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2018-01-16 20:16:14+0000\n"
+"PO-Revision-Date: 2018-01-18 15:19:39+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -253,7 +253,7 @@ msgstr "Schrijf je in voor de Yoast SEO voor WordPress training »"
 msgid "(Opens in a new browser tab)"
 msgstr "(Opent in een nieuwe browsertab)"
 
-#: admin/views/licenses.php:159 admin/views/licenses.php:217
+#: admin/views/licenses.php:165 admin/views/licenses.php:223
 msgid "Manage your subscription on My Yoast"
 msgstr "Beheer jouw abonnement in Mijn Yoast"
 
@@ -472,16 +472,16 @@ msgstr "Leesbaarheid: Heeft verbetering nodig"
 msgid "SEO: Needs improvement"
 msgstr "SEO: Heeft verbetering nodig"
 
-#: admin/views/licenses.php:161 admin/views/licenses.php:219
+#: admin/views/licenses.php:167 admin/views/licenses.php:225
 msgid "Not activated"
 msgstr "Niet geactiveerd"
 
-#: admin/views/licenses.php:158 admin/views/licenses.php:216
+#: admin/views/licenses.php:164 admin/views/licenses.php:222
 msgid "Activated"
 msgstr "Geactiveerd"
 
 #. translators: %1$s expands to "Yoast".
-#: admin/class-yoast-form.php:203
+#: admin/class-yoast-form.php:205
 msgid "%1s recommendations for you"
 msgstr "%1s aanbevelingen voor jou"
 
@@ -499,7 +499,7 @@ msgstr "Filter op leesbaarheidsscore"
 msgid "You are not receiving updates or support! Fix this problem by adding this site and enabling %1$s for it in %2$s."
 msgstr "Je ontvangt geen updates of ondersteuning. Los dit probleem op door deze site toe te voegen en %1$s te activeren voor deze site in %2$s."
 
-#: admin/views/licenses.php:162 admin/views/licenses.php:220
+#: admin/views/licenses.php:168 admin/views/licenses.php:226
 msgid "Activate your site on My Yoast"
 msgstr "Activeer je website op My Yoast"
 
@@ -530,7 +530,7 @@ msgstr "Stille problemen:"
 msgid "Muted notifications:"
 msgstr "Stille meldingen:"
 
-#: admin/views/tabs/tool/import-seo.php:27
+#: admin/views/tabs/tool/import-seo.php:33
 msgid "Import from Jetpack SEO"
 msgstr "Vanuit Jetpack SEO importeren"
 
@@ -671,10 +671,6 @@ msgstr "%s kolommen"
 #: admin/banner/class-admin-banner-sidebar.php:361
 msgid "Take the online Structured Data Training course and learn how to create rich snippets!"
 msgstr "Volg de online Structured Data Training en leer hoe je rich snippets krijgt!"
-
-#: languages/yoast-seo-js.php:212
-msgid "The focus keyword appears only in %2$d (out of %1$d) subheadings in your copy. Try to use it in at least one more subheading."
-msgstr "Het focustrefwoord komt slechts in %2$d (van de %1$d) tussenkoppen voor. Probeer om het in tenminste één tussenkop extra te gebruiken."
 
 #: languages/yoast-seo-js.php:118
 msgid "No internal links appear in this page, consider adding some as appropriate."
@@ -1014,7 +1010,7 @@ msgid_plural "The focus keyword contains %3$d stop words. This may or may not be
 msgstr[0] "Het focustrefwoord bevat een stopwoord. Dit kan onverstandig zijn afhankelijk van de omstandigheden. %1$sLeer meer over stopwoorden%2$s."
 msgstr[1] "Het focustrefwoord bevat %3$d stopwoorden. Dit kan onverstandig zijn afhankelijk van de omstandigheden. %1$sLeer meer over stopwoorden%2$s."
 
-#: admin/class-admin.php:354
+#: admin/class-admin.php:356
 msgid "Scroll to see the table content."
 msgstr "Scrol om de inhoud van de tabel te zien"
 
@@ -1206,7 +1202,7 @@ msgstr[1] "%1$d van de alinea's bevatten meer dan het aanbevolen maximum van %2$
 msgid "%1$s of the sentences contain %2$spassive voice%3$s, which is more than the recommended maximum of %4$s. Try to use their active counterparts."
 msgstr "%1$s van de zinnen bevat %2$spassief taalgebruik%3$s, dat is meer dan het aanbevolen maximum van %4$s. Probeer de actieve vorm te gebruiken."
 
-#: admin/class-bulk-editor-list-table.php:887
+#: admin/class-bulk-editor-list-table.php:892
 msgid "Save"
 msgstr "Opslaan"
 
@@ -1214,7 +1210,7 @@ msgstr "Opslaan"
 msgid "No new notifications."
 msgstr "Geen nieuwe meldingen."
 
-#: admin/class-bulk-editor-list-table.php:888
+#: admin/class-bulk-editor-list-table.php:893
 msgid "Save all"
 msgstr "Alles opslaan"
 
@@ -1684,7 +1680,7 @@ msgstr "Je settings.zip bestand selecteren"
 msgid "Configuration wizard"
 msgstr "Configuratiehulp"
 
-#: admin/class-bulk-editor-list-table.php:794
+#: admin/class-bulk-editor-list-table.php:799
 msgid "(no title)"
 msgstr "(geen titel)"
 
@@ -1959,11 +1955,11 @@ msgstr "Hou er rekening mee dat links naar archieven wellicht nog steeds gebruik
 
 #. translators: Text between %1$s and %2$s will only be shown to screen
 #. readers. %3$s expands to the product name.
-#: admin/views/licenses.php:177 admin/views/licenses.php:231
+#: admin/views/licenses.php:183 admin/views/licenses.php:237
 msgid "More information %1$sabout %3$s%2$s"
 msgstr "Meer informatie %1$sover %3$s%2$s"
 
-#: admin/views/licenses.php:155 admin/views/licenses.php:213
+#: admin/views/licenses.php:161 admin/views/licenses.php:219
 msgid "Installed"
 msgstr "Geïnstalleerd "
 
@@ -1972,12 +1968,12 @@ msgid "Microsoft Edge Site Scan"
 msgstr "Microsoft Edge Site Scan"
 
 #. translators: $1$s expands to Yoast SEO Premium
-#: admin/views/licenses.php:171
+#: admin/views/licenses.php:177
 msgid "Buy %1$s"
 msgstr "Koop %1$s"
 
 #: admin/metabox/class-metabox.php:483
-#: admin/taxonomy/class-taxonomy-metabox.php:275 admin/views/licenses.php:149
+#: admin/taxonomy/class-taxonomy-metabox.php:275 admin/views/licenses.php:155
 msgid "Premium support"
 msgstr "Premium support"
 
@@ -1991,7 +1987,7 @@ msgid "A seamless integration between %1$s and %2$s"
 msgstr "Een naadloze integratie tussen %1$s en %2$s"
 
 #. translators: %1$s expands to Yoast SEO extensions
-#: admin/views/licenses.php:197
+#: admin/views/licenses.php:203
 msgid "%1$s to optimize your site even further"
 msgstr "%1$s om je site nog verder te optimaliseren"
 
@@ -2000,12 +1996,12 @@ msgid "View credits"
 msgstr "Credits bekijken"
 
 #: admin/metabox/class-metabox.php:477
-#: admin/taxonomy/class-taxonomy-metabox.php:269 admin/views/licenses.php:137
+#: admin/taxonomy/class-taxonomy-metabox.php:269 admin/views/licenses.php:143
 msgid "Redirect manager"
 msgstr "Redirectbeheer"
 
 #: admin/metabox/class-metabox.php:479
-#: admin/taxonomy/class-taxonomy-metabox.php:271 admin/views/licenses.php:141
+#: admin/taxonomy/class-taxonomy-metabox.php:271 admin/views/licenses.php:147
 msgid "Multiple focus keywords"
 msgstr "Meerdere focustrefwoorden"
 
@@ -2013,15 +2009,15 @@ msgstr "Meerdere focustrefwoorden"
 msgid "Optimize your site for Google News"
 msgstr "Optimaliseer je site voor Google News"
 
-#: admin/views/licenses.php:150
+#: admin/views/licenses.php:156
 msgid "gain access to our 24/7 support team."
 msgstr "krijg toegang tot onze 24/7 klantenservice."
 
-#: admin/views/licenses.php:142
+#: admin/views/licenses.php:148
 msgid "optimize a single post for up to 5 keywords."
 msgstr "optimaliseer elk bericht met maximaal vijf zoekwoorden"
 
-#: admin/views/licenses.php:146
+#: admin/views/licenses.php:152
 msgid "check what your Facebook or Twitter post will look like."
 msgstr "bepaal hoe je pagina er op Facebook en Twitter uit zal zien"
 
@@ -2031,7 +2027,7 @@ msgid "Take a look at the people that create %1$s."
 msgstr "Bekijk de mensen die %1$s ontwikkelen."
 
 #. translators: %1$s expands to Yoast SEO
-#: admin/views/licenses.php:192
+#: admin/views/licenses.php:198
 msgid "%1$s extensions"
 msgstr "%1$s-extensies"
 
@@ -2048,7 +2044,7 @@ msgid "Easily insert Google Maps, a store locator, opening hours and more"
 msgstr "Voeg makkelijk Google Maps, een winkelzoeker, openingstijden en meer toe"
 
 #. translators: %1$s expands to Yoast SEO Premium
-#: admin/views/licenses.php:132
+#: admin/views/licenses.php:135
 msgid "%1$s, take your optimization to the next level!"
 msgstr "%1$s, breng jouw optimalisatie naar een hoger niveau!"
 
@@ -2061,7 +2057,7 @@ msgstr "Standaard voor dit taxonomytype, momenteel: %s"
 msgid "Improve sharing on Pinterest"
 msgstr "Verbeter delen op Pinterest"
 
-#: admin/views/licenses.php:145
+#: admin/views/licenses.php:151
 msgid "Social previews"
 msgstr "Sociale media-voorvertoning"
 
@@ -2078,7 +2074,7 @@ msgstr "Verbeter de ervaring van het delen van berichten die video's bevatten"
 msgid "Use %1$s breadcrumbs instead of %2$s ones"
 msgstr "Gebruik de %1$s broodkruimel-implementatie in plaats van de %2$s-implementatie"
 
-#: admin/views/licenses.php:184
+#: admin/views/licenses.php:190
 msgid "Comes with our 30-day no questions asked money back guarantee"
 msgstr "Komt met onze 30 dagen 'niet goed, geld terug'-garantie"
 
@@ -2090,7 +2086,7 @@ msgstr "Verbeter de gebruiksvriendelijkheid van je contact pagina"
 msgid "Immediately pings Google on the publication of a new post"
 msgstr "Stuurt Google direct een melding bij de publicatie van een nieuw bericht"
 
-#: admin/views/licenses.php:138
+#: admin/views/licenses.php:144
 msgid "create and manage redirects from within your WordPress install."
 msgstr "maak en beheer redirects vanuit je WordPress installatie."
 
@@ -2098,7 +2094,7 @@ msgstr "maak en beheer redirects vanuit je WordPress installatie."
 msgid "Premium"
 msgstr "Premium"
 
-#: admin/class-bulk-editor-list-table.php:420
+#: admin/class-bulk-editor-list-table.php:425
 msgid "Filter by post type"
 msgstr "Op berichttype filteren"
 
@@ -2121,7 +2117,7 @@ msgid "Files successfully removed."
 msgstr "Bestanden zijn verwijderd."
 
 #. translators: %s: post title
-#: admin/class-bulk-editor-list-table.php:808
+#: admin/class-bulk-editor-list-table.php:813
 msgid "Edit &#8220;%s&#8221;"
 msgstr "Bewerk &#8220;%s&#8221;"
 
@@ -2185,7 +2181,7 @@ msgstr "Google+-instellingen"
 msgid "Facebook settings"
 msgstr "Facebookinstellingen"
 
-#: admin/views/tabs/sitemaps/general.php:31
+#: admin/views/tabs/sitemaps/general.php:36
 msgid "Entries per sitemap page"
 msgstr "Aantal items per sitemap-pagina "
 
@@ -2228,7 +2224,7 @@ msgstr "Beveiligingsinstellingen"
 msgid "Enter your Google Authorization Code and press the Authenticate button."
 msgstr "Voer de Google-autorisatiecode in en druk op de knop Autenticatie."
 
-#: admin/class-admin.php:353
+#: admin/class-admin.php:355
 msgid "Yoast SEO video tutorial"
 msgstr "'Yoast-SEO'-videohandleiding"
 
@@ -2319,8 +2315,8 @@ msgstr "Je probeert bronbestanden te laden. Deze zijn alleen beschikbaar voor on
 msgid "You have a new issue concerning your SEO!"
 msgstr "Er is een nieuw SEO probleem gedetecteerd!"
 
-#. translators: %1$s expands to Yoast SEO
-#: admin/views/tabs/dashboard/dashboard.php:17
+#. translators: %1$s expands to Yoast SEO.
+#: admin/views/tabs/dashboard/dashboard.php:14
 msgid "%1$s Dashboard"
 msgstr "%1$s Dashboard"
 
@@ -2582,7 +2578,7 @@ msgid "New %1$s Title"
 msgstr "Nieuwe %1$s-titel"
 
 #. translators: %s expands to the product name
-#: admin/views/licenses.php:225
+#: admin/views/licenses.php:231
 msgid "Buy %s"
 msgstr "%s kopen"
 
@@ -2612,7 +2608,7 @@ msgstr "Redirect"
 msgid "Expected an integer as input."
 msgstr "Heel getal verwacht als invoer."
 
-#: admin/views/tabs/advanced/permalinks.php:41
+#: admin/views/tabs/advanced/permalinks.php:48
 msgid "Note: this feature has been deprecated, as the SEO value is close to 0 these days. If you disable it you will not be able to put it back on."
 msgstr "Let op: deze functie is verouderd, aangezien de SEO-waarde tegenwoordig bijna nul is. Als je hem uitschakelt kun je hem daarna niet meer aanzetten."
 
@@ -2715,7 +2711,7 @@ msgstr "Het geavanceerde gedeelte van de %1$s-metabox geeft een gebruiker de mog
 msgid "Advanced part of the %1$s meta box"
 msgstr "Geavanceerde gedeelte van de %1$s-metabox"
 
-#: admin/class-yoast-form.php:316 admin/views/tabs/dashboard/features.php:85
+#: admin/class-yoast-form.php:318 admin/views/tabs/dashboard/features.php:85
 #: admin/views/tabs/dashboard/security.php:17
 #: admin/views/tabs/metas/archives.php:34
 #: admin/views/tabs/metas/archives.php:53
@@ -2724,7 +2720,7 @@ msgstr "Geavanceerde gedeelte van de %1$s-metabox"
 msgid "Enabled"
 msgstr "Ingeschakeld"
 
-#: admin/class-yoast-form.php:316 admin/views/tabs/dashboard/features.php:86
+#: admin/class-yoast-form.php:318 admin/views/tabs/dashboard/features.php:86
 #: admin/views/tabs/dashboard/security.php:18
 #: admin/views/tabs/metas/archives.php:35
 #: admin/views/tabs/metas/archives.php:54
@@ -2760,7 +2756,7 @@ msgstr "Huidige status ophalen"
 msgid "Strip the category base (usually %s) from the category URL."
 msgstr "De categoriebasis (meestal %s) verwijderen uit de categorie-URL."
 
-#: admin/views/tabs/tool/import-seo.php:29
+#: admin/views/tabs/tool/import-seo.php:35
 msgid "Import from wpSEO"
 msgstr "Vanuit wpSEO importeren"
 
@@ -3020,7 +3016,7 @@ msgstr "Licentiestatus wisselen"
 msgid "Translation of %s"
 msgstr "Vertaling van %s"
 
-#. #-#-#-#-#  wordpress-seo-code.pot (Yoast SEO 6.1.1)  #-#-#-#-#
+#. #-#-#-#-#  wordpress-seo-code.pot (Yoast SEO 6.2)  #-#-#-#-#
 #. Plugin Name of the plugin/theme
 #: admin/capabilities/class-capability-manager-integration.php:66
 msgid "Yoast SEO"
@@ -3210,7 +3206,7 @@ msgid "%1$s does not seem to be a valid %2$s verification string. Please correct
 msgstr "%s is geen geldige %s-verificatiestring. Gelieve te corrigeren."
 
 #. translators: %1$s expands to Yoast SEO
-#: admin/views/user-profile.php:12
+#: admin/views/user-profile.php:7
 msgid "%1$s settings"
 msgstr "%1$s-instellingen"
 
@@ -3282,8 +3278,8 @@ msgstr "Hoe een kruimelpad aan het thema toe te voegen"
 #. translators: %s expands to a time period, i.e. month name, year or specific
 #. date.
 #. translators: %s expands to the variable used for term title.
-#: frontend/class-frontend.php:527 frontend/class-frontend.php:531
-#: frontend/class-frontend.php:535
+#: frontend/class-frontend.php:553 frontend/class-frontend.php:557
+#: frontend/class-frontend.php:561
 #: inc/options/class-wpseo-option-titles.php:241
 msgid "%s Archives"
 msgstr "%s Archieven"
@@ -3340,7 +3336,7 @@ msgstr "Credits"
 msgid "Default settings"
 msgstr "Standaardinstellingen"
 
-#: admin/views/tabs/tool/import-seo.php:35
+#: admin/views/tabs/tool/import-seo.php:41
 msgid "Delete the old data after import? (recommended)"
 msgstr "Oude data na importeren verwijderen? (aanbevolen)"
 
@@ -3382,7 +3378,7 @@ msgstr "Bestandsbewerker"
 msgid "Frontpage settings"
 msgstr "Voorpagina-instellingen"
 
-#: admin/views/tabs/tool/import-seo.php:39
+#: admin/views/tabs/tool/import-seo.php:45
 msgid "Import"
 msgstr "Importeren"
 
@@ -3395,7 +3391,7 @@ msgstr "Importeren en Exporteren"
 msgid "Import settings"
 msgstr "Instellingen importeren"
 
-#: admin/views/tabs/sitemaps/general.php:44
+#: admin/views/tabs/sitemaps/general.php:49
 msgid "Max entries per sitemap"
 msgstr "Maximumaantal regels per sitemap"
 
@@ -3407,7 +3403,7 @@ msgstr "Meta-trefwoorden voor de auteurspagina"
 msgid "No doubt you've used an SEO plugin before if this site isn't new. Let's make it easy on you, you can import the data below. If you want, you can import first, check if it was imported correctly, and then import &amp; delete. No duplicate data will be imported."
 msgstr "Ongetwijfeld heb je al eerder een SEO-plugin gebruikt, als deze site niet nieuw is. Ik heb het makkelijk gemaakt voor je; hieronder kun je de data ervan importeren. Als je wilt kun je eerst importeren, controleren of ze correct geïmporteerd zijn, en daarna nogmaals importeren &amp; verwijderen. Er zullen geen dubbele data geïmporteerd worden. "
 
-#: admin/views/tabs/advanced/permalinks.php:68
+#: admin/views/tabs/advanced/permalinks.php:75
 msgid "Other variables not to clean"
 msgstr "Andere variabelen die niet opgeschoond moeten worden"
 
@@ -3416,12 +3412,12 @@ msgstr "Andere variabelen die niet opgeschoond moeten worden"
 msgid "Page %1$d of %2$d"
 msgstr "Pagina %1$d van %2$d"
 
-#: frontend/class-frontend.php:550
+#: frontend/class-frontend.php:576
 #: inc/options/class-wpseo-option-titles.php:181
 msgid "Page not found"
 msgstr "Pagina niet gevonden"
 
-#: admin/views/tabs/advanced/permalinks.php:53
+#: admin/views/tabs/advanced/permalinks.php:60
 msgid "People make mistakes in their links towards you sometimes, or unwanted parameters are added to the end of your URLs, this allows you to redirect them all away. Please note that while this is a feature that is actively maintained, it is known to break several plugins, and should for that reason be the first feature you disable when you encounter issues after installing this plugin."
 msgstr "Mensen maken soms fouten in de links naar jou, of er worden soms ongewenste parameters toegevoegd aan het eind van de URLs. Dit zorgt ervoor dat je ze allemaal goed kunt doorsturen. Let erop dat, hoewel deze instelling actief wordt bijgehouden, het bekend is dat hij plugins kan 'breken' en dit moet daarom de eerste instelling zijn die je uitzet als je problemen tegenkomt nadat je deze plugin hebt geïnstalleerd."
 
@@ -3513,10 +3509,6 @@ msgstr "Dit helpt om betere URL's te creëren door automatisch de stopwoorden te
 msgid "This image is used if the post/page being shared does not contain any images."
 msgstr "Deze afbeelding wordt gebruikt als het bericht of de pagina geen afbeeldingen bevat."
 
-#: admin/views/tabs/advanced/permalinks.php:36
-msgid "This prevents threaded replies from working when the user has JavaScript disabled, but on a large site can mean a <em>huge</em> improvement in crawl efficiency for search engines when you have a lot of comments."
-msgstr "Dit voorkomt dat reageren op reacties werkt als de gebruiker JavaScript heeft uitgeschakeld, maar op een grote website kan dit een <em>enorme</em> verbetering zijn voor de 'doorzoekbaarheid' voor zoekmachines als je veel reacties hebt."
-
 #: admin/pages/tools.php:32
 msgid "This tool allows you to quickly change important files for your SEO, like your robots.txt and, if you have one, your .htaccess file."
 msgstr "Deze tool stelt je in staat snel belangrijke bestanden van de SEO te veranderen, zoals het <code>robots.txt</code>- en <code>.htaccess</code>-bestand (als dit bestaat)."
@@ -3543,11 +3535,11 @@ msgstr "Je kunt de volgende variabelen in de inhoud gebruiken, ze worden vervang
 msgid "You cannot overrule a WPSEO standard variable replacement by registering a variable with the same name. Use the \"wpseo_replacements\" filter instead to adjust the replacement value."
 msgstr "De standaardvariabele-vervanging van de WP-SEO kan niet worden overschreven door het registreren van een nieuwe variabele met dezelfde naam. Gebruik in plaats daarvan het 'wpseo_replacements'-filter om de vervangingswaarde in te stellen."
 
-#: admin/views/tabs/advanced/permalinks.php:69
+#: admin/views/tabs/advanced/permalinks.php:76
 msgid "You might have extra variables you want to prevent from cleaning out, add them here, comma separated."
 msgstr "Het kan zijn dat je extra variabelen gebruikt die je niet opgeruimd wilt hebben; voeg ze hier toe, gescheiden door komma's."
 
-#: admin/views/tabs/advanced/permalinks.php:40
+#: admin/views/tabs/advanced/permalinks.php:47
 msgid "Enforce a trailing slash on all category and tag URLs"
 msgstr "Een slash aan het eind van alle categorie- en tag-URL's forceren"
 
@@ -3572,12 +3564,12 @@ msgid "Replaced with the post type plural label"
 msgstr "Vervangen door het berichttype-meervoudslabel"
 
 #. translators: %s expands to the search phrase.
-#: frontend/class-frontend.php:467
+#: frontend/class-frontend.php:512
 msgid "Search for \"%s\""
 msgstr "Naar '%s' zoeken"
 
 #. translators: 1: link open tag; 2: link close tag.
-#: admin/views/tabs/tool/import-seo.php:17
+#: admin/views/tabs/tool/import-seo.php:19
 msgid "If you've used another SEO plugin, try the %1$sSEO Data Transporter%2$s plugin to move your data into this plugin, it rocks!"
 msgstr "Wanneer je een andere SEO plugin hebt gebruikt, gebruik dan de %1$sSEO Data Transporter%2$s plugin om je data over te zetten. Deze is écht goed!"
 
@@ -3591,11 +3583,11 @@ msgstr "Een vervangingsvariabele met dezelfde naam is al geregistreerd. Probeer 
 msgid "You can find your XML Sitemap here: %1$sXML Sitemap%2$s"
 msgstr "De XML-sitemap is hier te vinden: %1$sXML Sitemap%2$s"
 
-#: admin/views/tabs/advanced/permalinks.php:52
+#: admin/views/tabs/advanced/permalinks.php:59
 msgid "Redirect ugly URLs to clean permalinks. (Not recommended in many cases!)"
 msgstr "Redirect lelijke URL's naar nette permalinks. (Niet aanbevolen in veel gevallen!)"
 
-#: frontend/class-frontend.php:1261
+#: frontend/class-frontend.php:1277
 msgid "Admin only notice: this page doesn't show a meta description because it doesn't have one, either write it for this page specifically or go into the SEO -> Titles menu and set up a template."
 msgstr "Bericht alleen voor de beheerder: deze pagina toont geen meta-omschrijving omdat er geen opgegeven is. Schrijf er specifiek een voor deze pagina of ga naar het menu SEO => Titels om een template op te zetten."
 
@@ -3707,7 +3699,7 @@ msgstr "Een vervangingsvariable kan niet beginnen met '%%cf_' of '%%ct_' omdat d
 msgid "Export your %1$s settings here, to import them again later or to import them on another site."
 msgstr "Exporteer hier de %1$s-instellingen om ze later weer te kunnen importeren of om ze bij een andere site te importeren."
 
-#: admin/views/tabs/tool/wpseo-export.php:23
+#: admin/views/tabs/tool/wpseo-export.php:27
 msgid "Include Taxonomy Metadata"
 msgstr "Taxonomie-metadata opnemen"
 
@@ -3716,15 +3708,15 @@ msgstr "Taxonomie-metadata opnemen"
 msgid "Export your %1$s settings"
 msgstr "De %1$s-instellingen exporteren"
 
-#: admin/views/tabs/tool/import-seo.php:25
+#: admin/views/tabs/tool/import-seo.php:31
 msgid "Import from HeadSpace2"
 msgstr "Vanuit HeadSpace2 importeren"
 
-#: admin/views/tabs/tool/import-seo.php:26
+#: admin/views/tabs/tool/import-seo.php:32
 msgid "Import from All-in-One SEO"
 msgstr "Vanuit All-in-One SEO importeren"
 
-#: admin/views/tabs/tool/import-seo.php:28
+#: admin/views/tabs/tool/import-seo.php:34
 msgid "Import from WooThemes SEO framework"
 msgstr "Importeren vanuit WooThemes SEO framework"
 
@@ -3744,20 +3736,20 @@ msgstr "Deze instelling wordt gebruikt om automatisch tekst aan je RSS toe te vo
 msgid "Content to put after each post in the feed"
 msgstr "Informatie die geplaatst wordt na elk RSS-bericht"
 
-#: admin/views/tabs/advanced/permalinks.php:57
+#: admin/views/tabs/advanced/permalinks.php:64
 msgid "Google Site Search URLs look weird, and ugly, but if you're using Google Site Search, you probably do not want them cleaned out."
 msgstr "'Google Site Search'-URL's zien er raar uit, maar als je Google Site Search gebruikt, dan wil je ze waarschijnlijk niet verwijderen."
 
-#: admin/views/tabs/advanced/permalinks.php:56
+#: admin/views/tabs/advanced/permalinks.php:63
 msgid "Prevent cleaning out Google Site Search URLs."
 msgstr "De verwijdering uit 'Google Site Search'-URL's voorkomen."
 
 #. translators: %s expands to <code>?utm_</code>
-#: admin/views/tabs/advanced/permalinks.php:63
+#: admin/views/tabs/advanced/permalinks.php:70
 msgid "If you use Google Analytics campaign parameters starting with %s, check this box. However, you're advised not to use these. Instead, use the version with a hash."
 msgstr "Vink dit vakje aan als de 'Google Analytics campaigns'-parameters beginnen met %s. Het is echter aan te raden dit niet te doen. Gebruik in plaats daarvan de versie met het hekje (#)."
 
-#: admin/views/tabs/advanced/permalinks.php:59
+#: admin/views/tabs/advanced/permalinks.php:66
 msgid "Prevent cleaning out Google Analytics Campaign & Google AdWords Parameters."
 msgstr "Voorkom het opruimen van 'Google Analytics campagne & Google AdWords'-parameters."
 
@@ -3773,7 +3765,7 @@ msgstr "Het gebruik van de functie 'kruimelpad' wordt uitgelegd in %1$sons kenni
 
 #. translators: %1$s expands to <code>.html</code>, %2$s expands to
 #. <code>/</code>
-#: admin/views/tabs/advanced/permalinks.php:45
+#: admin/views/tabs/advanced/permalinks.php:52
 msgid "If you choose a permalink for your posts with %1$s, or anything else but a %2$s at the end, this will force WordPress to add a trailing slash to non-post pages nonetheless."
 msgstr "Als je kiest voor een permalink voor de berichten met %1$s, of voor van alles zonder een %2$s aan het eind, zal WordPress toch een slash aan het eind van niet-bericht-pagina's toevoegen."
 
@@ -3786,7 +3778,7 @@ msgid "Taxonomy to show in breadcrumbs for post types"
 msgstr "Te tonen taxonomie in het kruimelpad voor berichttypes"
 
 #. translators: %1$s expands to Yoast SEO
-#: admin/views/about.php:33
+#: admin/views/about.php:28
 msgid "Thank you for updating %1$s!"
 msgstr "Bedankt voor het updaten van %1$s!"
 
@@ -3820,11 +3812,7 @@ msgstr "Instellingen importeren van andere SEO-plugins en exporteren van deze in
 msgid "User sitemap"
 msgstr "Gebruikerssitemap"
 
-#: admin/views/tabs/sitemaps/general.php:24
-msgid "You do <strong>not</strong> need to generate the XML sitemap, nor will it take up time to generate after publishing a post."
-msgstr "Je hoeft de XML-sitemap <strong>niet</strong> te genereren, ook kost het je geen tijd hem te genereren na het plaatsen van een bericht."
-
-#: admin/views/tabs/sitemaps/general.php:28
+#: admin/views/tabs/sitemaps/general.php:33
 msgid "Save your settings to activate your XML Sitemap."
 msgstr "Instellingen bewaren om XML-sitemaps te activeren."
 
@@ -3859,7 +3847,7 @@ msgid "You don't have a %s file, create one here:"
 msgstr "Er bestaat geen %s-bestand. Maak er hier een aan:"
 
 #. translators: %d expands to default number of entries per sitemap.
-#: admin/views/tabs/sitemaps/general.php:37
+#: admin/views/tabs/sitemaps/general.php:42
 msgid "Please enter the maximum number of entries per sitemap page (defaults to %d, you might want to lower this to prevent memory issues on some installs):"
 msgstr "Geef het maximumaantal URL's per sitemappagina op (standaardwaarde is: %d, om geheugenproblemen te voorkomen is het voor sommige installaties aan te raden om dit aantal te verlagen):"
 
@@ -3876,8 +3864,8 @@ msgstr "Huidig profiel"
 msgid "Save Profile"
 msgstr "Profiel opslaan"
 
-#. translators: %1$s expands to Yoast SEO
-#: admin/views/licenses.php:121
+#. translators: %1$s expands to Yoast SEO.
+#: admin/views/licenses.php:117
 msgid "%1$s Extensions"
 msgstr "%1$s-extensies"
 
@@ -4461,7 +4449,7 @@ msgstr "Alle SEO-scores"
 msgid "Always include"
 msgstr "Altijd opnemen"
 
-#: admin/pages/metas.php:24 frontend/class-frontend.php:538
+#: admin/pages/metas.php:24 frontend/class-frontend.php:564
 msgid "Archives"
 msgstr "Archieven"
 
@@ -4474,7 +4462,7 @@ msgstr "Geblokkeerd"
 msgid "Breadcrumbs title"
 msgstr "Kruimelpadtitel"
 
-#: admin/class-social-facebook-form.php:246
+#: admin/class-social-facebook-form.php:244
 msgid "Clear all Facebook Data"
 msgstr "Alle Facebook-data opschonen"
 
@@ -4877,7 +4865,7 @@ msgstr "Googlebot kan de website benaderen, maar bepaalde URL's zijn geblokkeerd
 msgid "The keyword density is %1$s, which is over the advised %3$s maximum; the focus keyword was found %2$d times."
 msgstr "De trefwoorden-dichtheid is %1$s, wat meer is dan het geadviseerde maximum van %3$s, het trefwoord is %2$d keer gevonden."
 
-#: admin/class-yoast-form.php:508 admin/metabox/class-metabox.php:712
+#: admin/class-yoast-form.php:510 admin/metabox/class-metabox.php:712
 #: admin/taxonomy/class-taxonomy-fields-presenter.php:134
 msgid "Upload Image"
 msgstr "Afbeelding uploaden"
@@ -4914,7 +4902,7 @@ msgstr "Index"
 msgid "(no parent)"
 msgstr "(geen hoofd)"
 
-#: admin/class-bulk-editor-list-table.php:1008
+#: admin/class-bulk-editor-list-table.php:1013
 msgid "Action"
 msgstr "Actie"
 
@@ -4924,11 +4912,11 @@ msgstr "Actie"
 msgid "Advanced"
 msgstr "Geavanceerd"
 
-#: admin/class-admin.php:700 admin/class-admin.php:701 admin/pages/metas.php:75
+#: admin/class-admin.php:702 admin/class-admin.php:703 admin/pages/metas.php:75
 msgid "Advanced Variables"
 msgstr "Geavanceerde variabelen"
 
-#: admin/class-admin.php:692 admin/class-admin.php:693 admin/pages/metas.php:69
+#: admin/class-admin.php:694 admin/class-admin.php:695 admin/pages/metas.php:69
 msgid "Basic Variables"
 msgstr "Basisvariabelen"
 
@@ -4950,7 +4938,7 @@ msgstr "Canonieke URL"
 msgid "Could not write settings to file."
 msgstr "Niet mogelijk instellingen naar een bestand te schrijven."
 
-#: admin/class-bulk-editor-list-table.php:809
+#: admin/class-bulk-editor-list-table.php:814
 msgid "Edit"
 msgstr "Bewerken"
 
@@ -4965,15 +4953,15 @@ msgstr "Bestanden bewerken"
 msgid "Extensions"
 msgstr "Extensies"
 
-#: admin/class-admin.php:237
+#: admin/class-admin.php:239
 msgid "FAQ"
 msgstr "FAQ"
 
-#: admin/class-admin.php:276
+#: admin/class-admin.php:278
 msgid "Facebook profile URL"
 msgstr "Facebookprofiel-URL"
 
-#: admin/class-admin.php:670
+#: admin/class-admin.php:672
 msgid "For more information:"
 msgstr "Voor meer informatie:"
 
@@ -4982,7 +4970,7 @@ msgstr "Voor meer informatie:"
 msgid "General"
 msgstr "Algemeen"
 
-#: admin/class-admin.php:272 admin/pages/social.php:20
+#: admin/class-admin.php:274 admin/pages/social.php:20
 msgid "Google+"
 msgstr "Google+"
 
@@ -5012,15 +5000,15 @@ msgstr "Geen focus-trefwoord ingesteld."
 msgid "None"
 msgstr "Geen"
 
-#: admin/class-bulk-editor-list-table.php:1003
+#: admin/class-bulk-editor-list-table.php:1008
 msgid "Page URL/Slug"
 msgstr "Pagina-URL/Slug"
 
-#: admin/class-bulk-editor-list-table.php:1001
+#: admin/class-bulk-editor-list-table.php:1006
 msgid "Post Status"
 msgstr "Berichtstatus"
 
-#: admin/class-bulk-editor-list-table.php:1000
+#: admin/class-bulk-editor-list-table.php:1005
 msgid "Post Type"
 msgstr "Berichttype"
 
@@ -5041,20 +5029,20 @@ msgstr "Bericht is ingesteld op noindex."
 msgid "Posts"
 msgstr "Berichten"
 
-#: admin/class-admin.php:233
+#: admin/class-admin.php:235
 msgid "Premium Support"
 msgstr "Premium-ondersteuning"
 
-#: admin/class-bulk-editor-list-table.php:821
+#: admin/class-bulk-editor-list-table.php:826
 msgid "Preview"
 msgstr "Voorbeeld"
 
 #. translators: %s: post title
-#: admin/class-bulk-editor-list-table.php:820
+#: admin/class-bulk-editor-list-table.php:825
 msgid "Preview &#8220;%s&#8221;"
 msgstr "Voorbeeld &#8220;%s&#8221;"
 
-#: admin/class-bulk-editor-list-table.php:1002
+#: admin/class-bulk-editor-list-table.php:1007
 msgid "Publication date"
 msgstr "Publicatiedatum"
 
@@ -5091,7 +5079,7 @@ msgstr "Sociaal"
 msgid "The URL that this page should redirect to."
 msgstr "De URL waar deze pagina naar moet doorsturen."
 
-#: admin/class-admin.php:671
+#: admin/class-admin.php:673
 msgid "Title optimization"
 msgstr "Titel-optimalisatie"
 
@@ -5107,7 +5095,7 @@ msgstr "Titels &amp; meta's"
 msgid "Tools"
 msgstr "Extra"
 
-#: admin/class-admin.php:274
+#: admin/class-admin.php:276
 msgid "Twitter username (without @)"
 msgstr "Twitter-gebruikersnaam (zonder @)"
 
@@ -5120,21 +5108,21 @@ msgstr "Uitpakken mislukt - bestand settings.ini is niet gevonden."
 msgid "Use Image"
 msgstr "Afbeelding gebruiken"
 
-#: admin/class-bulk-editor-list-table.php:831
+#: admin/class-bulk-editor-list-table.php:836
 #: admin/google_search_console/class-gsc-table.php:207
 msgid "View"
 msgstr "Bekijken"
 
 #. translators: %s: post title
-#: admin/class-bulk-editor-list-table.php:830
+#: admin/class-bulk-editor-list-table.php:835
 msgid "View &#8220;%s&#8221;"
 msgstr "&#8220;%s&#8221; bekijken"
 
-#: admin/class-bulk-editor-list-table.php:999
+#: admin/class-bulk-editor-list-table.php:1004
 msgid "WP Page Title"
 msgstr "WP-paginatitel"
 
-#: admin/class-admin.php:672
+#: admin/class-admin.php:674
 msgid "Why Google won't display the right page title"
 msgstr "Waarom Google de juiste paginatitel niet wil tonen"
 
@@ -5313,7 +5301,7 @@ msgstr "Nieuwe Yoast-meta-omschrijving"
 msgid "You are not allowed to access this page."
 msgstr "Je hebt niet het recht deze pagina te bekijken."
 
-#: admin/class-bulk-editor-list-table.php:428
+#: admin/class-bulk-editor-list-table.php:433
 msgid "Filter"
 msgstr "Filteren"
 
@@ -5327,12 +5315,12 @@ msgstr "Ga naar %1$sInstellingen => Lezen%2$s en haal het vinkje weg bij 'Zoekma
 msgid "XML Sitemaps"
 msgstr "XML-sitemaps"
 
-#: admin/class-admin.php:678 admin/class-admin.php:679 admin/pages/metas.php:41
+#: admin/class-admin.php:680 admin/class-admin.php:681 admin/pages/metas.php:41
 #: admin/pages/metas.php:62
 msgid "Template explanation"
 msgstr "Template-uitleg"
 
-#: admin/class-admin.php:685 admin/pages/metas.php:64
+#: admin/class-admin.php:687 admin/pages/metas.php:64
 msgid "Note that not all variables can be used in every template."
 msgstr "Let op: niet alle variabelen kunnen worden gebruikt in elk template."
 
@@ -5364,7 +5352,7 @@ msgid "Search Console"
 msgstr "Search Console"
 
 #. translators: %1$s expands to Yoast SEO.
-#: admin/class-admin.php:682
+#: admin/class-admin.php:684
 msgid "The title &amp; metas settings for %1$s are made up of variables that are replaced by specific values from the page when the page is displayed. The tabs on the left explain the available variables."
 msgstr "De titel- &amp; meta-instellingen voor %1$s bestaan uit variabelen die worden vervangen door specifieke waarden voor de pagina die wordt weergegeven. De beschikbare variabelen worden op het tabblad aan de linkerkant uitgelegd."
 

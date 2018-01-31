@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "e8430f48f23e8498eede732217fb2976",
+    "content-hash": "f6ede3cc691995cba8bd97ffc0badd59",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -142,17 +142,6 @@
             "time": "2017-12-29T09:13:20+00:00"
         },
         {
-            "name": "envato/event-scheduler",
-            "version": "1.2.6",
-            "dist": {
-                "type": "zip",
-                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/event-scheduler-1.2.6.zip",
-                "reference": null,
-                "shasum": null
-            },
-            "type": "wordpress-plugin"
-        },
-        {
             "name": "enviragallery/envira-gallery",
             "version": "1.7.2",
             "dist": {
@@ -204,10 +193,10 @@
         },
         {
             "name": "ithemes/ithemes-security-pro",
-            "version": "4.7.3",
+            "version": "4.7.4",
             "dist": {
                 "type": "zip",
-                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/ithemes-security-pro-4.7.3.zip",
+                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/ithemes-security-pro-4.7.4.zip",
                 "reference": null,
                 "shasum": null
             },
@@ -294,16 +283,16 @@
         },
         {
             "name": "johnpbloch/wordpress-core-installer",
-            "version": "1.0.0",
+            "version": "1.0.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/johnpbloch/wordpress-core-installer.git",
-                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2"
+                "reference": "7941acd71725710a789daabe0557429da63e7ac6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/e9e767f2d9f994f358c34b41def2c410ad8717f2",
-                "reference": "e9e767f2d9f994f358c34b41def2c410ad8717f2",
+                "url": "https://api.github.com/repos/johnpbloch/wordpress-core-installer/zipball/7941acd71725710a789daabe0557429da63e7ac6",
+                "reference": "7941acd71725710a789daabe0557429da63e7ac6",
                 "shasum": ""
             },
             "require": {
@@ -339,7 +328,7 @@
             "keywords": [
                 "wordpress"
             ],
-            "time": "2017-05-31T18:42:33+00:00"
+            "time": "2018-01-29T14:49:29+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -542,6 +531,17 @@
             "time": "2016-03-01T16:27:06+00:00"
         },
         {
+            "name": "virgielxxiv/event-scheduler",
+            "version": "3.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/virgielxxiv-plugin-event-scheduler-3.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "vlucas/phpdotenv",
             "version": "v2.4.0",
             "source": {
@@ -653,7 +653,7 @@
         },
         {
             "name": "wpackagist-plugin/onesignal-free-web-push-notifications",
-            "version": "1.16.4",
+            "version": "1.16.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/onesignal-free-web-push-notifications/",
@@ -661,7 +661,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/onesignal-free-web-push-notifications.zip?timestamp=1514317086",
+                "url": "https://downloads.wordpress.org/plugin/onesignal-free-web-push-notifications.zip?timestamp=1517281903",
                 "reference": null,
                 "shasum": null
             },
