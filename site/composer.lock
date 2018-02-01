@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6ede3cc691995cba8bd97ffc0badd59",
+    "content-hash": "3f070a91b8695bbfe9af107f4441e20e",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -20,6 +20,17 @@
                 "philippbaschke/acf-pro-installer": "^1.0"
             },
             "type": "wordpress-muplugin"
+        },
+        {
+            "name": "ajdg-solutions/adrotate-pro",
+            "version": "1.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/adrotate-pro-1.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
         },
         {
             "name": "composer/installers",

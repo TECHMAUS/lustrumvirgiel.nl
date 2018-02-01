@@ -79,6 +79,12 @@
         </div>
     @endwhile
 
+    @if(defined('ADROTATE_VERSION'))
+        <div class="has-text-centered ggvhl">
+            {!! adrotate_group(1) !!}
+        </div>
+    @endif
+
     @if($recent_posts->have_posts())
         <div class="news">
             <div class="section-title title-has-icon">

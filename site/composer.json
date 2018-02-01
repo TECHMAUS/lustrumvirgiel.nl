@@ -148,6 +148,18 @@
           "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/virgielxxiv-plugin-event-scheduler-3.0.zip"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "ajdg-solutions/adrotate-pro",
+        "version": "1.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/adrotate-pro-1.0.zip"
+        }
+      }
     }
   ],
   "require": {
@@ -167,7 +179,8 @@
     "wpackagist-plugin/wordpress-seo": "^6.1",
     "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^2.0",
     "enviragallery/envira-gallery": "^1.7",
-    "virgielxxiv/event-scheduler": "^3.0"
+    "virgielxxiv/event-scheduler": "^3.0",
+    "ajdg-solutions/adrotate-pro": "^1.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
