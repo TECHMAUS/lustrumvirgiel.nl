@@ -1,4 +1,4 @@
-<footer class="page-footer section content-info lazy" data-src="@asset('images/common/footer-space-background.jpg')">
+<footer class="page-footer section content-info lazy" data-src="@asset('images/common/footer-bg.png')">
   <div class="container">
     <div class="columns">
       <div class="column has-text-centered-mobile">

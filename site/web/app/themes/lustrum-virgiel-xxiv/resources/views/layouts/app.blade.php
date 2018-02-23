@@ -8,7 +8,7 @@
     <div class="section">
      <div class="wrap container" role="document">
         <div class="content @hasSection ('sidebar') columns is-desktop @endif">
-          <main class="main @hasSection ('sidebar') column is-three-quarters-desktop is-two-thirds-widescreen @endif">
+          <main class="main @hasSection ('sidebar') column is-two-thirds @endif">
             @yield('content')
           </main>
             @hasSection ('sidebar')

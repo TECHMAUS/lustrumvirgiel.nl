@@ -13,7 +13,7 @@ add_filter('body_class', function (array $classes) {
         }
     }
 
-	if (is_single() || is_front_page() || is_page_template('views/template-lustrumevenement.blade.php')) {
+	if (is_single() || is_front_page() || is_home() || is_page_template('views/template-lustrumevenement.blade.php')) {
 		$classes[] = 'has-hero';
     }
 
@@ -97,7 +97,6 @@ add_filter('sage/display_sidebar', function ($display) {
 	isset($display) || $display = in_array(true, [
 		// The sidebar will be displayed if any of the following return true
 		is_front_page(),
-		is_home(),
 		is_archive(),
 		is_search(),
 		// ... more types

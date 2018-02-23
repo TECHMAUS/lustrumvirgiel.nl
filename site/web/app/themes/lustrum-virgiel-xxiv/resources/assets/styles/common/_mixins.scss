@@ -45,6 +45,16 @@
   }
 }
 
+@mixin lustrum-menu-colors($prefix, $commissies...) {
+  @each $i in $commissies {
+    #{$prefix}#{nth($i, 1)} {
+      background-color: nth($i, 2);
+      padding: 0 0.3rem;
+      margin: 0.2rem auto;
+    }
+  }
+}
+
 @mixin lustrum-colors($prefix, $commissies...) {
   @each $i in $commissies {
     #{$prefix}#{nth($i, 1)} {

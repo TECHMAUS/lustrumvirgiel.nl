@@ -1,9 +1,17 @@
 @extends('layouts.app')
 
-@section('content')
-    @include('partials.page-header')
+@section('hero')
+    <section class="hero lazy" data-src="@asset('images/common/hero-bg.png')">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="is-uppercase fancy_title has-text-centered-mobile">{!! App::title() !!}</h1>
+            </div>
+        </div>
+    </section>
+@endsection
 
-    @if (!have_posts())
+@section('content')
+    @if (!$recent_posts_blog->have_posts())
         <div class="alert alert-warning">
             {{ __('Sorry, no results were found.', 'sage') }}
         </div>
@@ -11,13 +19,14 @@
     @endif
 
     <div class="columns is-multiline">
-        @php($count = 0)
-        @while (have_posts()) @php(the_post())
-                <div class="column is-half">
-                  @include('partials.content')
-                </div>
-            @php($count++)
-        @endwhile
+        @if($recent_posts_blog->have_posts())
+            @while($recent_posts_blog->have_posts())  @php($recent_posts_blog->the_post())
+            <div class="column is-half is-one-third-widescreen is-one-quarter-fullhd">
+                @include('partials.content')
+            </div>
+            @endwhile
+            {{ wp_reset_postdata() }}
+        @endif
     </div>
 
     <footer class="single-footer">

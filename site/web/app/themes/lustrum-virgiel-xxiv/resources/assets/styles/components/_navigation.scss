@@ -67,7 +67,7 @@
       .menu-item {
         margin: 3px 0;
 
-        @include lustrum-colors('&.menu-',
+        @include lustrum-menu-colors('&.menu-',
         'gala a'              $gala-primary,
         'wintersport a'       $wispo-primary,
         'lustrumweek a'       $lustrumweek-primary,
