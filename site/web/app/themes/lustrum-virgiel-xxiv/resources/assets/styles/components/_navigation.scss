@@ -65,7 +65,7 @@
       flex-direction: column;
 
       .menu-item {
-        margin: 6px 0;
+        margin: 3px 0;
 
         @include lustrum-colors('&.menu-',
         'gala a'              $gala-primary,
@@ -132,7 +132,7 @@
   }
 
   .menu-footer {
-    margin: 40px 0;
+    margin: $gap 0;
 
     hr {
       height: 2px;

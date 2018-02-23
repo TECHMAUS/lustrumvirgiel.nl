@@ -1,6 +1,6 @@
 .sidebar {
   .widget {
-    padding: $gap-large 0;
+    padding: $gap 0;
     position: relative;
 
     &:nth-of-type(odd) .widget-title {
@@ -52,6 +52,8 @@
         padding-top: 0.25em;
         padding-bottom: 0.25em;
         counter-increment: numbered-list;
+        display: flex;
+        flex-direction: column;
 
         a {
           display: block;
@@ -62,6 +64,7 @@
           text-transform: uppercase;
           text-decoration: underline;
           font-weight: bold;
+          order: 2;
 
           &:hover {
             color: #2db198;
@@ -98,6 +101,18 @@
     }
 
     &.widget_polls-widget {
+      form {
+        margin: 0;
+      }
+
+      .content li + li {
+        margin-top: 0;
+      }
+
+      .poll-title {
+        margin-bottom: 0.25rem;
+      }
+
       .button {
         display: inline-flex;
         margin-top: $gap;

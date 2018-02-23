@@ -61,15 +61,19 @@ body:not(.has-hero) > .section {
 
 main {
   > div {
-    margin: 3rem 0;
+    margin: 1.5rem 0;
 
     &:first-of-type {
       margin-top: 0;
     }
 
     @include mobile {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
+  }
+
+  .g {
+    margin: 1rem auto;
   }
 
   .section-title {
@@ -136,6 +140,10 @@ main {
   .card {
     margin-bottom: $gap-large;
 
+    .card-content {
+      padding: 1rem;
+    }
+
     @include desktop {
       top: -100px;
       margin-bottom: -80px;
@@ -189,6 +197,8 @@ main {
     }
 
     .card-content {
+      padding: 1rem;
+
       @include mobile {
         padding: 1rem;
       }
