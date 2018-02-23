@@ -28,5 +28,13 @@
   <link rel="icon" type="image/png" sizes="192x192" href="@asset('images/touch/xxiv-homescreen192.png')">
   <link rel="apple-touch-icon" type="image/png" sizes="192x192" href="@asset('images/touch/xxiv-homescreen192.png')">
 
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-6406820543362920",
+          enable_page_level_ads: true
+      });
+  </script>
+
   @php(wp_head())
 </head>

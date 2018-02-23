@@ -32,7 +32,7 @@
           </div>
           <div class="level-item">
             <p>&copy; K.S.V. Sanctus Virgilius | Lustrum Media&Marketing Commissie <br>
-              Vragen/opmerkingen/suggesties: <a href="mailto:{{ antispambot('media@lustrumvirgiel.nl') }}">{{ antispambot('media@lustrumvirgiel.nl') }}</a>.</p>
+              Vragen/opmerkingen/suggesties: <a href="mailto:{!! antispambot('media@lustrumvirgiel.nl') !!}">{!! antispambot('media@lustrumvirgiel.nl') !!}</a>.</p>
           </div>
         @endif
       </div>

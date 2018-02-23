@@ -61,7 +61,11 @@ body:not(.has-hero) > .section {
 
 main {
   > div {
-    margin-bottom: 3rem;
+    margin: 3rem 0;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
 
     @include mobile {
       margin-bottom: 2rem;

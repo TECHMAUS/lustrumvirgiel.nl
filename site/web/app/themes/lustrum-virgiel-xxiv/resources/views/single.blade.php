@@ -14,9 +14,7 @@
     {{  App::wps_yoast_breadcrumb_bulma() }}
 
     @if(defined('ADROTATE_VERSION'))
-        <div class="has-text-centered ggvhl">
-            {!! adrotate_group(4) !!}
-        </div>
+        {!! adrotate_group(4) !!}
     @endif
 
     @while(have_posts()) @php(the_post())
@@ -45,9 +43,7 @@
     @include('partials.social-share-buttons')
 
     @if(defined('ADROTATE_VERSION'))
-        <div class="has-text-centered ggvhl">
-            {!! adrotate_group(3) !!}
-        </div>
+        {!! adrotate_group(3) !!}
     @endif
 
     @if (App\display_sidebar())

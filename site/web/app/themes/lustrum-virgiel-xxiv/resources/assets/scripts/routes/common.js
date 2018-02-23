@@ -5,15 +5,18 @@ export default {
     },
     finalize() {
 
+        /*global FB*/
+        /*global updateStatusCallback*/
+
         $.ajaxSetup({ cache: true });
 
         $.getScript('https://connect.facebook.net/nl_NL/sdk.js', function(){
-            window.FB.init({
+            FB.init({
                 appId: '148485092478258',
                 version: 'v2.7', // or v2.1, v2.2, v2.3, ...
             });
             $('#loginbutton,#feedbutton').removeAttr('disabled');
-            window.FB.getLoginStatus(window.updateStatusCallback);
+            FB.getLoginStatus(updateStatusCallback);
         });
 
         if ($("body").hasClass("has-hero")) {

@@ -13,9 +13,7 @@
 
         <div class="level-right">
             @if(defined('ADROTATE_VERSION'))
-                <div class="has-text-centered ggvhl">
-                    {!! adrotate_group(2) !!}
-                </div>
+                {!! adrotate_group(2) !!}
             @endif
         </div>
     </div>

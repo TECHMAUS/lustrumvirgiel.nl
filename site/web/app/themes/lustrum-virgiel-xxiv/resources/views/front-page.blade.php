@@ -80,9 +80,7 @@
     @endwhile
 
     @if(defined('ADROTATE_VERSION'))
-        <div class="has-text-centered ggvhl">
-            {!! adrotate_group(1) !!}
-        </div>
+        {!! adrotate_group(1) !!}
     @endif
 
     @if($recent_posts->have_posts())

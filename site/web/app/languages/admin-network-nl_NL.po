@@ -872,13 +872,13 @@ msgstr "zoals <code>%1$s/site1</code> en <code>%1$s/site2</code>"
 msgid "Server Address"
 msgstr "Serveradres"
 
-#: wp-admin/network.php:61
-msgid "The next screen for Network Setup will give you individually-generated lines of code to add to your wp-config.php and .htaccess files. Make sure the settings of your FTP client make files starting with a dot visible, so that you can find .htaccess; you may have to create this file if it really is not there. Make backup copies of those two files."
-msgstr "Het volgende scherm voor Netwerk Setup geeft je individueel gegenereerde regels code die je moet toe voegen aan je wp-config.php en .htaccess-bestanden. Zorg ervoor dat de instellingen van je FTP-client zo zijn dat bestanden die met een punt beginnen zichtbaar zijn zodat je het .htaccess bestand kunt vinden. Mogelijk moet je dit bestand maken als het er echt niet is. Maak van beide bestanden uiteraard eerst een kopie. "
-
 #: wp-admin/network.php:71
 msgid "Network"
 msgstr "Netwerk"
+
+#: wp-admin/network.php:61
+msgid "The next screen for Network Setup will give you individually-generated lines of code to add to your wp-config.php and .htaccess files. Make sure the settings of your FTP client make files starting with a dot visible, so that you can find .htaccess; you may have to create this file if it really is not there. Make backup copies of those two files."
+msgstr "Het volgende scherm voor Netwerk Setup geeft je individueel gegenereerde regels code die je moet toe voegen aan je wp-config.php en .htaccess-bestanden. Zorg ervoor dat de instellingen van je FTP-client zo zijn dat bestanden die met een punt beginnen zichtbaar zijn zodat je het .htaccess bestand kunt vinden. Mogelijk moet je dit bestand maken als het er echt niet is. Maak van beide bestanden uiteraard eerst een kopie. "
 
 #: wp-admin/includes/network.php:313 wp-admin/network/settings.php:125
 msgid "Network Title"
