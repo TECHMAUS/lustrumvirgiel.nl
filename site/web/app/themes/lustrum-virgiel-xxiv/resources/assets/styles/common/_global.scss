@@ -31,7 +31,7 @@
 }
 
 /** Dropshadow in paragraphs */
-.dropcap > p:first-of-type {
+.dropcap > p:first-child {
   font-weight: bold;
 
   &::first-letter {
@@ -134,6 +134,7 @@ main {
   background-size: contain;
   background-position: center center;
   margin-right: 6px;
+  flex-shrink: 0;
 }
 
 .has-hero .quick-facts {
@@ -253,6 +254,82 @@ main {
           color: $white;
         }
       }
+    }
+  }
+}
+
+.widget_related_posts {
+  hr {
+    border: 1px solid #373e60;
+    width: 80%;
+    margin: 0.5rem auto;
+  }
+
+  .related-post {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0.25rem;
+    margin: 0 -0.25rem;
+
+    .related-left {
+      margin-right: 1rem;
+    }
+
+    .related-content {
+      .title {
+        text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      background-color: $lustrumweek-primary;
+
+      .title {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+body.blog,
+body.page {
+  .hero {
+    background-repeat: repeat;
+    background-size: 1500px;
+    background-position: center center;
+
+    h1 {
+      @include blockchain;
+
+      letter-spacing: 0.75rem;
+
+      @include declare-font-size-all(4rem, 5rem, 6rem, 8rem, 10rem);
+
+      span {
+        display: inline-block;
+        position: relative;
+      }
+
+      @include set-gravity-letters('.char',
+      '1' 2px   -10deg,
+      '2'   -2px 5deg,
+      '3' 3px   -5deg,
+      '4'   -4px 3deg,
+      '5' 6px   -3deg,
+      '6' 8px   -2deg,
+      '7'   -5px 3deg,
+      '8' 0     -2deg,
+      '9'   -8px 4deg,
+      '10' 1px   -2deg,
+      '11'  -2px 5deg,
+      '12' 3px 2deg,
+      '13' 0 0,
+      '14'  -4px  -1deg,
+      '15' 2px 6deg,
+      '16' 5px 5deg,
+      '17'  -3px 8deg
+    );
     }
   }
 }

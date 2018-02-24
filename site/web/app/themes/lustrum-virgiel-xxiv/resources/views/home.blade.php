@@ -11,7 +11,10 @@
 @endsection
 
 @section('content')
-    @if (!$recent_posts_blog->have_posts())
+
+
+
+    @if (!have_posts())
         <div class="alert alert-warning">
             {{ __('Sorry, no results were found.', 'sage') }}
         </div>
@@ -19,13 +22,12 @@
     @endif
 
     <div class="columns is-multiline">
-        @if($recent_posts_blog->have_posts())
-            @while($recent_posts_blog->have_posts())  @php($recent_posts_blog->the_post())
+        @if(have_posts())
+            @while(have_posts())  @php(the_post())
             <div class="column is-half is-one-third-widescreen is-one-quarter-fullhd">
                 @include('partials.content')
             </div>
             @endwhile
-            {{ wp_reset_postdata() }}
         @endif
     </div>
 

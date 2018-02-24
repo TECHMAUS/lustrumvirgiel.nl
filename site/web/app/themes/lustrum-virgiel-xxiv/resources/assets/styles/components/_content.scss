@@ -1,186 +1,169 @@
-body.single .content main,
-body.page:not(.home):not(.archive):not(.search):not(.blog) .content main {
-  .table-overflow {
-    overflow-x: auto;
-  }
+body.single,
+body.page:not(.home):not(.archive):not(.search):not(.blog) {
+  @include fullhd {
+    .wrap.container {
+      max-width: 1200px;
 
-  min-height: 120px;
+      .columns {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        margin-top: -1.5rem;
 
-  h2 {
-    display: inline-flex;
-    padding: 8px;
-    border: 3px solid $piekweek-primary;
-    font-weight: bold;
+        &:last-child {
+          margin-bottom: -1.5rem;
+        }
 
-    &:first-of-type {
-      margin-top: 0;
-    }
-  }
-
-  h3 {
-    display: inline-flex;
-    font-weight: bold;
-    padding-bottom: 4px;
-    border-bottom: 3px solid $lustrumweek-primary;
-  }
-
-  table tr:hover {
-    background-color: $lustrumweek-primary;
-  }
-}
-
-.content {
-  /* centers the pagination on the page */
-  .envira-pagination {
-    text-align: center;
-    margin-top: $gap-large;
-  }
-
-  /* styles the pagination on the page */
-  span.page-numbers.dots {
-    display: inline-block;
-    padding: 10px;
-    background-color: #363f48;
-    border-radius: 3px;
-    color: #fff;
-  }
-
-  .envira-pagination a.page-numbers {
-    display: inline-block;
-    padding: 10px;
-    background-color: #363f48;
-    border-radius: 3px;
-    text-decoration: none;
-    transition: all 0.2s ease-in 0s;
-    color: #fff;
-  }
-
-  .envira-pagination a.page-numbers:hover {
-    background-color: #ccc;
-    color: #363f48;
-  }
-
-  .envira-pagination span.page-numbers.current {
-    display: inline-block;
-    padding: 10px;
-    background-color: #ccc;
-    border-radius: 3px;
-    color: #363f48;
-  }
-
-  /* styles the previous and next links */
-  .envira-pagination a.prev.page-numbers,
-  .envira-pagination a.next.page-numbers {
-    display: inline-block;
-    padding: 10px;
-    background-color: #363f48;
-    border-radius: 3px;
-    text-decoration: none;
-    transition: all 0.2s ease-in 0s;
-    color: #fff;
-  }
-
-  .envira-pagination a.prev.page-numbers:hover,
-  .envira-pagination a.next.page-numbers:hover {
-    background-color: #ccc;
-    color: #363f48;
-  }
-
-  .envira-download-all {
-    float: right;
-    margin: 0.5rem 0;
-    color: $wispo-primary;
-  }
-
-  .envira-tags-filter-list {
-    clear: both;
-    margin-bottom: 10px;
-    list-style: none;
-    list-style-type: none;
-  }
-
-  .breadcrumb {
-    li {
-      margin: 0;
-
-      &:last-of-type span {
-        padding: 0.5em 0.75em;
+        .column {
+          padding: 1.5rem;
+        }
       }
     }
   }
 
-  .social-share {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+  .content {
+    /* centers the pagination on the page */
+    .envira-pagination {
+      text-align: center;
+      margin-top: $gap-large;
+    }
 
-    .share-button {
+    /* styles the pagination on the page */
+    span.page-numbers.dots {
+      display: inline-block;
+      padding: 10px;
+      background-color: #363f48;
+      border-radius: 3px;
       color: #fff;
+    }
 
-      &:not(:last-of-type) {
-        margin: 0 8px 8px 0;
+    .envira-pagination a.page-numbers {
+      display: inline-block;
+      padding: 10px;
+      background-color: #363f48;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: all 0.2s ease-in 0s;
+      color: #fff;
+    }
+
+    .envira-pagination a.page-numbers:hover {
+      background-color: #ccc;
+      color: #363f48;
+    }
+
+    .envira-pagination span.page-numbers.current {
+      display: inline-block;
+      padding: 10px;
+      background-color: #ccc;
+      border-radius: 3px;
+      color: #363f48;
+    }
+
+    /* styles the previous and next links */
+    .envira-pagination a.prev.page-numbers,
+    .envira-pagination a.next.page-numbers {
+      display: inline-block;
+      padding: 10px;
+      background-color: #363f48;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: all 0.2s ease-in 0s;
+      color: #fff;
+    }
+
+    .envira-pagination a.prev.page-numbers:hover,
+    .envira-pagination a.next.page-numbers:hover {
+      background-color: #ccc;
+      color: #363f48;
+    }
+
+    .envira-download-all {
+      float: right;
+      margin: 0.5rem 0;
+      color: $wispo-primary;
+    }
+
+    .envira-tags-filter-list {
+      clear: both;
+      margin-bottom: 10px;
+      list-style: none;
+      list-style-type: none;
+    }
+
+    .breadcrumb {
+      li {
+        margin: 0;
+
+        &:last-of-type span {
+          padding: 0.5em 0.75em;
+        }
+      }
+    }
+
+    .social-share {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+
+      .share-button {
+        color: #fff;
+
+        &:not(:last-of-type) {
+          margin: 0 8px 8px 0;
+        }
+
+        svg {
+          fill: #fff;
+          width: 19px;
+          height: 19px;
+          margin-right: 4px;
+        }
+
+        &.facebook {
+          background-color: #4a66b7;
+
+          &:hover {
+            background-color: darken(#4a66b7, 10%);
+          }
+        }
+
+        &.whatsapp {
+          background-color: #25d366;
+
+          &:hover {
+            background-color: darken(#25d366, 10%);
+          }
+        }
+      }
+    }
+
+    main {
+      .table-overflow {
+        overflow-x: auto;
       }
 
-      svg {
-        fill: #fff;
-        width: 19px;
-        height: 19px;
-        margin-right: 4px;
-      }
+      min-height: 120px;
 
-      &.facebook {
-        background-color: #4a66b7;
+      h2 {
+        display: inline-flex;
+        padding: 8px;
+        border: 3px solid $piekweek-primary;
+        font-weight: bold;
 
-        &:hover {
-          background-color: darken(#4a66b7, 10%);
+        &:first-of-type {
+          margin-top: 0;
         }
       }
 
-      &.whatsapp {
-        background-color: #25d366;
-
-        &:hover {
-          background-color: darken(#25d366, 10%);
-        }
+      h3 {
+        display: inline-flex;
+        font-weight: bold;
+        padding-bottom: 4px;
+        border-bottom: 3px solid $lustrumweek-primary;
       }
-    }
-  }
 
-  footer.single-footer {
-    margin: $gap-large 0;
-
-    .pagination-previous,
-    .pagination-next {
-      max-width: 100%;
-    }
-
-    .pagination-previous::before {
-      content: "\2039";
-      margin-right: 4px;
-      font-size: 150%;
-    }
-
-    .pagination-next::after {
-      content: "\203A";
-      margin-left: 4px;
-      font-size: 150%;
-    }
-
-    @include tablet {
-      .pagination-previous,
-      .pagination-next {
-        max-width: 48%;
-      }
-    }
-
-    .pagination a,
-    .posts-navigation a {
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-
-      &:not(:hover) {
-        color: $primary;
+      table tr:hover {
+        background-color: $lustrumweek-primary;
       }
     }
   }

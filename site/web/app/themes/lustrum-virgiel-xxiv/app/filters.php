@@ -13,7 +13,7 @@ add_filter('body_class', function (array $classes) {
         }
     }
 
-	if (is_single() || is_front_page() || is_home() || is_page_template('views/template-lustrumevenement.blade.php')) {
+	if (( is_singular() || is_front_page() || is_home() ) && !is_page_template('views/template-media.blade.php')) {
 		$classes[] = 'has-hero';
     }
 
@@ -99,6 +99,7 @@ add_filter('sage/display_sidebar', function ($display) {
 		is_front_page(),
 		is_archive(),
 		is_search(),
+		is_page(),
 		// ... more types
 	]);
 
@@ -106,11 +107,11 @@ add_filter('sage/display_sidebar', function ($display) {
 });
 
 add_filter('next_posts_link_attributes', function () {
-	return 'class="prev-post pagination-previous"';
+	return 'class="prev-post pagination-previous chevron-left"';
 });
 
 add_filter('previous_posts_link_attributes', function () {
-	return 'class="next-post pagination-next"';
+	return 'class="next-post pagination-next chevron-right"';
 });
 
 add_filter('the_content', function ($content) {

@@ -6,12 +6,6 @@
 
         </div>
         <div class="hero-part hero-body is-paddingless scattered-4d">
-            <img data-src="@asset('images/front-page/confetti/confetti-4d-neutraal.svg')" class="confetti-svg lazy" />
-            <img data-src="@asset('images/front-page/confetti/confetti-kubus-wispo.svg')" class="confetti-svg lazy" />
-            <img data-src="@asset('images/front-page/confetti/confetti-lijn-lustrumweken.svg')" class="confetti-svg lazy" />
-            <img data-src="@asset('images/front-page/confetti/confetti-lijn-piekweken.svg')" class="confetti-svg lazy" />
-            <img data-src="@asset('images/front-page/confetti/confetti-vierkant-wispo.svg')" class="confetti-svg lazy" />
-            <img data-src="@asset('images/front-page/confetti/confetti-vierkanten-neutraal-gala.svg')" class="confetti-svg lazy" />
             <div class="container is-fluid has-text-centered">
                 <div>
                     <span id="scattered-1">4</span>
@@ -49,7 +43,10 @@
                 </div>
             </div>
         </div>
+
         <div class="background-image lazy" data-src="{{ the_post_thumbnail_url($size = 'large') }}"></div>
+        <div class="background-image background-confetti lazy" data-src="@asset('images/common/hero-bg.png')"></div>
+
     </section>
     <section class="section action-banner lazy" data-src="@asset('images/front-page/lustrum_pattern.svg')">
         <div class="container">
@@ -86,7 +83,7 @@
     @if($recent_posts->have_posts())
         <div class="news">
             <div class="section-title title-has-icon">
-                <span class="icon" style="background-image:url('@asset('images/front-page/latest-news.svg')')"></span>
+                <span class="icon lazy" data-src="@asset('images/front-page/latest-news.svg')"></span>
                 <h2>{{ the_field('news_title') }}</h2>
             </div>
 
@@ -115,7 +112,7 @@
 
         <div class="featured-media">
             <div class="section-title title-has-icon">
-                <span class="icon" style="background-image:url('@asset('images/front-page/featured-media.svg')')"></span>
+                <span class="icon lazy" data-src="@asset('images/front-page/featured-media.svg')"></span>
                 <h2>{{ the_field('featured_media_title') }}</h2>
             </div>
             {{ the_field('featured_media_content') }}

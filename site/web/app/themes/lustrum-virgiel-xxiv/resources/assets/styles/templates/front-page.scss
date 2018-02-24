@@ -10,63 +10,69 @@
   .hero-body {
     @include blockchain;
   }
-}
 
-.home .hero .level-item {
-  display: flex;
-  flex-direction: column;
-
-  .chevron-down {
-    color: white;
-    height: 35px;
-    margin-top: $gap;
-  }
-}
-
-.home .hero .hero-foot {
-  border-bottom: $gap solid $wispo-primary;
-  padding-bottom: $gap;
-
-  .level {
-    align-items: flex-end;
-  }
-
-  .level-left {
-    color: white;
+  .level-item {
     display: flex;
     flex-direction: column;
 
-    @include desktop {
-      flex-direction: row;
+    .chevron-down {
+      color: white;
+      height: 35px;
+      margin-top: $gap;
     }
   }
 
-  .level-item {
+  .hero-foot {
+    border-bottom: $gap solid $wispo-primary;
+    padding-bottom: $gap;
+
+    .level {
+      align-items: flex-end;
+    }
+
+    .level-left {
+      color: white;
+      display: flex;
+      flex-direction: column;
+
+      @include desktop {
+        flex-direction: row;
+      }
+    }
+
+    .level-item {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .level-right {
+      color: $white;
+      font-size: 50px;
+      line-height: 54px;
+    }
+  }
+
+  .hero-part {
+    z-index: 1;
+  }
+
+  .background-image {
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    right: 0;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    background-position: center center;
+    background-size: cover;
+    filter: brightness(30%);
   }
 
-  .level-right {
-    color: $white;
-    font-size: 50px;
-    line-height: 54px;
+  .background-confetti {
+    background-repeat: repeat;
+    background-size: 1500px;
+    filter: none;
   }
-}
-
-.home .hero .hero-part {
-  z-index: 1;
-}
-
-.home .hero .background-image {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  background-position: center center;
-  background-size: cover;
-  filter: brightness(30%);
 }
 
 .scattered-4d {
