@@ -11,8 +11,28 @@
 @endsection
 
 @section('content')
+    @if($news_filters)
+    <div class="news-filter has-text-centered">
+        <div class="columns is-vcentered">
+            <div class="column is-narrow column-left">
+                <h2 class="is-marginless"><span class="is-uppercase has-text-weight-bold filter-title">Filter</span></h2>
+            </div>
 
+            <div class="column column-right">
+                <div class="tags">
+                    @foreach( $news_filters as $news_filter )
+                        <a href="{{ get_term_link( $news_filter ) }}">
+                            <span class="tag is-uppercase has-text-weight-bold"> {!! $news_filter->name !!} </span>
+                        </a>
+                    @endforeach
+                </div>
+            </div>
 
+        </div>
+    </div>
+
+    <hr>
+    @endif
 
     @if (!have_posts())
         <div class="alert alert-warning">

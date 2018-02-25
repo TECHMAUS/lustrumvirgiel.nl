@@ -295,9 +295,7 @@ main {
 body.blog,
 body.page {
   .hero {
-    background-repeat: repeat;
-    background-size: 1500px;
-    background-position: center center;
+    @include confetti-background;
 
     h1 {
       @include blockchain;

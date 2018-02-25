@@ -3,6 +3,12 @@
   -webkit-font-smoothing: antialiased;
 }
 
+@mixin confetti-background() {
+  background-repeat: repeat;
+  background-size: 1500px;
+  background-position: center center;
+}
+
 @mixin config-event-quick-facts($event-classes...) {
   @each $i in $event-classes {
     &.#{nth($i, 1)} {
@@ -51,6 +57,10 @@
       background-color: nth($i, 2);
       padding: 0 0.3rem;
       margin: 0.2rem auto;
+
+      &:hover {
+        color: darken(nth($i, 2), 20%);
+      }
     }
   }
 }
@@ -70,7 +80,7 @@
       color: findColorInvert(nth($i, 2));
 
       &:hover {
-        color: darken(nth($i, 2), 10%);
+        color: darken(nth($i, 2), 20%);
       }
     }
   }
