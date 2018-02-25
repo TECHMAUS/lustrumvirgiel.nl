@@ -310,23 +310,26 @@ body.page {
       }
 
       @include set-gravity-letters('.char',
-      '1' 2px   -10deg,
-      '2'   -2px 5deg,
-      '3' 3px   -5deg,
-      '4'   -4px 3deg,
-      '5' 6px   -3deg,
-      '6' 8px   -2deg,
-      '7'   -5px 3deg,
-      '8' 0     -2deg,
-      '9'   -8px 4deg,
-      '10' 1px   -2deg,
-      '11'  -2px 5deg,
-      '12' 3px 2deg,
-      '13' 0 0,
-      '14'  -4px  -1deg,
-      '15' 2px 6deg,
-      '16' 5px 5deg,
-      '17'  -3px 8deg
+      '1'   2px     -10deg,
+      '2'   -2px    5deg,
+      '3'   3px     -5deg,
+      '4'   -4px    3deg,
+      '5'   6px     -3deg,
+      '6'   8px     -2deg,
+      '7'   -5px    3deg,
+      '8'   0       -2deg,
+      '9'   -8px    4deg,
+      '10'  1px     -2deg,
+      '11'  -2px    5deg,
+      '12'  3px     2deg,
+      '13'  0       0,
+      '14'  -4px    -1deg,
+      '15'  2px     6deg,
+      '16'  5px     5deg,
+      '17'  -3px    8deg,
+      '18'  2px     -2deg,
+      '19'  5px     -4deg,
+      '20'  -1px    6deg
     );
     }
   }
