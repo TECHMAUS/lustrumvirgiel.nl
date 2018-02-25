@@ -51,7 +51,7 @@ body.template-lustrumevenement {
 }
 
 body.single,
-body.page:not(.template-media-overview) {
+body.page:not(.template-media-overview):not(.home) {
   main {
     .table-overflow {
       overflow-x: auto;
