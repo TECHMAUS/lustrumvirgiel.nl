@@ -1,0 +1,80 @@
+body.template-media-overview {
+  .media-event {
+    padding-bottom: $gap-large;
+
+    .media-title {
+      padding-right: 2rem;
+
+      h2.title {
+        display: inline-flex;
+        background-color: $black;
+        padding: 0.5rem 0.75rem;
+      }
+    }
+
+    &:nth-of-type(2n) {
+      .media-title h2.title {
+        transform: rotate(4deg);
+      }
+    }
+
+    &:nth-of-type(2n+1) {
+      .media-title h2.title {
+        transform: rotate(-4deg);
+      }
+    }
+
+    .media-content {
+      .column {
+        .image {
+          position: relative;
+          background-color: $black;
+          will-change: opacity;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center center;
+        }
+
+        .title {
+          position: absolute;
+          background-color: black;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          padding: 0.75rem;
+          z-index: 2;
+        }
+
+        &:hover {
+          .image::before {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-color: transparentize($black, 0.6);
+            content: "";
+            z-index: 1;
+          }
+
+          .title {
+            padding-bottom: 1.5rem;
+          }
+        }
+      }
+    }
+
+    @include lustrum-background-colors('',
+    '&.lustrumweek .media-title h2.title, &.lustrumweek .media-content .title'                  $lustrumweek-primary,
+    '&.gala .media-title h2.title, &.gala .media-content .title'                                $gala-primary,
+    '&.piekweek .media-title h2.title, &.piekweek .media-content .title'                        $piekweek-primary,
+    '&.wintersport .media-title h2.title, &.wintersport .media-content .title'                  $wispo-primary,
+    '&.lustrum-productie .media-title h2.title, &.lustrum-productie .media-content .title'      $lustrum-productie-primary
+  );
+
+    &:not(:last-child) {
+      border-bottom: 3px solid $lustrumweek-primary;
+      margin-bottom: $gap-large;
+    }
+  }
+}

@@ -1,42 +1,6 @@
 body.archive {
-  .hero {
-    @include touch {
-      margin-top: 60px;
-    }
-
-    @include confetti-background;
-
-    h1 {
-      display: inline-flex;
-      padding: 0.2rem 0.5rem;
-      background-color: $piekweek-primary;
-    }
-
-    .hero-body {
-      padding-bottom: 1.5rem;
-    }
-  }
-
   .category-description {
     margin: 1rem 0;
     max-width: 960px;
-  }
-
-  .breadcrumb {
-    margin-bottom: 0;
-
-    a {
-      &::before {
-        content: "\2039";
-        margin-right: 0.5rem;
-        font-size: 150%;
-        line-height: 1;
-        text-decoration: none;
-      }
-
-      span:hover {
-        text-decoration: underline;
-      }
-    }
   }
 }

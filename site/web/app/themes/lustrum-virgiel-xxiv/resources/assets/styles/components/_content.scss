@@ -1,103 +1,14 @@
 body.single,
-body.page:not(.home):not(.archive):not(.search):not(.blog) {
-  @include fullhd {
-    .wrap.container {
-      max-width: 1200px;
-
-      .columns {
-        margin-left: -1.5rem;
-        margin-right: -1.5rem;
-        margin-top: -1.5rem;
-
-        &:last-child {
-          margin-bottom: -1.5rem;
-        }
-
-        .column {
-          padding: 1.5rem;
-        }
-      }
-    }
-  }
-
+body.template-lustrumevenement {
   .content {
-    /* centers the pagination on the page */
-    .envira-pagination {
-      text-align: center;
-      margin-top: $gap-large;
-    }
-
-    /* styles the pagination on the page */
-    span.page-numbers.dots {
-      display: inline-block;
-      padding: 10px;
-      background-color: #363f48;
-      border-radius: 3px;
-      color: #fff;
-    }
-
-    .envira-pagination a.page-numbers {
-      display: inline-block;
-      padding: 10px;
-      background-color: #363f48;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: all 0.2s ease-in 0s;
-      color: #fff;
-    }
-
-    .envira-pagination a.page-numbers:hover {
-      background-color: #ccc;
-      color: #363f48;
-    }
-
-    .envira-pagination span.page-numbers.current {
-      display: inline-block;
-      padding: 10px;
-      background-color: #ccc;
-      border-radius: 3px;
-      color: #363f48;
-    }
-
-    /* styles the previous and next links */
-    .envira-pagination a.prev.page-numbers,
-    .envira-pagination a.next.page-numbers {
-      display: inline-block;
-      padding: 10px;
-      background-color: #363f48;
-      border-radius: 3px;
-      text-decoration: none;
-      transition: all 0.2s ease-in 0s;
-      color: #fff;
-    }
-
-    .envira-pagination a.prev.page-numbers:hover,
-    .envira-pagination a.next.page-numbers:hover {
-      background-color: #ccc;
-      color: #363f48;
-    }
-
-    .envira-download-all {
-      float: right;
-      margin: 0.5rem 0;
-      color: $wispo-primary;
-    }
-
-    .envira-tags-filter-list {
-      clear: both;
-      margin-bottom: 10px;
-      list-style: none;
-      list-style-type: none;
-    }
-
     .breadcrumb {
-      li {
-        margin: 0;
+      margin: 0;
+    }
 
-        &:last-of-type span {
-          padding: 0.5em 0.75em;
-        }
-      }
+    hr {
+      margin: 0.25rem 0 2rem;
+      background-color: $lustrumweek-primary;
+      height: 2px;
     }
 
     .social-share {
@@ -136,35 +47,38 @@ body.page:not(.home):not(.archive):not(.search):not(.blog) {
         }
       }
     }
+  }
+}
 
-    main {
-      .table-overflow {
-        overflow-x: auto;
+body.single,
+body.page:not(.template-media-overview) {
+  main {
+    .table-overflow {
+      overflow-x: auto;
+    }
+
+    min-height: 120px;
+
+    h2 {
+      display: inline-flex;
+      padding: 8px;
+      border: 3px solid $piekweek-primary;
+      font-weight: bold;
+
+      &:first-of-type {
+        margin-top: 0;
       }
+    }
 
-      min-height: 120px;
+    h3 {
+      display: inline-flex;
+      font-weight: bold;
+      padding-bottom: 4px;
+      border-bottom: 3px solid $lustrumweek-primary;
+    }
 
-      h2 {
-        display: inline-flex;
-        padding: 8px;
-        border: 3px solid $piekweek-primary;
-        font-weight: bold;
-
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
-
-      h3 {
-        display: inline-flex;
-        font-weight: bold;
-        padding-bottom: 4px;
-        border-bottom: 3px solid $lustrumweek-primary;
-      }
-
-      table tr:hover {
-        background-color: $lustrumweek-primary;
-      }
+    table tr:hover {
+      background-color: $lustrumweek-primary;
     }
   }
 }

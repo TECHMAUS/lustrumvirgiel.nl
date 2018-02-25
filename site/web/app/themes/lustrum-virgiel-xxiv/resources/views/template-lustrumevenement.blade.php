@@ -16,6 +16,10 @@
 @endsection
 
 @section('content')
+    {{  App::wps_yoast_breadcrumb_bulma() }}
+
+    <hr>
+
     <div class="dropcap has-text-justified">
         @while(have_posts()) @php(the_post())
                 @include('partials.content-page')
@@ -39,6 +43,20 @@
         </div>
     </div>
     @include('partials.social-share-buttons')
+
+    @if($related_posts->have_posts())
+        <section class="widget widget_related_posts">
+            <hr>
+            <h3><div class="widget-title has-shadow z-depth-1">
+                    <span class="icon lazy" data-src="@asset('images/common/3d-icon.svg')"></span> Gerelateerd</div></h3>
+
+            @while($related_posts->have_posts())  @php($related_posts->the_post())
+            @include('partials.content-related')
+            @endwhile
+            {{ wp_reset_postdata() }}
+
+        </section>
+    @endif
 
     @if (App\display_sidebar())
         @include('partials.sidebar')

@@ -1,148 +1,154 @@
-.home .hero {
-  min-height: 90vh;
-  position: relative;
-  background-color: $black;
-
-  @include desktop {
-    min-height: 100vh;
+body.home {
+  .g {
+    margin: 1rem auto;
   }
 
-  .hero-body {
-    @include blockchain;
-  }
+  .hero {
+    min-height: 90vh;
+    position: relative;
+    background-color: $black;
 
-  .level-item {
-    display: flex;
-    flex-direction: column;
-
-    .chevron-down {
-      color: white;
-      height: 35px;
-      margin-top: $gap;
-    }
-  }
-
-  .hero-foot {
-    border-bottom: $gap solid $wispo-primary;
-    padding-bottom: $gap;
-
-    .level {
-      align-items: flex-end;
+    @include desktop {
+      min-height: 100vh;
     }
 
-    .level-left {
-      color: white;
-      display: flex;
-      flex-direction: column;
-
-      @include desktop {
-        flex-direction: row;
-      }
+    .hero-body {
+      @include blockchain;
     }
 
     .level-item {
+      display: flex;
+      flex-direction: column;
+
+      .chevron-down {
+        color: white;
+        height: 35px;
+        margin-top: $gap;
+      }
+    }
+
+    .hero-foot {
+      border-bottom: $gap solid $wispo-primary;
+      padding-bottom: $gap;
+
+      .level {
+        align-items: flex-end;
+      }
+
+      .level-left {
+        color: white;
+        display: flex;
+        flex-direction: column;
+
+        @include desktop {
+          flex-direction: row;
+        }
+      }
+
+      .level-item {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      .level-right {
+        color: $white;
+        font-size: 50px;
+        line-height: 54px;
+      }
+    }
+
+    .hero-part {
+      z-index: 1;
+    }
+
+    .background-image {
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      right: 0;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      background-position: center center;
+      background-size: cover;
+      filter: brightness(30%);
     }
 
-    .level-right {
-      color: $white;
-      font-size: 50px;
-      line-height: 54px;
+    .background-confetti {
+      background-repeat: repeat;
+      background-size: 1500px;
+      filter: none;
     }
   }
 
-  .hero-part {
-    z-index: 1;
+  .scattered-4d {
+    margin-top: 15vh;
+    line-height: 100%;
+
+    @include mobile {
+      letter-spacing: -5px;
+    }
+
+    @include declare-font-size-all(4rem, 7rem, 8rem, 10rem, 12rem);
+
+    span {
+      display: inline-block;
+      position: relative;
+    }
+
+    @include set-gravity-letters('#scattered-',
+    '1' 0     -20deg,
+    '2'   -40px 10deg,
+    '3' 0     -10deg,
+    '4' 0 5deg,
+    '5' 0     -5deg,
+    '6' 8px   -3deg,
+    '7'   -5px 6deg,
+    '8' 0     -3deg,
+    '9'   -8px 7deg,
+    '10' 0 5deg
+  );
+
+    #scattered-1 {
+      font-size: 130%;
+    }
+
+    #scattered-2 {
+      font-size: 80%;
+    }
+
+    .confetti-svg {
+      max-width: 30px;
+      position: absolute;
+    }
+
+    @include place-confetti('.confetti-svg:nth-child',
+    '(1)' 64% 25%,
+    '(2)' 17% 28%,
+    '(3)' 30% 5%,
+    '(4)' 73% 51%,
+    '(5)' 61% 86%,
+    '(6)' 24% 81%
+  );
   }
 
-  .background-image {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 0;
-    left: 0;
-    background-position: center center;
-    background-size: cover;
-    filter: brightness(30%);
-  }
-
-  .background-confetti {
+  .action-banner {
+    padding: 3rem 16px;
     background-repeat: repeat;
-    background-size: 1500px;
-    filter: none;
-  }
-}
+    background-size: 150px;
 
-.scattered-4d {
-  margin-top: 15vh;
-  line-height: 100%;
-
-  @include mobile {
-    letter-spacing: -5px;
+    @include mobile {
+      padding: 2rem 16px;
+    }
   }
 
-  @include declare-font-size-all(4rem, 7rem, 8rem, 10rem, 12rem);
+  main {
+    .quick-links {
+      margin-top: 1.5rem;
 
-  span {
-    display: inline-block;
-    position: relative;
-  }
-
-  @include set-gravity-letters('#scattered-',
-  '1'   0     -20deg,
-  '2'   -40px  10deg,
-  '3'   0     -10deg,
-  '4'   0     5deg,
-  '5'   0     -5deg,
-  '6'   8px   -3deg,
-  '7'   -5px  6deg,
-  '8'   0     -3deg,
-  '9'   -8px  7deg,
-  '10'  0     5deg
-);
-
-  #scattered-1 {
-    font-size: 130%;
-  }
-
-  #scattered-2 {
-    font-size: 80%;
-  }
-
-  .confetti-svg {
-    max-width: 30px;
-    position: absolute;
-  }
-
-  @include place-confetti('.confetti-svg:nth-child',
-  '(1)' 64% 25%,
-  '(2)' 17% 28%,
-  '(3)' 30% 5%,
-  '(4)' 73% 51%,
-  '(5)' 61% 86%,
-  '(6)' 24% 81%
-);
-}
-
-.action-banner {
-  padding: 3rem 16px;
-  background-repeat: repeat;
-  background-size: 150px;
-
-  @include mobile {
-    padding: 2rem 16px;
-  }
-}
-
-main {
-  .quick-links {
-    margin-top: 1.5rem;
-
-    .button:not(:last-child) {
-      margin-right: 0.5rem;
-      margin-bottom: 1rem;
+      .button:not(:last-child) {
+        margin-right: 0.5rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 }

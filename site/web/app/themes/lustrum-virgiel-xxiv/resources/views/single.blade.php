@@ -13,6 +13,8 @@
 @section('content')
     {{  App::wps_yoast_breadcrumb_bulma() }}
 
+    <hr>
+
     @if(defined('ADROTATE_VERSION'))
         {!! adrotate_group(4) !!}
     @endif

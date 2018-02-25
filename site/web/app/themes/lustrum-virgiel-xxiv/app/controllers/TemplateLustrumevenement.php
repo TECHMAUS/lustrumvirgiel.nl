@@ -17,4 +17,34 @@ class TemplateLustrumevenement extends Controller
 		$daysleft=floor($diff/(60*60*24));
 		return "$daysleft";
 	}
+
+	public function relatedPosts()
+	{
+		global $post;
+		$categories = get_field('event_category');
+
+		if ($categories) {
+			$cat_ids = array();
+			foreach($categories as $individual_category) {
+				$cat       = get_category( $individual_category );
+				$cat_ids[] = $cat->term_id;
+			}
+
+			$args = array(
+				'category__in' => $cat_ids,
+				'post__not_in' => array($post->ID),
+				'posts_per_page'=>3, // Number of related posts to display.
+				'ignore_sticky'=>1
+			);
+
+			$the_query = new \WP_Query( $args );
+
+			return $the_query;
+		}
+
+		else {
+			$the_query = new \WP_Query();
+			return $the_query;
+		}
+	}
 }

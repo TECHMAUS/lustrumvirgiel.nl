@@ -18,9 +18,7 @@
 @endsection
 
 @section('content')
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-        <a href="{{ get_permalink( get_option( 'page_for_posts' ) ) }}"><span class="is-uppercase is-size-5">Nieuws</span></a>
-    </nav>
+    {{  App::wps_yoast_breadcrumb_bulma() }}
 
     @if (!have_posts())
         <div class="alert alert-warning">

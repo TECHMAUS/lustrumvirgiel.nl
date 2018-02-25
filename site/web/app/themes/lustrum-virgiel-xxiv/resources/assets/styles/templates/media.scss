@@ -1,0 +1,65 @@
+body.template-media {
+  /* centers the pagination on the page */
+  .envira-pagination {
+    text-align: center;
+    font-size: $size-normal;
+    margin: $pagination-margin;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .page-numbers {
+      min-width: 2.25em;
+      font-size: 1em;
+      color: white;
+      justify-content: center;
+      margin: 0.25rem;
+      text-align: center;
+      align-items: center;
+      border: 1px solid $pagination-border-color;
+      border-radius: $control-radius;
+      box-shadow: none;
+      display: inline-flex;
+      height: 2.25em;
+      line-height: 1.5;
+      padding: $control-padding-vertical 0.5em;
+      position: relative;
+      vertical-align: top;
+
+      &.current {
+        background-color: $pagination-current-background-color;
+        border-color: $pagination-current-border-color;
+        color: $pagination-current-color;
+        pointer-events: none;
+      }
+
+      &.dots {
+        border-color: transparent;
+        color: $pagination-ellipsis-color;
+        pointer-events: none;
+      }
+
+      &:hover {
+        border-color: $pagination-hover-border-color;
+        color: $pagination-hover-color;
+      }
+
+      &:focus {
+        border-color: $pagination-focus-border-color;
+      }
+
+      &:active {
+        box-shadow: $pagination-shadow-inset;
+      }
+
+      &[disabled] {
+        background-color: $pagination-disabled-background-color;
+        border-color: $pagination-disabled-border-color;
+        box-shadow: none;
+        color: $pagination-disabled-color;
+        opacity: 0.5;
+      }
+    }
+  }
+}

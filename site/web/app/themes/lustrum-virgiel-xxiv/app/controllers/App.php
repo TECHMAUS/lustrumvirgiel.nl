@@ -39,7 +39,7 @@ class App extends Controller
 	public static function wps_yoast_breadcrumb_bulma() {
 		if ( function_exists( 'yoast_breadcrumb' ) ) {
 			$breadcrumb = yoast_breadcrumb(
-				'<nav class="breadcrumb has-succeeds-separator" aria-label="breadcrumbs"><ul class="is-marginless"><li>',
+				'<nav class="breadcrumb has-succeeds-separator has-text-weight-bold is-uppercase" aria-label="breadcrumbs"><ul class="is-marginless"><li>',
 				'</li></ul></nav>',
 				false
 			);
