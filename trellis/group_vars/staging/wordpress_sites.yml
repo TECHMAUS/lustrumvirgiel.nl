@@ -19,6 +19,3 @@ wordpress_sites:
       provider: letsencrypt
     cache:
       enabled: false
-    htpasswd:
-      - name: lustrum
-        password: huldebravo!
