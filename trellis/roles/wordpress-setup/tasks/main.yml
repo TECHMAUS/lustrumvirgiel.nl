@@ -45,7 +45,7 @@
 - name: Setup WP system cron
   cron:
     name: "{{ item.key }} WordPress cron"
-    minute: "*/15"
+    minute: "*/1"
     user: "{{ web_user }}"
     job: "cd {{ www_root }}/{{ item.key }}/{{ item.value.current_path | default('current') }} && wp cron event run --due-now > /dev/null 2>&1"
     cron_file: "wordpress-{{ item.key | replace('.', '_') }}"
