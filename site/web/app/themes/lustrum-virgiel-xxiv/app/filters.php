@@ -13,7 +13,7 @@ add_filter('body_class', function (array $classes) {
         }
     }
 
-	if ( is_singular() || is_front_page() || is_archive() || is_home() ) {
+	if ( is_singular() || is_front_page() || is_archive() || is_home() || is_404() ) {
 		$classes[] = 'has-hero';
     }
 

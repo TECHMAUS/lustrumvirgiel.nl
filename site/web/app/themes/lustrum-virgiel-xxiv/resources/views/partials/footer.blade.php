@@ -16,7 +16,7 @@
           </div>
         </section>
       </div>
-      <div class="column has-text-centered-mobile has-text-right">
+      <div class="column has-text-centered has-text-right-tablet">
         @php(dynamic_sidebar('sidebar-footer-3'))
       </div>
     </div>
