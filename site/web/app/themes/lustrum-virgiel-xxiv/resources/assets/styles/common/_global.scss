@@ -307,7 +307,7 @@ main {
 }
 
 body.blog,
-body.page:not(.template-media),
+body.page:not(.template-media):not(.template-lustrumevenement),
 body.error404 {
   .hero {
     @include confetti-background;
