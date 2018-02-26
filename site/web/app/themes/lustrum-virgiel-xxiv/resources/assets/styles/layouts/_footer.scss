@@ -29,6 +29,8 @@ footer.page-footer {
         color: #ededed;
         text-transform: uppercase;
         margin-bottom: 0.5rem;
+        background-color: black;
+        padding: 0.25rem;
 
         @include mobile {
           font-size: 1rem;
