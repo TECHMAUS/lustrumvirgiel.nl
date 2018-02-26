@@ -9,82 +9,44 @@ class Single extends Controller
 	public function relatedPosts()
 	{
 		global $post;
-		$tags = wp_get_post_tags($post->ID);
-		$categories = wp_get_post_categories($post->ID);
-		$post_total = 3;
 
-		if ( !empty($tags) ) {
-			$tag_ids = array();
+		$tags = wp_get_post_terms($post->ID, 'post_tag');
+		$tag_ids = array();
+
+		if (!empty ($tags)) :
 			foreach($tags as $individual_tag) {
 				$tag_ids[] = $individual_tag->term_id;
 			}
+		endif;
 
-			$args = array(
-				'tag__in' => $tag_ids,
-				'post__not_in' => array($post->ID),
-				'posts_per_page'=> $post_total, // Number of related posts to display.
-				'ignore_sticky'=> 1
-			);
+		$categories = wp_get_post_terms($post->ID, 'category');
+		$cat_ids = array();
 
-			$tag_query = new \WP_Query( $args );
-
-			if ($tag_query->post_count <= $post_total ) :
-
-				$num_posts = $post_total - $tag_query->post_count;
-				$cat_ids = array();
-
-				foreach($categories as $individual_category) {
-					$cat       = get_category( $individual_category );
-					$cat_ids[] = $cat->term_id;
-				}
-
-				$args = array(
-					'category__in' => $cat_ids,
-					'post__not_in' => array($post->ID),
-					'posts_per_page'=> $post_total, // Number of related posts to display.
-					'ignore_sticky'=> 1
-				);
-
-				$cat_query = new \WP_Query( $args );
-
-				//create new empty query and populate it with the other two
-				$wp_query        = new \WP_Query();
-				$wp_query->posts = array_merge( $tag_query->posts, $cat_query->posts );
-
-				//populate post_count count for the loop to work correctly
-				$wp_query->post_count = $tag_query->post_count + $cat_query->post_count;
-
-				return $wp_query;
-
-			else :
-
-				return $tag_query;
-
-			endif;
-		}
-
-		elseif ( !empty($categories) ) {
-			$cat_ids = array();
+		if (!empty ($categories)) :
 			foreach($categories as $individual_category) {
-				$cat       = get_category( $individual_category );
-				$cat_ids[] = $cat->term_id;
+				$cat_ids[] = $individual_category->term_id;
 			}
+		endif;
 
-			$args = array(
-				'category__in' => $cat_ids,
-				'post__not_in' => array($post->ID),
-				'posts_per_page'=> $post_total, // Number of related posts to display.
-				'ignore_sticky'=> 1
-			);
+		$args = array(
+			'post__not_in' => array($post->ID),
+			'posts_per_page'=> 3, // Number of related posts to display.
+			'ignore_sticky'=> 1,
+			'tax_query' => array(
+				'relation' => 'OR',
+				array(
+					'taxonomy'  =>  'category',
+					'terms'     =>  $cat_ids,
+				),
+				array(
+					'taxonomy'  =>  'post_tag',
+					'terms'     =>  $tag_ids,
+				)
+			),
+		);
 
-			$cat_query = new \WP_Query( $args );
+		$the_query = new \WP_Query( $args );
 
-			return $cat_query;
-		}
-
-		else {
-			$the_query = new \WP_Query();
-			return $the_query;
-		}
+		return $the_query;
 	}
 }
