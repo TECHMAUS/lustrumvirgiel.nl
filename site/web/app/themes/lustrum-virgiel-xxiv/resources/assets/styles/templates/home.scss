@@ -1,6 +1,10 @@
 footer.single-footer {
   margin: $gap-large 0;
 
+  .pagination {
+    clear: both;
+  }
+
   .nav-links {
     display: flex;
     flex-direction: row;
