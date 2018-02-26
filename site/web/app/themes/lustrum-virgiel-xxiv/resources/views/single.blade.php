@@ -1,6 +1,15 @@
 @extends('layouts.app')
 
 @section('hero')
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/nl_NL/sdk.js#xfbml=1&version=v2.12&appId=148485092478258';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+
     <section class="hero is-medium lazy" @if(get_the_post_thumbnail_url()) data-src="{{ the_post_thumbnail_url($size = 'large') }}" @endif>
         <div class="hero-body">
             <div class="container">

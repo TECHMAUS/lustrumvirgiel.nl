@@ -7,7 +7,7 @@
 		</div>
 		<div class="related-content">
 			<div class="content">
-				<small class="has-text-white is-uppercase is-marginless">{{ the_date() }}</small>
+				<small class="has-text-white is-uppercase is-marginless">{{ get_the_date() }}</small>
 				<h4 class="title is-6 is-uppercase has-text-weight-bold is-marginless">{{  the_title() }}</h4>
 			</div>
 		</div>

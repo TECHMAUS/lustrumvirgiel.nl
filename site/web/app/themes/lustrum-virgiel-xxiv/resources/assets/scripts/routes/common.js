@@ -4,20 +4,6 @@ export default {
         // JavaScript to be fired on all pages
     },
     finalize() {
-
-        /*global FB*/
-
-        $.ajaxSetup({ cache: true });
-
-        $.getScript('https://connect.facebook.net/nl_NL/sdk.js', function(){
-            FB.init({
-                appId: '148485092478258',
-                version: 'v2.7', // or v2.1, v2.2, v2.3, ...
-            });
-            $('#loginbutton,#feedbutton').removeAttr('disabled');
-            FB.getLoginStatus();
-        });
-
         if ($("body").hasClass("has-hero")) {
             $('.site-header').addClass('hero-header').removeClass('z-depth-2');
             $(window).scroll(function(){
