@@ -1,5 +1,25 @@
 body.single,
 body.template-lustrumevenement {
+  @include fullhd {
+    .wrap.container {
+      max-width: 1200px;
+
+      .columns {
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+        margin-top: -1.5rem;
+
+        &:last-child {
+          margin-bottom: -1.5rem;
+        }
+
+        .column {
+          padding: 1.5rem;
+        }
+      }
+    }
+  }
+
   .content {
     .breadcrumb {
       margin: 0;
