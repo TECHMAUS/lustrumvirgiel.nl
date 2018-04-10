@@ -15,7 +15,9 @@ class Single extends Controller
 
 		if (!empty ($tags)) :
 			foreach($tags as $individual_tag) {
-				$tag_ids[] = $individual_tag->term_id;
+				if (get_tag($individual_tag)->count > 0) :
+					$tag_ids[] = $individual_tag->term_id;
+				endif;
 			}
 		endif;
 

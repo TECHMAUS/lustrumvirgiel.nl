@@ -1,7 +1,9 @@
 body.single,
-body.template-lustrumevenement {
+body.template-lustrumevenement,
+body.template-lustrumsubevenement {
   @include fullhd {
-    .wrap.container {
+    .wrap.container,
+    .hero-body .container {
       max-width: 1200px;
 
       .columns {

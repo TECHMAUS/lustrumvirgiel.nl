@@ -22,6 +22,16 @@ add_filter('body_class', function (array $classes) {
         $classes[] = 'sidebar-primary';
     }
 
+	if (is_page_template('views/template-lustrumsubevenement.blade.php')) {
+		global $post;
+		$parents = get_post_ancestors( $post->ID );
+
+		$id = ($parents) ? $parents[0]: $post->ID;
+		/* Get the parent and set the $class with the page slug (post_name) */
+		$parent = get_post( $id );
+		$classes[] = $parent->post_name;
+	}
+
 	if (!is_admin() && is_single() ) {
 		global $post;
 		foreach((get_the_category($post->ID)) as $category) {
@@ -98,7 +108,7 @@ add_filter('sage/display_sidebar', function ($display) {
 		// The sidebar will be displayed if any of the following return true
 		is_front_page(),
 		is_search(),
-		is_page() && !is_page_template('views/template-lustrumevenement.blade.php'),
+		is_page() && !is_page_template(array('views/template-lustrumevenement.blade.php', 'views/template-lustrumsubevenement.blade.php')),
 		// ... more types
 	]);
 

@@ -214,6 +214,13 @@ function my_dynamic_sidebar_params( $params ) {
 
 }
 
+function my_acf_init() {
+
+	acf_update_setting('google_api_key', 'AIzaSyD2FwMll8vmbqPOmOyY2eiNswW2-qR4t6s');
+}
+
+add_action('acf/init', 'my_acf_init');
+
 if( function_exists('acf_add_local_field_group') ):
 
 	acf_add_local_field_group(array(
@@ -921,7 +928,7 @@ if( function_exists('acf_add_local_field_group') ):
 			array(
 				'key' => 'field_5a93308f758ce',
 				'label' => 'Categorie',
-				'name' => 'event_category',
+				'name' => 'event_tag',
 				'type' => 'taxonomy',
 				'instructions' => 'Selecteer de nieuwscategorieën die gekoppeld zijn aan dit event, dit wordt o.a. gebruik bij het weergeven van gerelateerds nieuwsberichten.',
 				'required' => 0,
@@ -931,7 +938,7 @@ if( function_exists('acf_add_local_field_group') ):
 					'class' => '',
 					'id' => '',
 				),
-				'taxonomy' => 'category',
+				'taxonomy' => 'post_tag',
 				'field_type' => 'checkbox',
 				'allow_null' => 0,
 				'add_term' => 1,
@@ -956,6 +963,24 @@ if( function_exists('acf_add_local_field_group') ):
 				'display_format' => 'd/m/Y',
 				'return_format' => 'm/d/Y',
 				'first_day' => 1,
+			),
+			array(
+				'key' => 'field_5acd42c16b5b9',
+				'label' => 'Locatie',
+				'name' => 'event_location',
+				'type' => 'google_map',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'center_lat' => '',
+				'center_lng' => '',
+				'zoom' => '',
+				'height' => '',
 			),
 			array(
 				'key' => 'field_5a4fc8e0f586a',
@@ -1038,6 +1063,13 @@ if( function_exists('acf_add_local_field_group') ):
 					'param' => 'page_template',
 					'operator' => '==',
 					'value' => 'views/template-lustrumevenement.blade.php',
+				),
+			),
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'views/template-lustrumsubevenement.blade.php',
 				),
 			),
 		),

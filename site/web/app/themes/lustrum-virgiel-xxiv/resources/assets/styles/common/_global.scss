@@ -164,6 +164,19 @@ main {
   .card {
     margin-bottom: $gap-large;
 
+    .fact .has-subtitle {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        font-weight: normal;
+      }
+    }
+
+    .tag {
+      margin: 0 0.25rem 0.25rem 0;
+    }
+
     .card-content {
       padding: 1rem;
     }
@@ -176,7 +189,7 @@ main {
     background-color: $black;
 
     .fact:not(:last-child) {
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.5rem;
     }
   }
 }
@@ -311,7 +324,7 @@ main {
 }
 
 body.blog,
-body.page:not(.template-media):not(.template-lustrumevenement),
+body.page:not(.template-media):not(.template-lustrumevenement):not(.template-lustrumsubevenement),
 body.error404 {
   .hero {
     @include confetti-background;
