@@ -144,7 +144,8 @@
     "virgielxxiv/event-scheduler": "^3.0",
     "ajdg-solutions/adrotate-pro": "^1.0",
     "enviragallery/envira-gallery": "^1.7",
-    "wpackagist-plugin/wp-rest-api-cache": "^1.2"
+    "wpackagist-plugin/wp-rest-api-cache": "^1.2",
+    "airesvsg/acf-to-rest-api": "^3.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
