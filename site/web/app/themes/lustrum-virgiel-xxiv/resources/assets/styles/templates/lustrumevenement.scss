@@ -42,6 +42,9 @@ body.template-lustrumsubevenement {
       @include tablet {
         max-width: 66.6667%;
       }
+
+      display: inline-block;
+      padding: 0.15rem 0.5rem;
     }
   }
 
@@ -49,6 +52,34 @@ body.template-lustrumsubevenement {
     .hero {
       h1 {
         line-height: 115%;
+      }
+    }
+  }
+
+  .quick-facts .counter {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    color: black;
+    background-color: white;
+    padding: 0 0.25rem;
+    font-size: 80%;
+
+    .days {
+      margin-right: 0.25rem;
+
+      span {
+        font-size: 200%;
+      }
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+
+      span {
+        line-height: 100%;
       }
     }
   }
@@ -74,12 +105,13 @@ body.template-lustrumsubevenement {
       top: 0;
       left: 0;
       background-color: $black;
-      opacity: 0.5;
+      opacity: 0.4;
     }
   }
 }
 
-.hero::before {
+.hero::before,
+.hero h2 {
   @include lustrum-background-colors('body.template-lustrumsubevenement.',
   'gala &'              $gala-primary,
   'wintersport &'       $wispo-primary,

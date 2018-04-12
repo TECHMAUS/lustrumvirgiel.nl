@@ -13,6 +13,11 @@ use Roots\Sage\Template\BladeProvider;
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_style('sage/main.css', asset_path('styles/main.css'), false, null);
     wp_enqueue_script('sage/main.js', asset_path('scripts/main.js'), ['jquery'], null, true);
+
+	if (is_page_template('views/template-lustrumsubevenement.blade.php')) {
+		wp_enqueue_script( 'google-map', 'https://maps.googleapis.com/maps/api/js?key=AIzaSyD2FwMll8vmbqPOmOyY2eiNswW2-qR4t6s&callback=initMap', array(), '3', true );
+		wp_enqueue_script( 'google-map-init', asset_path('scripts/googlemaps.js'), ['google-map', 'jquery'], '0.3', true );
+	}
 }, 100);
 
 /**
@@ -168,3 +173,10 @@ add_action( 'load-themes.php', function (){
 		$role->add_cap( 'publish_posts' );
 	}
 });
+
+$envs = [
+	'development' => 'https://lustrumvirgiel.dev',
+	'staging'     => 'https://staging.lustrumvirgiel.nl',
+	'production'  => 'https://lustrumvirgiel.nl'
+];
+define('ENVIRONMENTS', serialize($envs));

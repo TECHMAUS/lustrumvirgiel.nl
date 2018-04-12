@@ -10,6 +10,8 @@
       <path value="$PROJECT_DIR$/site/vendor/composer" />
       <path value="$PROJECT_DIR$/site/vendor/oscarotero/env" />
       <path value="$PROJECT_DIR$/site/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/site/vendor/jwage/purl" />
+      <path value="$PROJECT_DIR$/site/vendor/jeremykendall/php-domain-parser" />
     </include_path>
   </component>
 </project>

@@ -141,11 +141,11 @@
     "wpackagist-plugin/onesignal-free-web-push-notifications": "^1.16",
     "wpackagist-plugin/wordpress-seo": "^7.2",
     "wpackagist-plugin/acf-content-analysis-for-yoast-seo": "^2.0",
-    "virgielxxiv/event-scheduler": "^3.0",
     "ajdg-solutions/adrotate-pro": "^1.0",
     "enviragallery/envira-gallery": "^1.7",
     "wpackagist-plugin/wp-rest-api-cache": "^1.2",
-    "airesvsg/acf-to-rest-api": "^3.1"
+    "airesvsg/acf-to-rest-api": "^3.1",
+    "roots/wp-stage-switcher": "2.0.0"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"

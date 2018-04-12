@@ -16,7 +16,7 @@ export default {
             });
         }
 
-        $(".fancy_title").lettering('words').children('span').lettering();
+        $(".fancy_title").fitText(0.85).lettering('words').children('span').lettering();
 
         $('.nav-close, #page-overlay').click(function(){
             $('header').removeClass("side-menu-open");

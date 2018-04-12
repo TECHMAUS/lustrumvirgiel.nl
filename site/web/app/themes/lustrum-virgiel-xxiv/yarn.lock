@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+FitText@nicooprat/FitText.js:
+  version "1.2.0"
+  resolved "https://codeload.github.com/nicooprat/FitText.js/tar.gz/9ff1275e19a930f63f03041287f8c5cb3c5dea1a"
+
 FitVids@davatron5000/FitVids.js:
   version "0.0.0"
   resolved "https://codeload.github.com/davatron5000/FitVids.js/tar.gz/eacbf9f155c86f089ce70c8c5fcdad9c8c3dc241"

@@ -1,7 +1,11 @@
 .sidebar {
   .widget {
-    padding: $gap 0;
+    padding: 18px 0;
     position: relative;
+
+    &.social-share {
+      padding-top: 0;
+    }
 
     &:nth-of-type(odd) .widget-title {
       transform: rotate(-2deg);

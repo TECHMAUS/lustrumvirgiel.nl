@@ -3,8 +3,10 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/site/vendor/jeremykendall/php-domain-parser" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/johnpbloch/wordpress" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/johnpbloch/wordpress-core-installer" />
+      <excludeFolder url="file://$MODULE_DIR$/site/vendor/jwage/purl" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/oscarotero/env" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/philippbaschke/acf-pro-installer" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/roots/wp-password-bcrypt" />

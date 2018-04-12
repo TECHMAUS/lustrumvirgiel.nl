@@ -219,6 +219,7 @@ function my_acf_init() {
 	acf_update_setting('google_api_key', 'AIzaSyD2FwMll8vmbqPOmOyY2eiNswW2-qR4t6s');
 }
 
+add_filter('acf/settings/show_admin', '__return_false');
 add_action('acf/init', 'my_acf_init');
 
 if( function_exists('acf_add_local_field_group') ):

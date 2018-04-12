@@ -3,6 +3,9 @@
     "main": [
       "./scripts/main.js",
       "./styles/main.scss"
+    ],
+    "googlemaps": [
+      "./scripts/googlemaps.js"
     ]
   },
   "publicPath": "/app/themes/lustrum-virgiel-xxiv",
