@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "ccc718ba0bb2c65473cc9d69ed580a26",
+    "content-hash": "e6cdd589a559678f7874177a0dc42f0d",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -839,6 +839,26 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/onesignal-free-web-push-notifications/"
+        },
+        {
+            "name": "wpackagist-plugin/tinymce-advanced",
+            "version": "4.6.7",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/tinymce-advanced/",
+                "reference": "tags/4.6.7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/tinymce-advanced.4.6.7.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/tinymce-advanced/"
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",

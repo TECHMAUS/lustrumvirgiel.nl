@@ -219,7 +219,7 @@ function my_acf_init() {
 	acf_update_setting('google_api_key', 'AIzaSyD2FwMll8vmbqPOmOyY2eiNswW2-qR4t6s');
 }
 
-add_filter('acf/settings/show_admin', '__return_false');
+//add_filter('acf/settings/show_admin', '__return_false');
 add_action('acf/init', 'my_acf_init');
 
 if( function_exists('acf_add_local_field_group') ):
@@ -904,8 +904,92 @@ if( function_exists('acf_add_local_field_group') ):
 	));
 
 	acf_add_local_field_group(array(
-		'key' => 'group_5a4fc30258272',
+		'key' => 'group_lustrumevenement',
 		'title' => 'Lustrumevenementen',
+		'fields' => array(
+			array(
+				'key' => 'field_evenement_video',
+				'label' => 'Achtergrond Video',
+				'name' => 'event_background_video',
+				'type' => 'file',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '',
+					'class' => '',
+					'id' => '',
+				),
+				'return_format' => 'url',
+				'library' => 'all',
+				'min_size' => '',
+				'max_size' => 30,
+				'mime_types' => 'mp4',
+			),
+			array(
+				'key' => 'field_evenement_ondertitel',
+				'label' => 'Ondertitel',
+				'name' => 'event_subtitle',
+				'type' => 'text',
+				'instructions' => 'Ondertitel die wordt weergegeven bovenaan de pagina. LET Op: de ondertitel op de \'jaaroverzicht\'-pagina staat hier los van!',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '50',
+					'class' => '',
+					'id' => '',
+				),
+				'default_value' => '',
+				'placeholder' => '',
+				'prepend' => '',
+				'append' => '',
+				'maxlength' => '',
+			),
+			array(
+				'key' => 'field_evenement_categorie',
+				'label' => 'Categorie',
+				'name' => 'event_tag',
+				'type' => 'taxonomy',
+				'instructions' => 'Selecteer de nieuwscategorieën die gekoppeld zijn aan dit event, dit wordt o.a. gebruik bij het weergeven van gerelateerds nieuwsberichten.',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => array(
+					'width' => '50',
+					'class' => '',
+					'id' => '',
+				),
+				'taxonomy' => 'post_tag',
+				'field_type' => 'checkbox',
+				'allow_null' => 0,
+				'add_term' => 1,
+				'save_terms' => 0,
+				'load_terms' => 0,
+				'return_format' => 'id',
+				'multiple' => 0,
+			),
+		),
+		'location' => array(
+			array(
+				array(
+					'param' => 'page_template',
+					'operator' => '==',
+					'value' => 'views/template-lustrumevenement.blade.php',
+				),
+			),
+		),
+		'menu_order' => 0,
+		'position' => 'acf_after_title',
+		'style' => 'default',
+		'label_placement' => 'top',
+		'instruction_placement' => 'label',
+		'hide_on_screen' => '',
+		'active' => 1,
+		'description' => '',
+	));
+
+	acf_add_local_field_group(array(
+		'key' => 'group_5a4fc30258272',
+		'title' => 'Lustrum-sub-evenementen',
 		'fields' => array(
 			array(
 				'key' => 'field_5a50b05796ef2',
@@ -1059,13 +1143,6 @@ if( function_exists('acf_add_local_field_group') ):
 			),
 		),
 		'location' => array(
-			array(
-				array(
-					'param' => 'page_template',
-					'operator' => '==',
-					'value' => 'views/template-lustrumevenement.blade.php',
-				),
-			),
 			array(
 				array(
 					'param' => 'page_template',

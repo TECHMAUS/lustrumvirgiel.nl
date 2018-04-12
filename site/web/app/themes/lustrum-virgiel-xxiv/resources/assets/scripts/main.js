@@ -4,7 +4,6 @@ import 'tilt.js/dest/tilt.jquery.js';
 import 'lettering.js';
 import 'jquery-lazy';
 import 'FitVids/jquery.fitvids';
-import 'FitText/jquery.fittext.js';
 
 // Import everything from autoload
 import "./autoload/**/*"

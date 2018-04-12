@@ -47,4 +47,10 @@ class TemplateLustrumevenement extends Controller
 			return $the_query;
 		}
 	}
+
+	public function eventVideo()
+	{
+		$bg_video = get_field('event_background_video');
+		return $bg_video;
+	}
 }

@@ -16,7 +16,7 @@ export default {
             });
         }
 
-        $(".fancy_title").fitText(0.85).lettering('words').children('span').lettering();
+        $(".fancy_title").lettering('words').children('span').lettering();
 
         $('.nav-close, #page-overlay').click(function(){
             $('header').removeClass("side-menu-open");
@@ -38,23 +38,15 @@ export default {
 
         $(".entry-content-asset").fitVids();
 
-        if ($.isFunction($.fn.schedule) && $.isFunction($.fn.tcodeslick)) {
-            $('.event-schedule').schedule({
-                showLocations: true,
-                keepAccordionsOpen: false,
-                openFirstAccordion: false,
-            });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-            $('#days-carousel').tcodeslick({
-                slidesToShow: 7,
-                slidesToScroll: 7,
-                infinite: false,
-                prevArrow: '<a href="#" class="slick-prev"></a>',
-                nextArrow: '<a href="#" class="slick-next"></a>',
-                speed: 800,
-                easing: 'swing',
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                });
             });
-        }
-
+        });
     },
 };

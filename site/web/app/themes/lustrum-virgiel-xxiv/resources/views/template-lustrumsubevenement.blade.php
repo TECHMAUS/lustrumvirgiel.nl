@@ -35,7 +35,7 @@
                     <div class="days">
                         <span class="has-text-weight-bold">{!! TemplateLustrumevenement::days_until() !!}</span>
                     </div>
-                    <div class="text has-text-left">
+                    <div class="text has-text-left bigtext">
                         @if(TemplateLustrumevenement::days_until() == 1)
                             <span class="is-uppercase">Nachtje</span>
                         @else

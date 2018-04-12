@@ -68,11 +68,11 @@
         margin: 3px 0;
 
         @include lustrum-menu-colors('&.menu-',
-        'gala a'              $gala-primary,
-        'wintersport a'       $wispo-primary,
-        'lustrumweek a'       $lustrumweek-primary,
-        'lustrum-productie a' $lustrum-productie-primary,
-        'piekweek a'          $piekweek-primary
+        'gala > a'              $gala-primary,
+        'wintersport > a'       $wispo-primary,
+        'lustrumweek > a'       $lustrumweek-primary,
+        'lustrum-productie > a' $lustrum-productie-primary,
+        'piekweek > a'          $piekweek-primary
       );
 
         /* The navigation menu links */
@@ -92,11 +92,11 @@
         &.menu-item-has-children {
           > a {
             position: relative;
-            padding-right: 32px;
+            padding-left: 32px;
 
-            &::after {
+            &::before {
               top: 50%;
-              right: 0;
+              left: 0;
               height: 1rem;
               width: 1rem;
               content: "";
@@ -115,6 +115,7 @@
             > .menu-item a {
               padding-left: 32px;
               position: relative;
+              font-size: 1.4rem;
 
               &::before {
                 top: 50%;
@@ -128,11 +129,13 @@
           }
 
           &.submenu-open {
+            margin: 1rem 0;
+
             .sub-menu {
               display: block;
             }
 
-            a::after {
+            > a::before {
               transform: translateY(-50%) rotate(45deg);
             }
           }

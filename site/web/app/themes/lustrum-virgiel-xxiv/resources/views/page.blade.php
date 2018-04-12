@@ -11,6 +11,10 @@
 @endsection
 
 @section('content')
+    {{  App::wps_yoast_breadcrumb_bulma() }}
+
+    <hr>
+
     <div class="dropcap has-text-justified">
         @while(have_posts()) @php(the_post())
         @include('partials.content-page')

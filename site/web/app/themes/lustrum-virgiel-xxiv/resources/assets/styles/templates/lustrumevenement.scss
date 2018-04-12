@@ -4,6 +4,22 @@ body.template-lustrumsubevenement {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
+    z-index: -2;
+
+    &::before {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      left: 0;
+      background-color: $black;
+      opacity: 0.4;
+    }
+
+    .hero-video {
+      z-index: -1;
+    }
 
     h1 {
       @include blockchain;
@@ -93,23 +109,6 @@ body.template-lustrumsubevenement {
   );
 }
 
-body.template-lustrumsubevenement {
-  .hero {
-    position: relative;
-
-    &::before {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      top: 0;
-      left: 0;
-      background-color: $black;
-      opacity: 0.4;
-    }
-  }
-}
-
 .hero::before,
 .hero h2 {
   @include lustrum-background-colors('body.template-lustrumsubevenement.',
@@ -119,4 +118,21 @@ body.template-lustrumsubevenement {
   'lustrum-productie &' $lustrum-productie-primary,
   'piekweek &'          $piekweek-primary
 );
+}
+
+.hero::before,
+.hero h2 {
+  @include lustrum-background-colors('body.template-lustrumevenement.',
+  'gala &'              $gala-primary,
+  'wintersport &'       $wispo-primary,
+  'lustrumweek &'       $lustrumweek-primary,
+  'lustrum-productie &' $lustrum-productie-primary,
+  'piekweek &'          $piekweek-primary
+);
+}
+
+body.template-lustrumevenement {
+  .dropcap > p:first-child {
+    font-size: 1.1rem;
+  }
 }

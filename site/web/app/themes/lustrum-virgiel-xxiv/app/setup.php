@@ -96,6 +96,30 @@ add_action('widgets_init', function () {
         'name'          => __('Primary', 'sage'),
         'id'            => 'sidebar-primary'
     ] + $config_sidebar);
+	register_sidebar([
+        'name'          => __('Lustrum Opening', 'sage'),
+        'id'            => 'sidebar-event-opening'
+    ] + $config_sidebar);
+	register_sidebar([
+        'name'          => __('Lustrum Gala', 'sage'),
+        'id'            => 'sidebar-event-gala'
+    ] + $config_sidebar);
+	register_sidebar([
+        'name'          => __('Lustrum Wintersport', 'sage'),
+        'id'            => 'sidebar-event-wintersport'
+    ] + $config_sidebar);
+	register_sidebar([
+        'name'          => __('Lustrum Lustrumweek', 'sage'),
+        'id'            => 'sidebar-event-lustrumweek'
+    ] + $config_sidebar);
+	register_sidebar([
+        'name'          => __('Lustrum Lustrum Productie', 'sage'),
+        'id'            => 'sidebar-event-lustrum-productie'
+    ] + $config_sidebar);
+	register_sidebar([
+	    'name'          => __('Lustrum Piekweek', 'sage'),
+	    'id'            => 'sidebar-event-piekweek'
+	] + $config_sidebar);
     register_sidebar([
         'name'          => __('Footer 1e column', 'sage'),
         'id'            => 'sidebar-footer-1'

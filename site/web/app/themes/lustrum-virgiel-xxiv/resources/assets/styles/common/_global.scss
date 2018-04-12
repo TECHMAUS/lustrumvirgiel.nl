@@ -37,10 +37,15 @@
     0 5px 5px -3px rgba(0, 0, 0, 0.2);
 }
 
+.hero {
+  position: relative;
+}
+
 /** Dropshadow in paragraphs */
 .dropcap > p {
   &:first-child {
     font-weight: bold;
+    overflow: auto;
 
     &::first-letter {
       float: left;
@@ -51,10 +56,6 @@
       line-height: 4rem;
       padding: 0 8px 8px 0;
     }
-  }
-
-  &:nth-child(2) {
-    clear: both;
   }
 }
 
@@ -298,6 +299,10 @@ main {
   hr {
     width: 80%;
     margin: 0.5rem auto;
+  }
+
+  .button {
+    margin-top: $gap;
   }
 
   .related-post {
