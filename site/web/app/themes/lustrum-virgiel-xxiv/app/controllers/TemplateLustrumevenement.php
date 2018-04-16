@@ -56,7 +56,8 @@ class TemplateLustrumevenement extends Controller
 		$image = get_sub_field('activity_image');
 
 		if (!empty($image)) :
-			return $image['sizes']['thumbnail'];
+			return $image['sizes']['medium'];
+
 		endif;
 	}
 

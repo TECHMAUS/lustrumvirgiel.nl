@@ -96,4 +96,24 @@ class TemplateLustrumsubevenement extends Controller
 	{
 		return get_field('featured_video_link');
 	}
+
+	public static function artistName()
+	{
+		return get_sub_field('artist_name');
+	}
+
+	public static function artistLink()
+	{
+		return get_sub_field('artist_link');
+	}
+
+	public static function artistImage()
+	{
+		$image = get_sub_field('artist_image');
+
+		if (!empty($image)) :
+			return $image['sizes']['medium'];
+
+		endif;
+	}
 }

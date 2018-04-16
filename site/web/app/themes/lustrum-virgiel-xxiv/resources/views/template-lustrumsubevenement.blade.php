@@ -9,7 +9,9 @@
         <div class="hero-body">
             <div class="container">
                 <h1 class="is-uppercase fancy_title has-text-centered-mobile">{!! App::title() !!}</h1>
-                <h2 class="is-uppercase is-size-4 has-text-weight-bold has-text-centered-mobile">{{ the_field('event_subtitle') }}</h2>
+                @if(!empty(get_field('event_subtitle')))
+                    <h2 class="is-uppercase is-size-4 has-text-weight-bold has-text-centered-mobile">{{ the_field('event_subtitle') }}</h2>
+                @endif
             </div>
         </div>
     </section>
@@ -25,6 +27,32 @@
                 @include('partials.content-page')
         @endwhile
     </div>
+
+    @if(have_rows('artists'))
+        <div class="artists">
+            <h2>Line-Up</h2>
+            <div class="columns is-multiline is-mobile">
+                @while(have_rows('artists')) @php(the_row())
+                    <div class="artist column is-half-mobile is-one-third-tablet is-one-quarter-desktop has-text-centered">
+                        <a href="{!! TemplateLustrumsubevenement::artistLink() !!}" target="_blank" rel="nofollow">
+                            <div class="artist-tile has-shadow z-depth-1 lazy" data-tilt>
+                                <div class="artist-image lazy" data-src="{!! TemplateLustrumsubevenement::artistImage() !!}">
+                                </div>
+                                <div class="artist-title">
+                                    <h5 class="has-text-weight-bold is-marginless is-uppercase has-shadow z-depth-2">{{ TemplateLustrumsubevenement::artistName() }}</h5>
+                                </div>
+                                <div class="artist-link-out">
+                                    <svg viewBox="0 0 24 24">
+                                        <path fill="#fff" d="M14,3V5H17.59L7.76,14.83L9.17,16.24L19,6.41V10H21V3M19,19H5V5H12V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V12H19V19Z" />
+                                    </svg>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endwhile
+            </div>
+        </div>
+    @endif
 @endsection
 
 @section('sidebar')

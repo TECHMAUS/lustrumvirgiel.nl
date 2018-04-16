@@ -25,6 +25,10 @@ body.template-lustrumsubevenement {
       @include blockchain;
       @include declare-font-size-all(3rem, 6rem, 7rem, 8rem, 10rem);
 
+      @include desktop {
+        margin-bottom: 65px;
+      }
+
       span {
         display: inline-block;
         position: relative;
@@ -214,6 +218,70 @@ body.template-lustrumevenement {
 
       &:nth-of-type(2n+1) .event-tile::before {
         background-color: lighten($piekweek-primary, 15%);
+      }
+    }
+  }
+}
+
+body.template-lustrumsubevenement {
+  .artists {
+    .artist-tile {
+      padding-top: 100%;
+      position: relative;
+      overflow: hidden;
+
+      .artist-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center center;
+        filter: grayscale(1);
+        transition: 0.4s all;
+      }
+
+      .artist-title {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+        text-align: center;
+        transition: 0.4s all;
+
+        h5 {
+          background-color: $gala-primary;
+          padding: 0.25em 0.5em;
+        }
+      }
+
+      .artist-link-out {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        visibility: hidden;
+
+        svg {
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      &:hover {
+        .artist-image {
+          filter: grayscale(0);
+          transform: scale(1.1);
+        }
+
+        .artist-title {
+          opacity: 0;
+        }
+
+        .artist-link-out {
+          visibility: visible;
+        }
       }
     }
   }
