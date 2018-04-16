@@ -187,12 +187,14 @@ add_action( 'load-themes.php', function (){
 
 		// This only works, because it accesses the class instance.
 		// would allow the author to edit others' posts for current theme only
+		$role->add_cap( 'edit_pages' );
 		$role->add_cap( 'edit_published_pages' );
 		$role->remove_cap( 'publish_posts' );
 	}
 	else {
 		// Theme is deactivated
 		// Remove the capability when theme is deactivated
+		$role->remove_cap( 'edit_pages' );
 		$role->remove_cap( 'edit_published_pages' );
 		$role->add_cap( 'publish_posts' );
 	}
