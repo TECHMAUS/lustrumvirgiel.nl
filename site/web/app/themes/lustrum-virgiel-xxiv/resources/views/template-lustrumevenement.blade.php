@@ -18,7 +18,11 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="is-uppercase fancy_title has-text-centered">{!! App::title() !!}</h1>
-                <h2 class="is-uppercase is-size-5 is-size-4-tablet is-size-3-desktop has-text-weight-bold has-text-centered">{{ the_field('event_subtitle') }}</h2>
+                @if(!empty(get_field('event_subtitle')))
+                    <div class="subtitle">
+                        <h2 class="is-uppercase is-size-5 is-size-4-tablet is-size-3-desktop has-text-weight-bold has-text-centered">{{ the_field('event_subtitle') }}</h2>
+                    </div>
+                @endif
             </div>
         </div>
     </section>

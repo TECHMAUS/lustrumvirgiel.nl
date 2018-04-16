@@ -21,6 +21,10 @@ body.template-lustrumsubevenement {
       z-index: -1;
     }
 
+    .subtitle {
+      display: block;
+    }
+
     h1 {
       @include blockchain;
       @include declare-font-size-all(3rem, 6rem, 7rem, 8rem, 10rem);

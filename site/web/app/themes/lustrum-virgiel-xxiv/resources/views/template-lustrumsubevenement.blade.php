@@ -10,7 +10,9 @@
             <div class="container">
                 <h1 class="is-uppercase fancy_title has-text-centered-mobile">{!! App::title() !!}</h1>
                 @if(!empty(get_field('event_subtitle')))
-                    <h2 class="is-uppercase is-size-4 has-text-weight-bold has-text-centered-mobile">{{ the_field('event_subtitle') }}</h2>
+                    <div class="subtitle">
+                        <h2 class="is-uppercase is-size-5 is-size-4-tablet is-size-3-desktop has-text-weight-bold has-text-centered-mobile">{{ the_field('event_subtitle') }}</h2>
+                    </div>
                 @endif
             </div>
         </div>
