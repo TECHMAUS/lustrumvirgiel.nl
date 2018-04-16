@@ -39,9 +39,61 @@ class TemplateLustrumsubevenement extends Controller
 		endif;
 	}
 
+	public function daysUntilEvent()
+	{
+		$today = date('Y-m-d');
+		$today = strtotime($today);
+		$finish = get_field('activity_start_time');
+		$finish = strtotime($finish);
+		//difference
+		$diff = $finish - $today;
+
+		$daysleft=floor($diff/(60*60*24));
+		return "$daysleft";
+	}
+
+	public function quickFactsDate()
+	{
+		$start = get_field('activity_start_time');
+		$start = strtotime($start);
+		$start_date = date('j-m-Y', $start);
+
+		if (!empty(get_field('activity_end_time'))) :
+
+			$end = get_field('activity_end_time');
+			$end = strtotime($end);
+			$end_date = date('j-m-Y', $end);
+
+		endif;
+
+		if (isset($end)) :
+
+			if ($start_date == $end_date) :
+				return date_i18n('D j F Y, G:i', $start) . ' &ndash; ' . date_i18n('G:i \u\u\r', $end);
+
+			else :
+				return date_i18n('D j F Y, G:i \u\u\r', $start) . ' &mdash;<br>' . date_i18n('D j F Y, G:i \u\u\r', $end);
+
+			endif;
+
+		else :
+			return date_i18n('D j F Y, G:i \u\u\r', $start);
+
+		endif;
+	}
+
 	public function eventLocation()
 	{
-		$location = get_field('event_location');
-		return $location;
+		return get_field('event_location');
+	}
+
+	public function featuredVideoTitle()
+	{
+		return get_field('featured_video_title');
+	}
+
+	public function featuredVideoLink()
+	{
+		return get_field('featured_video_link');
 	}
 }

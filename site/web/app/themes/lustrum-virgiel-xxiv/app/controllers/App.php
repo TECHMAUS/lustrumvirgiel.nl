@@ -48,4 +48,15 @@ class App extends Controller
 			echo '<ul class="breadcrumb"><li>Missing function "yoast_breadcrumb"</li></ul>';
 		}
 	}
+
+	public static function authorEmail()
+	{
+		$email = the_author_meta($field = 'user_email');
+		return antispambot( $email );
+	}
+
+	public static function pageSlug()
+	{
+		return get_post_field('post_name');
+	}
 }

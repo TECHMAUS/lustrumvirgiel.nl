@@ -7,7 +7,8 @@
 h1,
 h2,
 h3,
-h4 {
+h4,
+.section-title {
   a {
     color: white;
 
@@ -15,4 +16,24 @@ h4 {
       color: inherit;
     }
   }
+
+  @include lustrum-border-colors('body.',
+  'gala &'              $gala-primary,
+  'wintersport &'       $wispo-primary,
+  'lustrumweek &'       $lustrumweek-primary,
+  'lustrum-productie &' $lustrum-productie-primary,
+  'piekweek &'          $piekweek-primary
+);
+  @include lustrum-border-colors('body.category-',
+  'gala &'              $gala-primary,
+  'wintersport &'       $wispo-primary,
+  'lustrumweek &'       $lustrumweek-primary,
+  'lustrum-productie &' $lustrum-productie-primary,
+  'piekweek &'          $piekweek-primary
+);
+}
+
+.fancy_title {
+  letter-spacing: 0.1em;
+  line-height: 1;
 }

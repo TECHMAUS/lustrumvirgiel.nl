@@ -29,14 +29,14 @@
 
 @section('sidebar')
     <div class="quick-facts">
-        @if(TemplateLustrumevenement::days_until() >= 0)
+        @if($days_until_event >= 0)
             <div class="has-text-right">
                 <div class="counter">
                     <div class="days">
-                        <span class="has-text-weight-bold">{!! TemplateLustrumevenement::days_until() !!}</span>
+                        <span class="has-text-weight-bold">{!! $days_until_event !!}</span>
                     </div>
                     <div class="text has-text-left bigtext">
-                        @if(TemplateLustrumevenement::days_until() == 1)
+                        @if($days_until_event == 1)
                             <span class="is-uppercase">Nachtje</span>
                         @else
                             <span class="is-uppercase">Nachtjes</span>
@@ -50,10 +50,10 @@
         <div class="card">
             <div class="card-content">
                 <div class="content is-uppercase has-text-weight-bold">
-                    <div class="fact title-has-icon"><span class="icon" style="background-image:url('@asset('images/common/1d-icon.svg')')"></span> <p class="has-subtitle"><span class="is-size-7">Datum & tijd: </span>{!! the_field('quick_facts_1d') !!}</p></div>
+                    <div class="fact title-has-icon"><span class="icon" style="background-image:url('@asset('images/common/1d-icon.svg')')"></span> <p class="has-subtitle"><span class="is-size-7">Datum & tijd:</span>{!! $quick_facts_date !!} </p></div>
                     <div class="fact title-has-icon"><span class="icon" style="background-image:url('@asset('images/common/2d-icon.svg')')"></span> <p class="has-subtitle"><span class="is-size-7">Locatie: </span>{!! the_field('quick_facts_2d') !!}</p></div>
                     <div class="fact title-has-icon"><span class="icon" style="background-image:url('@asset('images/common/3d-icon.svg')')"></span> <p class="has-subtitle"><span class="is-size-7">Kaarten: </span>{!! the_field('quick_facts_3d') !!}</p></div>
-                    <div class="fact title-has-icon"><span class="icon" style="background-image:url('@asset('images/common/4d-icon.svg')')"></span> <p class="has-subtitle"><span class="is-size-7">Contact: </span>@php($user = get_field('quick_facts_4d')) <a class="has-text-white has-word-wrap" href="mailto:{!! antispambot($user['user_email']) !!}">{!! antispambot($user['user_email']) !!}</a></p> </div>
+                    <div class="fact title-has-icon"><span class="icon" style="background-image:url('@asset('images/common/4d-icon.svg')')"></span> <p class="has-subtitle"><span class="is-size-7">Contact: </span><a class="has-text-white has-word-wrap" href="mailto:{{ App::authorEmail() }}">{{ App::authorEmail() }}</a></p> </div>
                 </div>
             </div>
         </div>

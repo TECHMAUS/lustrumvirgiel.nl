@@ -132,17 +132,17 @@ body.home {
   }
 
   .action-banner {
-    padding: 3rem 16px;
-    background-repeat: repeat;
-    background-size: 150px;
-
-    h3 {
-      padding: 0 1rem;
+    .homepage-background {
       background-color: $gala-primary;
     }
 
-    @include mobile {
-      padding: 2rem 16px;
+    .button-homepage {
+      background-color: $gala-primary;
+      color: white;
+
+      &:hover {
+        color: darken($gala-primary, 20%);
+      }
     }
   }
 

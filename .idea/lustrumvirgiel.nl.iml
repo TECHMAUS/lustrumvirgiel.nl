@@ -12,6 +12,7 @@
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/roots/wp-password-bcrypt" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/squizlabs/php_codesniffer" />
       <excludeFolder url="file://$MODULE_DIR$/site/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/site/web/app/themes/lustrum-virgiel-xxiv/dist" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

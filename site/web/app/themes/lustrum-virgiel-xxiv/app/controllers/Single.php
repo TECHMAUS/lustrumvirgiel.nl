@@ -51,4 +51,9 @@ class Single extends Controller
 
 		return $the_query;
 	}
+
+	public function postTime()
+	{
+		return get_post_time('D j F Y, G:i \u\u\r', false, null, true);
+	}
 }

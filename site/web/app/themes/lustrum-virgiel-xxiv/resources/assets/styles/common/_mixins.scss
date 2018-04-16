@@ -51,6 +51,14 @@
   }
 }
 
+@mixin lustrum-border-colors($prefix, $commissies...) {
+  @each $i in $commissies {
+    #{$prefix}#{nth($i, 1)} {
+      border-color: nth($i, 2);
+    }
+  }
+}
+
 @mixin lustrum-menu-colors($prefix, $commissies...) {
   @each $i in $commissies {
     #{$prefix}#{nth($i, 1)} {
@@ -60,6 +68,10 @@
 
       &:hover {
         color: darken(nth($i, 2), 20%);
+      }
+
+      &::before {
+        left: 0.3rem !important;
       }
     }
   }

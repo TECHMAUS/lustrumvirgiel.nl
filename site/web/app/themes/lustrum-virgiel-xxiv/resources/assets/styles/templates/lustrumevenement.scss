@@ -23,9 +23,6 @@ body.template-lustrumsubevenement {
 
     h1 {
       @include blockchain;
-
-      letter-spacing: 0.75rem;
-
       @include declare-font-size-all(3rem, 6rem, 7rem, 8rem, 10rem);
 
       span {
@@ -61,6 +58,7 @@ body.template-lustrumsubevenement {
 
       display: inline-block;
       padding: 0.15rem 0.5rem;
+      margin-top: $gap-large;
     }
   }
 
@@ -132,7 +130,91 @@ body.template-lustrumsubevenement {
 }
 
 body.template-lustrumevenement {
-  .dropcap > p:first-child {
-    font-size: 1.1rem;
+  .event-tiles {
+    margin: -0.3em;
+
+    .column {
+      padding: 0.3em;
+
+      a {
+        color: inherit;
+        text-decoration: unset;
+      }
+
+      .event-tile {
+        background-color: $piekweek-primary;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        padding-top: 100%;
+        text-transform: uppercase;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background-color: $piekweek-primary;
+          opacity: 0.7;
+        }
+
+        .event-date {
+          position: absolute;
+          left: 4px;
+          bottom: 4px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          line-height: 0.9;
+          width: 25%;
+          font-size: 120%;
+
+          span {
+            &:first-of-type {
+              font-weight: bold;
+              font-size: 180%;
+            }
+          }
+        }
+
+        .event-title {
+          position: absolute;
+          top: 4px;
+          right: 4px;
+          font-weight: bold;
+          width: 65%;
+          text-align: right;
+          font-size: 130%;
+          line-height: 1;
+        }
+
+        .event-read-more {
+          position: absolute;
+          bottom: 8px;
+          right: 4px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          visibility: hidden;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+
+          .event-read-more {
+            visibility: visible;
+          }
+        }
+      }
+
+      &:nth-of-type(2n+1) .event-tile::before {
+        background-color: lighten($piekweek-primary, 15%);
+      }
+    }
   }
 }

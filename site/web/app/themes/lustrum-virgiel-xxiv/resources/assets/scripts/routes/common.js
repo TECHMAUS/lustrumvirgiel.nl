@@ -1,7 +1,9 @@
+import fitty from 'fitty/dist/fitty.min.js';
+
 export default {
 
     init() {
-        // JavaScript to be fired on all pages
+        document.documentElement.classList.add('js');
     },
     finalize() {
         if ($("body").hasClass("has-hero")) {
@@ -37,6 +39,17 @@ export default {
         });
 
         $(".entry-content-asset").fitVids();
+
+        $(".sidebar .widget_media_video").fitVids();
+
+        fitty('.font-fit');
+        fitty('.page-template.template-lustrumevenement .fancy_title', {
+            maxSize: 250,
+        });
+
+        fitty('body:not(.page-template) .fancy_title', {
+            maxSize: 160,
+        });
 
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {

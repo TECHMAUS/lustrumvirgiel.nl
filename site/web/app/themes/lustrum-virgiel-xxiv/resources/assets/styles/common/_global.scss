@@ -1,6 +1,7 @@
 @include lustrum-background-colors('',
 '.gala-background'              $gala-primary,
 '.wispo-background'             $wispo-primary,
+'.wintersport-background'       $wispo-primary,
 '.lustrumweek-background'       $lustrumweek-primary,
 '.lustrum-productie-background' $lustrum-productie-primary,
 '.piekweek-background'          $piekweek-primary
@@ -45,7 +46,7 @@
 .dropcap > p {
   &:first-child {
     font-weight: bold;
-    overflow: auto;
+    overflow: hidden;
 
     &::first-letter {
       float: left;
@@ -59,6 +60,11 @@
   }
 }
 
+.js .font-fit {
+  display: inline-block;
+  white-space: nowrap;
+}
+
 .noscroll {
   overflow: hidden;
 }
@@ -69,7 +75,13 @@ body:not(.has-hero) > .section {
 
 @include touch {
   .hero-body {
-    padding-top: 60px;
+    padding-top: 80px;
+  }
+}
+
+@include desktop {
+  .hero-body {
+    padding-top: 150px;
   }
 }
 
@@ -89,7 +101,8 @@ main {
   .section-title {
     margin-bottom: $gap-large;
     padding-bottom: 2px;
-    border-bottom: 5px solid $lustrumweek-primary;
+    border-bottom-width: 4px;
+    border-bottom-style: solid;
 
     h2,
     h1 {
@@ -141,6 +154,11 @@ main {
       height: auto;
     }
   }
+}
+
+.hero-video video {
+  max-width: none !important;
+  max-height: none !important;
 }
 
 .icon {
@@ -295,6 +313,20 @@ main {
   }
 }
 
+.action-banner {
+  padding: 2.5rem 0;
+  background-repeat: repeat;
+  background-size: 150px;
+
+  h3 {
+    padding: 0 1rem;
+  }
+
+  @include mobile {
+    padding: 2rem 16px;
+  }
+}
+
 .widget_related_posts {
   hr {
     width: 80%;
@@ -337,7 +369,7 @@ body.error404 {
     h1 {
       @include blockchain;
 
-      letter-spacing: 0.75rem;
+      letter-spacing: 0.1em;
 
       @include declare-font-size-all(4rem, 5rem, 6rem, 8rem, 10rem);
 

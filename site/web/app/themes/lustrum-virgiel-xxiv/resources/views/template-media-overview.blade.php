@@ -15,14 +15,13 @@
 @endsection
 
 @section('content')
-
     @if( have_rows('media_overview_subjects') )
 
         @while( have_rows('media_overview_subjects') ) @php(the_row())
 
             <div class="columns media-event {{ strtolower(TemplateMediaOverview::subjectTitle()) }}">
                 <div class="column is-2 media-title">
-                    <h2 class="title is-marginless is-size-4-desktop is-size-5 is-uppercase has-text-weight-bold z-depth-1 has-word-wrap">{{ TemplateMediaOverview::subjectTitle() }}</h2>
+                    <h2 class="title is-marginless is-size-4-desktop is-size-5 is-uppercase has-text-weight-bold z-depth-1 has-word-wrap"><a id="{{ strtolower(TemplateMediaOverview::subjectTitle()) }}"> {{ TemplateMediaOverview::subjectTitle() }}</a></h2>
                 </div>
 
                 @if( have_rows('items') )

@@ -6,18 +6,6 @@ use Sober\Controller\Controller;
 
 class TemplateLustrumevenement extends Controller
 {
-	public static function days_until() {
-		$today = date('m/d/Y');
-		$today = strtotime($today);
-		$finish = get_field('quick_facts_date_start');
-		$finish = strtotime($finish);
-		//difference
-		$diff = $finish - $today;
-
-		$daysleft=floor($diff/(60*60*24));
-		return "$daysleft";
-	}
-
 	public function relatedPosts()
 	{
 		global $post;
@@ -50,7 +38,59 @@ class TemplateLustrumevenement extends Controller
 
 	public function eventVideo()
 	{
-		$bg_video = get_field('event_background_video');
-		return $bg_video;
+		return get_field('event_background_video');
+	}
+
+	public static function activityPage()
+	{
+		return get_sub_field('related_activity_page');
+	}
+
+	public static function activityTitle()
+	{
+		return get_sub_field('activity_title');
+	}
+
+	public static function activityImage()
+	{
+		$image = get_sub_field('activity_image');
+
+		if (!empty($image)) :
+			return $image['sizes']['thumbnail'];
+		endif;
+	}
+
+	public static function activityDate($event_object)
+	{
+		$start = get_field('activity_start_time', $event_object->ID);
+		$end = get_field('activity_end_time', $event_object->ID);
+
+		$start = strtotime($start);
+		$start_day = date('j', $start);
+
+		if (!empty($end)) :
+			$end = strtotime($end);
+			$end_day = date('j', $end);
+
+			if ($start_day != $end_day) :
+				return date_i18n('j', $start) . '&ndash;' . date_i18n('j', $end);
+
+			else :
+				return date_i18n('d', $start);
+
+			endif;
+
+		else :
+			return date_i18n('d', $start);
+
+		endif;
+	}
+
+	public static function activityMonth($event_object)
+	{
+		$start = get_field('activity_start_time', $event_object->ID);
+		$start = strtotime($start);
+
+		return date_i18n('M', $start);
 	}
 }
