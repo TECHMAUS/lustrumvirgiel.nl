@@ -35,44 +35,45 @@
 
     <hr>
 
-        @while(have_posts()) @php(the_post())
-            <div class="dropcap has-text-justified">
-                @include('partials.content-page')
+    @while(have_posts()) @php(the_post())
+    <div class="dropcap has-text-justified">
+        @include('partials.content-page')
+    </div>
+    @endwhile
+
+    @if(have_rows('activiteiten'))
+        <div class="event-programm">
+            <div class="section-title">
+                <h2 class="programm-title">Programma</h2>
             </div>
 
-            @if(have_rows('activiteiten'))
-                <div class="event-programm">
-                    <div class="section-title">
-                        <h2 class="programm-title">Programma</h2>
-                    </div>
-
-                    <div class="columns is-multiline is-mobile event-tiles">
-                        @while(have_rows('activiteiten')) @php(the_row())
-                            <div class="column is-half-mobile is-one-quarter-tablet" data-tilt data-tilt-scale="1.05">
-                                    <a href="{!! get_permalink(TemplateLustrumevenement::activityPage()->ID) !!}">
-                                        <div class="event-tile lazy" data-src="{!! TemplateLustrumevenement::activityImage() !!}">
-                                            <div class="event-date">
-                                                <span class="font-fit">{!! TemplateLustrumevenement::activityDate(TemplateLustrumevenement::activityPage()) !!}</span>
-                                                <span class="font-fit">{!! TemplateLustrumevenement::activityMonth(TemplateLustrumevenement::activityPage()) !!}</span>
-                                            </div>
-                                            <div class="event-title">
-                                                <span class="font-fit">{!! TemplateLustrumevenement::activityTitle() !!}</span>
-                                            </div>
-                                            <div class="event-read-more has-text-white has-text-weight-bold">
-                                                <span class="is-size-7">Lees meer</span>
-                                                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
-                                                    <path fill="#fff" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </a>
+            <div class="columns is-multiline is-mobile event-tiles">
+                @while(have_rows('activiteiten')) @php(the_row())
+                    <div class="column is-half-mobile is-one-quarter-tablet">
+                        <a href="{!! get_permalink(TemplateLustrumevenement::activityPage()->ID) !!}">
+                            <div class="event-tile has-shadow z-depth-1">
+                                <div class="event-image lazy" data-src="{!! TemplateLustrumevenement::activityImage() !!}">
+                                </div>
+                                <div class="event-date">
+                                    <span class="font-fit">{!! TemplateLustrumevenement::activityDate(TemplateLustrumevenement::activityPage()) !!}</span>
+                                    <span class="font-fit">{!! TemplateLustrumevenement::activityMonth(TemplateLustrumevenement::activityPage()) !!}</span>
+                                </div>
+                                <div class="event-title">
+                                    <span class="font-fit">{!! TemplateLustrumevenement::activityTitle() !!}</span>
+                                </div>
+                                <div class="event-read-more has-text-black has-text-weight-bold">
+                                    <span class="is-size-7">Lees meer</span>
+                                    <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                                        <path fill="#000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
+                                    </svg>
+                                </div>
                             </div>
-                        @endwhile
+                        </a>
                     </div>
-                </div>
-            @endif
-
-        @endwhile
+                @endwhile
+            </div>
+        </div>
+    @endif
 @endsection
 
 @section('sidebar')

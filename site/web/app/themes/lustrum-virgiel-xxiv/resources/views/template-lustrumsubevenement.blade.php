@@ -24,20 +24,20 @@
 
     <hr>
 
-    <div class="dropcap has-text-justified">
-        @while(have_posts()) @php(the_post())
+    @while(have_posts()) @php(the_post())
+        <div class="dropcap has-text-justified">
                 @include('partials.content-page')
-        @endwhile
-    </div>
+        </div>
+    @endwhile
 
     @if(have_rows('artists'))
         <div class="artists">
             <h2>Line-Up</h2>
             <div class="columns is-multiline is-mobile">
                 @while(have_rows('artists')) @php(the_row())
-                    <div class="artist column is-half-mobile is-one-third-tablet is-one-quarter-desktop has-text-centered">
+                    <div class="artist column is-half-mobile is-one-third-tablet is-one-quarter-desktop">
                         <a href="{!! TemplateLustrumsubevenement::artistLink() !!}" target="_blank" rel="nofollow">
-                            <div class="artist-tile has-shadow z-depth-1 lazy" data-tilt>
+                            <div class="artist-tile has-shadow z-depth-1" data-tilt>
                                 <div class="artist-image lazy" data-src="{!! TemplateLustrumsubevenement::artistImage() !!}">
                                 </div>
                                 <div class="artist-title">
