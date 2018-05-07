@@ -3,18 +3,18 @@ body.home {
     margin: 1rem auto;
   }
 
+  .hero-header .brand-title h1 {
+    font-size: 150%;
+    transition: 0.3s all;
+    padding: 0.2em 0.5em;
+    background-color: white;
+    color: black;
+  }
+
   .hero {
-    min-height: 90vh;
+    min-height: 100vh;
     position: relative;
     background-color: $black;
-
-    @include desktop {
-      min-height: 100vh;
-    }
-
-    .hero-body {
-      @include blockchain;
-    }
 
     .level-item {
       display: flex;
@@ -27,16 +27,135 @@ body.home {
       }
     }
 
+    .hero-body {
+      @include mobile {
+        flex-direction: column;
+      }
+
+      .column {
+        h2 {
+          @include blockchain;
+
+          font-size: 5rem;
+          text-transform: uppercase;
+
+          span {
+            display: inline-block;
+          }
+
+          @include set-gravity-letters('.char',
+          '1'   2px     -10deg,
+          '2'   -2px    5deg,
+          '3'   3px     -5deg,
+          '4'   -4px    3deg,
+          '5'   6px     -3deg,
+          '6'   8px     -2deg,
+          '7'   -5px    3deg,
+          '8'   0       -2deg,
+          '9'   -8px    4deg,
+          '10'  1px     -2deg,
+          '11'  -2px    5deg,
+          '12'  3px     2deg,
+          '13'  0       0,
+          '14'  -4px    -1deg,
+          '15'  2px     6deg,
+          '16'  5px     5deg,
+          '17'  -3px    8deg,
+          '18'  2px     -2deg,
+          '19'  5px     -4deg,
+          '20'  -1px    6deg
+        );
+        }
+
+        h3 {
+          text-transform: uppercase;
+          font-weight: bold;
+        }
+
+        h4 {
+          padding: 0.25em 0.5em;
+          color: white;
+          text-transform: uppercase;
+          display: inline-block;
+          font-weight: bold;
+          font-size: 110%;
+        }
+
+        .title-card {
+          padding: 1em;
+        }
+
+        .buttons {
+          margin-top: $gap-large;
+
+          a {
+            background-color: transparent;
+            border: 2px solid;
+            margin-bottom: 0.25em;
+
+            &:not(:last-child) {
+              margin-right: 0.25em;
+            }
+
+            &::before {
+              margin-right: 0.25em;
+            }
+          }
+        }
+
+        &.lustrumweek {
+          .title-card {
+            background-image: linear-gradient(to right bottom, transparentize($gala-primary, 0.3), transparentize($lustrumweek-primary, 0.1));
+          }
+
+          h4 {
+            background-color: $lustrumweek-primary;
+          }
+
+          .buttons a {
+            color: white;
+            border-color: white;
+          }
+        }
+
+        &.piekweek {
+          color: white;
+
+          .title-card {
+            background-image: linear-gradient(to right bottom, transparentize($piekweek-primary, 0.3), transparentize($wispo-primary, 0.3));
+          }
+
+          .buttons a {
+            color: white;
+            border-color: white;
+          }
+
+          h4 {
+            background-color: $gala-primary;
+          }
+        }
+      }
+    }
+
     .hero-foot {
-      border-bottom: $gap solid $wispo-primary;
       padding-bottom: $gap;
+      position: relative;
+
+      &::after {
+        height: $gap;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: linear-gradient(90deg, $lustrumweek-primary 50%, $piekweek-primary 50%);
+      }
 
       .level {
         align-items: flex-end;
       }
 
       .level-left {
-        color: white;
         display: flex;
         flex-direction: column;
 
@@ -47,14 +166,9 @@ body.home {
 
       .level-item {
         position: absolute;
+        color: black;
         left: 50%;
         transform: translateX(-50%);
-      }
-
-      .level-right {
-        color: $white;
-        font-size: 50px;
-        line-height: 54px;
       }
     }
 
@@ -68,67 +182,9 @@ body.home {
       bottom: 0;
       top: 0;
       left: 0;
-      background-position: center center;
-      background-size: cover;
-      filter: brightness(30%);
+      background: linear-gradient(90deg, $lustrumweek-primary 50%, $piekweek-primary 50%), none 50% / cover;
+      background-blend-mode: screen;
     }
-
-    .background-confetti {
-      background-repeat: repeat;
-      background-size: 1500px;
-      filter: none;
-    }
-  }
-
-  .scattered-4d {
-    margin-top: 15vh;
-    line-height: 100%;
-
-    @include mobile {
-      letter-spacing: -5px;
-    }
-
-    @include declare-font-size-all(4rem, 7rem, 8rem, 10rem, 12rem);
-
-    span {
-      display: inline-block;
-      position: relative;
-    }
-
-    @include set-gravity-letters('#scattered-',
-    '1' 0     -20deg,
-    '2'   -40px 10deg,
-    '3' 0     -10deg,
-    '4' 0 5deg,
-    '5' 0     -5deg,
-    '6' 8px   -3deg,
-    '7'   -5px 6deg,
-    '8' 0     -3deg,
-    '9'   -8px 7deg,
-    '10' 0 5deg
-  );
-
-    #scattered-1 {
-      font-size: 130%;
-    }
-
-    #scattered-2 {
-      font-size: 80%;
-    }
-
-    .confetti-svg {
-      max-width: 30px;
-      position: absolute;
-    }
-
-    @include place-confetti('.confetti-svg:nth-child',
-    '(1)' 64% 25%,
-    '(2)' 17% 28%,
-    '(3)' 30% 5%,
-    '(4)' 73% 51%,
-    '(5)' 61% 86%,
-    '(6)' 24% 81%
-  );
   }
 
   .action-banner {
@@ -147,13 +203,14 @@ body.home {
   }
 
   main {
-    .quick-links {
-      margin-top: 1.5rem;
+    .introduction {
+      margin: 50px auto;
 
-      .button:not(:last-child) {
-        margin-right: 0.5rem;
-        margin-bottom: 1rem;
+      h3 {
+        text-transform: uppercase;
+        font-weight: bold;
       }
     }
   }
 }
+

@@ -3,6 +3,8 @@ export default {
         // JavaScript to be fired on the home page
     },
     finalize() {
-        // JavaScript to be fired on the home page, after the init JS
+        $(".background-image").css("backgroundImage", function(i, v){
+            return v.replace("none", "url("+ $(this).data("bg") +")" );
+        });
     },
 };

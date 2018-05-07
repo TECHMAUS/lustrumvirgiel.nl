@@ -207,6 +207,17 @@ body.template-lustrumevenement {
           z-index: 2;
         }
 
+        .sold-out {
+          position: absolute;
+          right: 5px;
+          bottom: 40px;
+          color: white;
+          padding: 0.15em 0.3em;
+          transform: rotate(-8deg);
+          background-color: hsl(348, 100%, 61%);
+          z-index: 2;
+        }
+
         .event-read-more {
           position: absolute;
           bottom: 8px;
@@ -227,6 +238,10 @@ body.template-lustrumevenement {
           .event-read-more {
             visibility: visible;
           }
+
+          .sold-out {
+            visibility: hidden;
+          }
         }
       }
     }
@@ -244,6 +259,37 @@ body.template-lustrumevenement {
 }
 
 body.template-lustrumsubevenement {
+  .widget.timetable {
+    .widget-title::before {
+      margin-right: 6px;
+    }
+
+    tr {
+      vertical-align: baseline;
+
+      &:hover {
+        background-color: transparent;
+      }
+    }
+
+    td {
+      vertical-align: baseline;
+      border: none;
+      padding: 5px;
+      line-height: 1.25;
+    }
+
+    .time {
+      white-space: nowrap;
+      text-align: right;
+      color: lightgrey;
+    }
+
+    .artist {
+      text-align: left;
+    }
+  }
+
   .artists {
     .artist-tile {
       padding-top: 100%;

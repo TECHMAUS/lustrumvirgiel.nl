@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@mdi/font@^2.3.54":
+  version "2.3.54"
+  resolved "https://registry.yarnpkg.com/@mdi/font/-/font-2.3.54.tgz#12dc9a64a5081c488f105fc55e814ecc190c0982"
+
 FitVids@davatron5000/FitVids.js:
   version "0.0.0"
   resolved "https://codeload.github.com/davatron5000/FitVids.js/tar.gz/eacbf9f155c86f089ce70c8c5fcdad9c8c3dc241"

@@ -52,7 +52,7 @@ add_filter('body_class', function (array $classes) {
  * Add "… Continued" to the excerpt
  */
 add_filter('excerpt_more', function () {
-    return '&hellip;';
+	return ' &hellip; <a href="' . get_permalink() . '">' . __('Continued', 'sage') . '</a>';
 });
 
 /**
@@ -106,9 +106,9 @@ add_filter('sage/display_sidebar', function ($display) {
 
 	isset($display) || $display = in_array(true, [
 		// The sidebar will be displayed if any of the following return true
-		is_front_page(),
 		is_search(),
-		is_page() && !is_page_template(array('views/template-lustrumevenement.blade.php', 'views/template-lustrumsubevenement.blade.php')),
+		is_single(),
+		is_page() && !is_page_template(array('views/template-lustrumevenement.blade.php', 'views/template-lustrumsubevenement.blade.php')) && !is_front_page(),
 		// ... more types
 	]);
 

@@ -107,6 +107,20 @@ class TemplateLustrumsubevenement extends Controller
 		return get_sub_field('artist_link');
 	}
 
+	public static function parentPageID()
+	{
+		return wp_get_post_parent_id(get_the_ID());
+	}
+
+	public function ticketFact()
+	{
+		if (get_field('sold_out')) :
+			return '<span class="tag is-black is-uppercase has-text-weight-bold">Uitverkocht!</span>';
+		else :
+			return get_field('quick_facts_3d');
+		endif;
+	}
+
 	public static function artistImage()
 	{
 		$image = get_sub_field('artist_image');

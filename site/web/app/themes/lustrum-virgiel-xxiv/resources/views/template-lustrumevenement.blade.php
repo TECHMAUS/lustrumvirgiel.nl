@@ -67,6 +67,9 @@
                                         <path fill="#000" d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" />
                                     </svg>
                                 </div>
+                                @if(get_field('sold_out', TemplateLustrumevenement::activityPage()->ID))
+                                    <span class="sold-out is-uppercase has-text-weight-bold has-background-danger">Uitverkocht!</span>
+                                @endif
                             </div>
                         </a>
                     </div>
@@ -77,10 +80,6 @@
 @endsection
 
 @section('sidebar')
-    <section class="widget">
-        @include('partials.social-share-buttons')
-    </section>
-
     @if($related_posts->have_posts())
         <section class="widget widget_related_posts">
             <h3><div class="widget-title has-shadow z-depth-1">

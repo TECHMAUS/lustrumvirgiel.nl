@@ -8,7 +8,7 @@ class FrontPage extends Controller {
 	public function recent_posts() {
 		/** Grab the sticky post ID's */
 		$sticky      = get_option( 'sticky_posts' );
-		$posts_total = 2;
+		$posts_total = 3;
 
 		/** Query the sticky posts */
 		$args = array(
