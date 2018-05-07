@@ -3,12 +3,14 @@ body.home {
     margin: 1rem auto;
   }
 
-  .hero-header .brand-title h1 {
-    font-size: 150%;
-    transition: 0.3s all;
-    padding: 0.2em 0.5em;
-    background-color: white;
-    color: black;
+  @include desktop {
+    .hero-header .brand-title h1 {
+      font-size: 150%;
+      transition: 0.3s all;
+      padding: 0.2em 0.5em;
+      background-color: white;
+      color: black;
+    }
   }
 
   .hero {
