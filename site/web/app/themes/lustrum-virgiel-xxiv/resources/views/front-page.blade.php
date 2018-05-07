@@ -69,8 +69,6 @@
                 @endwhile
                 {{ wp_reset_postdata() }}
 
-
-
             </div>
 
             @if(have_rows('home_quick_links_news'))
