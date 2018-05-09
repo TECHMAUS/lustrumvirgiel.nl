@@ -115,7 +115,7 @@ class TemplateLustrumsubevenement extends Controller
 	public function ticketFact()
 	{
 		if (get_field('sold_out')) :
-			return '<span class="tag is-black is-uppercase has-text-weight-bold">Uitverkocht!</span>';
+			return '<span class="tag is-danger is-uppercase has-text-weight-bold">Uitverkocht!</span>';
 		else :
 			return get_field('quick_facts_3d');
 		endif;

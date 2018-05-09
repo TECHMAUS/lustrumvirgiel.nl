@@ -38,7 +38,7 @@
             Tickets
         </a>
     @endif
-    @if(!empty(the_field('fb_event_url')))
+    @if(!empty(get_field('fb_event_url')))
         <a href="{!! the_field('fb_event_url') !!}"
            class="share-button facebook button z-depth-1 mdi mdi-facebook is-uppercase"
            target="_blank"
