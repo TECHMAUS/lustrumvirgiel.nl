@@ -2,33 +2,33 @@
 
 @section('hero')
     <section class="hero">
-        <div class="hero-part hero-body">
-            <div class="container is-fluid">
-                <div class="columns is-vcentered">
-                    <div class="lustrumweek column has-text-centered is-half">
-                        <div class="title-card">
-                            <h2 class="fancy_title">Lustrumweek</h2>
-                            <h3>{{ the_field('event_subtitle', 242) }}</h3>
-                            <h4>06 t/m 12 mei 2018, Delft</h4>
+        <div class="hero-part hero-body columns is-vcentered">
+            <div class="lustrumweek column has-text-centered is-half">
+                <div class="container is-fluid">
+                    <div class="title-card">
+                        <h2 class="fancy_title">Lustrumweek</h2>
+                        <h3>{{ the_field('event_subtitle', 242) }}</h3>
+                        <h4>06 t/m 12 mei 2018, Delft</h4>
 
-                            <div class="buttons">
-                                <a href="{{ the_permalink(242) }}" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-calendar">Programma</a>
-                                <a href="{!! the_field('tickets_url', 242) !!}" rel="noopener" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-ticket">Tickets</a>
-                                <a href="/category/lustrumweek/" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-bell">Updates</a>
-                            </div>
+                        <div class="buttons">
+                            <a href="{{ the_permalink(242) }}" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-calendar">Programma</a>
+                            <a href="{!! the_field('tickets_url', 242) !!}" rel="noopener" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-ticket">Tickets</a>
+                            <a href="/category/lustrumweek/" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-bell">Updates</a>
                         </div>
                     </div>
-                    <div class="piekweek column has-text-centered is-half">
-                        <div class="title-card">
-                            <h2 class="fancy_title">Piekweek</h2>
-                            <h3>{{ the_field('event_subtitle', 244) }}</h3>
-                            <h4>13 t/m 22 juli 2018, Delft</h4>
+                </div>
+            </div>
+            <div class="piekweek column has-text-centered is-half">
+                <div class="container is-fluid">
+                    <div class="title-card">
+                        <h2 class="fancy_title">Piekweek</h2>
+                        <h3>{{ the_field('event_subtitle', 244) }}</h3>
+                        <h4>13 t/m 22 juli 2018, Delft</h4>
 
-                            <div class="buttons">
-                                <a href="{{ the_permalink(244) }}" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-calendar">Programma</a>
-                                <a href="{!! the_field('tickets_url', 244) !!}" rel="noopener" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-ticket">Tickets</a>
-                                <a href="/category/piekweek/" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-bell">Updates</a>
-                            </div>
+                        <div class="buttons">
+                            <a href="{{ the_permalink(244) }}" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-calendar">Programma</a>
+                            <a href="{!! the_field('tickets_url', 244) !!}" rel="noopener" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-ticket">Tickets</a>
+                            <a href="/category/piekweek/" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-bell">Updates</a>
                         </div>
                     </div>
                 </div>
