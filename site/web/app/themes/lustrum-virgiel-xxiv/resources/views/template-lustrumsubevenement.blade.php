@@ -98,22 +98,26 @@
         </section>
     @endif
 
-    @if(have_rows('timetable'))
+    @if(have_rows('stages'))
+        @while(have_rows('stages')) @php(the_row())
         <section class="widget timetable">
             <h3><div class="widget-title has-shadow z-depth-1 mdi mdi-clock mdi-24px">
-                Timetable
+                    {{ the_sub_field('titel') }}
             </div></h3>
             <table class="timetable-table">
                 <tbody>
-                    @while(have_rows('timetable')) @php(the_row())
-                        <tr class="row">
-                            <td class="time has-text-weight-light">{{ the_sub_field('time') }}</td>
-                            <td class="artist has-text-weight-bold is-size-5 is-uppercase">{{ the_sub_field('artist') }}</td>
-                        </tr>
-                    @endwhile
+                    @if(have_rows('timetable'))
+                        @while(have_rows('timetable')) @php(the_row())
+                            <tr class="row">
+                                <td class="time has-text-weight-light">{{ the_sub_field('time') }}</td>
+                                <td class="artist has-text-weight-bold is-size-5 is-uppercase">{{ the_sub_field('artist') }}</td>
+                            </tr>
+                        @endwhile
+                    @endif
                 </tbody>
             </table>
         </section>
+        @endwhile
     @endif
 
     @if (App\display_sidebar())
