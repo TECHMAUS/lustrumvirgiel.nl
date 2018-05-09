@@ -4,6 +4,8 @@ export default {
 
     init() {
         document.documentElement.classList.add('js');
+
+        $(".fancy_title").lettering('words').children('span').lettering();
     },
     finalize() {
         if ($("body").hasClass("has-hero")) {
@@ -17,8 +19,6 @@ export default {
                 }
             });
         }
-
-        $(".fancy_title").lettering('words').children('span').lettering();
 
         $('.nav-close, #page-overlay').click(function(){
             $('header').removeClass("side-menu-open");
