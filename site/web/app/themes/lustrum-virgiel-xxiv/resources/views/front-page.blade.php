@@ -3,22 +3,7 @@
 @section('hero')
     <section class="hero">
         <div class="hero-part hero-body columns is-vcentered">
-            <div class="lustrumweek column has-text-centered is-half">
-                <div class="container is-fluid">
-                    <div class="title-card">
-                        <h2 class="fancy_title">Lustrumweek</h2>
-                        <h3>{{ the_field('event_subtitle', 242) }}</h3>
-                        <h4>06 t/m 12 mei 2018, Delft</h4>
-
-                        <div class="buttons">
-                            <a href="{{ the_permalink(242) }}" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-calendar">Programma</a>
-                            <a href="{!! the_field('tickets_url', 242) !!}" rel="noopener" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-ticket">Tickets</a>
-                            <a href="/category/lustrumweek/" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-bell">Updates</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="piekweek column has-text-centered is-half">
+            <div class="piekweek column has-text-centered is-half is-offset-one-quarter">
                 <div class="container is-fluid">
                     <div class="title-card">
                         <h2 class="fancy_title">Piekweek</h2>
@@ -47,7 +32,7 @@
             </div>
         </div>
 
-        <div class="background-image" data-bg="{{ the_post_thumbnail_url($size = 'large') }}"></div>
+        <div class="background-image lazy" data-src="{{ the_post_thumbnail_url($size = 'large') }}"></div>
     </section>
 
     @include('partials.actionbanner')
