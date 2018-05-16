@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1df2cd3b6b66a822bba1a5993a31a52b",
+    "content-hash": "cba671d51aa33930d03f04f5262ce685",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -198,8 +198,19 @@
             "time": "2017-12-29T09:13:20+00:00"
         },
         {
+            "name": "enviragallery/envira-defaults",
+            "version": "1.4.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-defaults-1.4.0.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
             "name": "enviragallery/envira-gallery",
-            "version": "1.8.2.1",
+            "version": "1.8.2.2",
             "dist": {
                 "type": "zip",
                 "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-gallery-1.8.2.1.zip",
@@ -208,6 +219,7 @@
             },
             "require": {
                 "composer/installers": "^1.0",
+                "enviragallery/envira-defaults": "^1.4.0",
                 "enviragallery/envira-instagram": "^1.4",
                 "enviragallery/envira-pagination": "^1.6"
             },
@@ -862,15 +874,15 @@
         },
         {
             "name": "wpackagist-plugin/wordpress-seo",
-            "version": "7.4.2",
+            "version": "7.5",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wordpress-seo/",
-                "reference": "tags/7.4.2"
+                "reference": "tags/7.5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.7.4.2.zip",
+                "url": "https://downloads.wordpress.org/plugin/wordpress-seo.7.5.zip",
                 "reference": null,
                 "shasum": null
             },

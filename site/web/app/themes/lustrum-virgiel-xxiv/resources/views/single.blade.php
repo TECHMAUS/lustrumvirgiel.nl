@@ -4,7 +4,7 @@
     <section class="hero is-medium lazy" @if(get_the_post_thumbnail_url()) data-src="{{ the_post_thumbnail_url($size = 'large') }}" @endif>
         <div class="hero-body">
             <div class="container">
-                <h1 class="is-uppercase has-word-wrap z-depth-1 is-size-1 is-size-3-touch has-text-centered-mobile has-text-weight-bold">{!! App::title() !!}</h1>
+                <h1 class="is-uppercase has-word-wrap z-depth-1 is-size-5-mobile is-size-3-tablet is-size-1-desktop has-text-centered-mobile has-text-weight-bold">{!! App::title() !!}</h1>
             </div>
         </div>
     </section>

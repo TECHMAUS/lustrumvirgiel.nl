@@ -74,8 +74,20 @@
     {
       "type": "package",
       "package": {
+        "name": "enviragallery/envira-defaults",
+        "version": "1.4.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/envira-defaults-1.4.0.zip"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
         "name": "enviragallery/envira-gallery",
-        "version": "1.8.2.1",
+        "version": "1.8.2.2",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -84,6 +96,7 @@
         "require": {
           "enviragallery/envira-instagram": "^1.4",
           "enviragallery/envira-pagination": "^1.6",
+          "enviragallery/envira-defaults": "^1.4.0",
           "composer/installers": "^1.0"
         }
       }

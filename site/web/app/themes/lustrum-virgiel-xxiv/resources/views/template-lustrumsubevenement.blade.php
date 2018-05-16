@@ -71,6 +71,8 @@
         @include('partials.subevent-quick-info')
     </div>
 
+    <hr>
+
     @if($related_posts->have_posts())
         <section class="widget widget_related_posts">
             <h3><div class="widget-title has-shadow z-depth-1">

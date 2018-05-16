@@ -29,10 +29,10 @@
     </div>
 </div>
 
-<div class="social-share">
+<div class="social-share widget">
     @if(!get_field('sold_out'))
         <a  href="{!! the_field('tickets_url', TemplateLustrumsubevenement::parentPageID()) !!}"
-            class="share-button tickets button z-depth-1 mdi mdi-ticket mdi-rotate-315 is-uppercase"
+            class="share-button tickets button is-medium z-depth-1 mdi mdi-ticket mdi-rotate-315 is-uppercase"
             target="_blank"
             rel="noopener">
             Tickets
@@ -40,7 +40,7 @@
     @endif
     @if(!empty(get_field('fb_event_url')))
         <a href="{!! the_field('fb_event_url') !!}"
-           class="share-button facebook button z-depth-1 mdi mdi-facebook is-uppercase"
+           class="share-button facebook button is-medium z-depth-1 mdi mdi-facebook is-uppercase"
            target="_blank"
            rel="noopener">
             Event
