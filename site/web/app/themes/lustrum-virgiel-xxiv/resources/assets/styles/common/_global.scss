@@ -176,7 +176,7 @@ main {
   }
 }
 
-.has-hero .quick-facts {
+.quick-facts {
   @include desktop {
     margin-top: -125px;
   }
