@@ -4,7 +4,7 @@
     <section class="site-hero">
         <div class="container has-text-right">
             <div class="video-promo">
-                <video poster="{{ the_post_thumbnail_url(244) }}" playsinline loop id="hero-video">
+                <video poster="{{ the_post_thumbnail_url(244) }}" playsinline preload="auto" loop id="hero-video">
                     <source src="{!! get_field('event_background_video', 244) !!}" type="video/mp4">
                 </video>
                 <div id="play-button" class="mdi mdi-play-circle"></div>
