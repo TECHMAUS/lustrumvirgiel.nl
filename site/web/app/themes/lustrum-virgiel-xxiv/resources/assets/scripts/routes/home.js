@@ -11,11 +11,11 @@ export default {
             if (video.paused == true) {
                 // Play the video
                 video.play();
-                $('#play-button').removeClass('mdi-play-circle').addClass('mdi-pause-circle');
+                $('#play-button').removeClass('mdi-play-circle').addClass('is-hidden');
             } else {
                 // Pause the video
                 video.pause();
-                $('#play-button').addClass('mdi-play-circle').removeClass('mdi-pause-circle');
+                $('#play-button').addClass('mdi-play-circle').removeClass('is-hidden');
             }
         });
     },
