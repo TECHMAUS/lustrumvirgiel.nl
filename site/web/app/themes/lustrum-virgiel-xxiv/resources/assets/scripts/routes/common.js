@@ -8,18 +8,6 @@ export default {
         $(".fancy_title").lettering('words').children('span').lettering();
     },
     finalize() {
-        if ($("body").hasClass("has-hero")) {
-            $('.site-header').addClass('hero-header').removeClass('z-depth-2');
-            $(window).scroll(function(){
-                if ($(window).scrollTop() >= $('.hero').height() * 0.4) {
-                    $('.site-header').removeClass('hero-header').addClass('z-depth-2');
-                }
-                else {
-                    $('.site-header').addClass('hero-header').removeClass('z-depth-2');
-                }
-            });
-        }
-
         $('.nav-close, #page-overlay').click(function(){
             $('header').removeClass("side-menu-open");
             $('html').removeClass("noscroll");

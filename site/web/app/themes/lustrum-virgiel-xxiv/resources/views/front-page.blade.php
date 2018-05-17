@@ -1,38 +1,25 @@
 @extends('layouts.app')
 
 @section('hero')
-    <section class="hero">
-        <div class="hero-part hero-body columns is-vcentered">
-            <div class="piekweek column has-text-centered is-half is-offset-one-quarter">
-                <div class="container is-fluid">
-                    <div class="title-card">
-                        <h2 class="fancy_title">Piekweek</h2>
-                        <h3>{{ the_field('event_subtitle', 244) }}</h3>
-                        <h4>13 t/m 22 juli 2018, Delft</h4>
-
-                        <div class="buttons">
-                            <a href="{{ the_permalink(244) }}" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-calendar">Programma</a>
-                            <a href="{!! the_field('tickets_url', 244) !!}" rel="noopener" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-ticket">Tickets</a>
-                            <a href="/category/piekweek/" class="button is-outlined is-uppercase has-shadow z-depth-1 hoverable mdi mdi-bell">Updates</a>
-                        </div>
+    <section class="site-hero">
+        <div class="container has-text-right">
+            <div class="video-promo">
+                <video poster="{{ the_post_thumbnail_url(244) }}" playsinline loop id="hero-video">
+                    <source src="{!! get_field('event_background_video', 244) !!}" type="video/mp4">
+                </video>
+                <div id="play-button" class="mdi mdi-play-circle"></div>
+                <div class="title-card has-text-left">
+                    <h3 class="is-uppercase has-text-weight-bold is-size-5 is-size-6-mobile">Het laatste hoofdstuk van het Lustrumjaar</h3>
+                    <h2 class="is-uppercase has-text-weight-bold">Piekweek</h2>
+                    <h4 class="is-uppercase has-text-weight-bold is-size-4 is-size-5-tablet is-size-6-mobile has-shadow z-depth-1">13 t/m 22 juli 2018, Delft</h4>
+                    <div class="buttons">
+                        <a href="{{ the_permalink(244) }}" class="button is-large is-uppercase is-white has-shadow z-depth-1">Programma</a>
+                        <a href="{!! the_field('tickets_url', 244) !!}" class="button is-large is-uppercase button-gala has-shadow z-depth-1">Tickets</a>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="section hero-part hero-foot">
-            <div class="container is-fluid">
-                <div class="level is-mobile">
-                    <div class="level-item">
-                        <span class="is-size-7 has-text-centered is-uppercase has-text-weight-bold">
-                          Scroll
-                        </span>
-                        <object class="chevron-down animated infinite bounce" type="image/svg+xml" data="@asset('images/front-page/chevron-down.svg')">Down</object>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="background-image lazy" data-src="{{ the_post_thumbnail_url($size = 'large') }}"></div>
+        <div class="background-image lazy" data-src="@asset('images/front-page/confetti-bg-new.svg')"></div>
     </section>
 
     @include('partials.actionbanner')
@@ -49,7 +36,7 @@
             <div class="columns is-multiline">
 
                 @while($recent_posts->have_posts())  @php($recent_posts->the_post())
-                <div class="column is-one-third">
+                <div class="column is-one-quarter">
                     @include('partials.content')
                 </div>
                 @endwhile
