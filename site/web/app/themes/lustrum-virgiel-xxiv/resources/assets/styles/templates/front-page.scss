@@ -13,154 +13,132 @@ body.home {
     }
   }
 
-  .hero {
-    min-height: 100vh;
+  .site-hero {
     position: relative;
-    background-color: $black;
+    padding: 120px 0 40px;
 
-    .level-item {
-      display: flex;
-      flex-direction: column;
-
-      .chevron-down {
-        color: white;
-        height: 35px;
-        margin-top: $gap;
-      }
-    }
-
-    .hero-body {
-      @include mobile {
-        flex-direction: column;
-      }
-
-      .column {
-        h2 {
-          @include blockchain;
-
-          font-size: 5rem;
-          text-transform: uppercase;
-
-          span {
-            display: inline-block;
-          }
-
-          @include set-gravity-letters('.char',
-          '1'   2px     -10deg,
-          '2'   -2px    5deg,
-          '3'   3px     -5deg,
-          '4'   -4px    3deg,
-          '5'   6px     -3deg,
-          '6'   8px     -2deg,
-          '7'   -5px    3deg,
-          '8'   0       -2deg,
-          '9'   -8px    4deg,
-          '10'  1px     -2deg,
-          '11'  -2px    5deg,
-          '12'  3px     2deg,
-          '13'  0       0,
-          '14'  -4px    -1deg,
-          '15'  2px     6deg,
-          '16'  5px     5deg,
-          '17'  -3px    8deg,
-          '18'  2px     -2deg,
-          '19'  5px     -4deg,
-          '20'  -1px    6deg
-        );
-        }
-
-        h3 {
-          text-transform: uppercase;
-          font-weight: bold;
-        }
-
-        h4 {
-          padding: 0.25em 0.5em;
-          color: white;
-          text-transform: uppercase;
-          display: inline-block;
-          font-weight: bold;
-          font-size: 110%;
-        }
-
-        .title-card {
-          padding: 1em;
-        }
-
-        .buttons {
-          margin-top: $gap-large;
-
-          a {
-            margin-bottom: 0.25em;
-            border: none;
-            background-color: transparent;
-
-            &:not(:last-child) {
-              margin-right: 0.25em;
-            }
-
-            &::before {
-              margin-right: 0.25em;
-            }
-          }
-        }
-
-        &.piekweek {
-          color: white;
-
-          .title-card {
-            background-image: linear-gradient(to right bottom, transparentize($piekweek-primary, 0.3), transparentize($wispo-primary, 0.3));
-          }
-
-          .buttons a {
-            color: white;
-            background-image: linear-gradient(to right bottom, transparentize($gala-primary, 0.3), transparentize($lustrumweek-primary, 0.3));
-          }
-
-          h4 {
-            background-color: $gala-primary;
-          }
-        }
-      }
-    }
-
-    .hero-foot {
-      padding-bottom: $gap;
+    .video-promo {
+      max-width: 65vw;
+      display: inline-block;
       position: relative;
 
-      &::after {
-        height: $gap;
-        content: "";
+      #play-button {
         position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: $piekweek-primary;
-      }
+        font-size: 80px;
+        left: 100px;
+        top: 200px;
+        z-index: 4;
+        transition: all 0.5s ease-in;
+        text-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
 
-      .level {
-        align-items: flex-end;
-      }
+        @include tablet-only {
+          top: 100px;
+          left: 150px;
+        }
 
-      .level-left {
-        display: flex;
-        flex-direction: column;
+        @include mobile {
+          right: 10px;
+          bottom: 10px;
+          left: unset;
+          top: unset;
+          transform-origin: right bottom;
+          font-size: 60px;
+        }
 
-        @include desktop {
-          flex-direction: row;
+        &.mdi-pause-circle {
+          transform-origin: center;
+          transform: scale(0.5);
         }
       }
 
-      .level-item {
-        position: absolute;
-        color: black;
-        left: 50%;
-        transform: translateX(-50%);
+      video {
+        object-fit: cover;
       }
     }
 
-    .hero-part {
-      z-index: 1;
+    @include mobile {
+      padding: 67px 0 0;
+
+      .video-promo {
+        width: 100vw;
+        max-width: none;
+      }
+    }
+
+    .title-card {
+      position: absolute;
+      top: 5%;
+      left: -35%;
+
+      @include mobile {
+        left: 20px;
+
+        h3 {
+          line-height: 1;
+        }
+      }
+
+      h2 {
+        color: black;
+        font-size: 8rem;
+        line-height: 100%;
+        letter-spacing: 4px;
+
+        @include tablet-only {
+          font-size: 4rem;
+        }
+
+        @include mobile {
+          font-size: 2.5rem;
+        }
+      }
+
+      h3 {
+        text-shadow: 1px 1px 1px black;
+      }
+
+      h4 {
+        padding: 0.25em 0.5em;
+        background-color: $gala-primary;
+        display: inline-block;
+
+        @include mobile {
+          padding: 0.1em 0.25em;
+        }
+      }
+
+      .buttons {
+        margin-top: 40px;
+
+        a:not(:last-of-type) {
+          margin-right: 10px;
+        }
+
+        @include mobile {
+          margin-top: 15px;
+
+          .button {
+            border-radius: 2px;
+            font-size: 0.75rem;
+          }
+        }
+      }
+
+      @include touch {
+        .buttons a {
+          border-radius: 3px;
+          font-size: 1rem;
+        }
+      }
+
+      @include widescreen {
+        top: 10%;
+        left: -25%;
+
+        .buttons {
+          margin-top: 80px;
+        }
+      }
     }
 
     .background-image {
@@ -169,24 +147,25 @@ body.home {
       bottom: 0;
       top: 0;
       left: 0;
-      background-size: cover;
-      background-position: center;
+      z-index: -1;
+      background-size: 1500px;
       background-color: $piekweek-primary;
       background-blend-mode: screen;
+      fill: darken($piekweek-primary, 20%);
     }
   }
 
   .action-banner {
     .homepage-background {
-      background-color: $gala-primary;
+      background-color: $wispo-primary;
     }
 
     .button-homepage {
-      background-color: $gala-primary;
+      background-color: $wispo-primary;
       color: white;
 
       &:hover {
-        color: darken($gala-primary, 20%);
+        color: darken($wispo-primary, 20%);
       }
     }
   }

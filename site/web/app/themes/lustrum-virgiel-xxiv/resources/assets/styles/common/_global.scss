@@ -69,19 +69,17 @@
   overflow: hidden;
 }
 
-body:not(.has-hero) > .section {
-  margin-top: 70px;
-}
-
 @include touch {
   .hero-body {
     padding-top: 80px;
+    overflow: hidden;
   }
 }
 
 @include desktop {
   .hero-body {
     padding-top: 150px;
+    overflow: hidden;
   }
 }
 
@@ -254,6 +252,12 @@ main {
     .card-content {
       padding: 1rem;
 
+      .category-title {
+        a {
+          color: darkgray;
+        }
+      }
+
       @include mobile {
         padding: 1rem;
       }
@@ -269,6 +273,7 @@ main {
         display: flex;
         flex-direction: row;
         align-items: center;
+        color: white;
 
         a {
           color: white;
@@ -286,39 +291,16 @@ main {
     }
 
     .entry-title {
-      text-decoration: underline;
-    }
-
-    .entry-summary {
-      hr {
-        background-color: lighten($dark-blue-bg, 20%);
-        margin: 0.5rem auto;
-      }
-
-      .post-categories,
-      .read-more-tag {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        span:not(:last-child) {
-          margin-right: 0.5rem;
-        }
-
-        span {
-          line-height: 120%;
-        }
-
-        span a {
-          color: $white;
-        }
-      }
+      //text-decoration: underline;
+      margin: 0.7rem auto;
+      line-height: 0.9;
     }
   }
 }
 
 .action-banner {
-  padding: 2.5rem 0;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
   background-repeat: repeat;
   background-size: 150px;
 
@@ -327,7 +309,12 @@ main {
   }
 
   @include mobile {
-    padding: 2rem 16px;
+    padding: 1.5rem 16px;
+
+    .button {
+      border-radius: 3px;
+      font-size: 1rem;
+    }
   }
 }
 
