@@ -8,6 +8,16 @@
     changed_when: site_transient_theme_roots.stdout != ''
     when: project.update_wp_theme_paths | default(update_wp_theme_paths | default(true)) | bool
 
+  - name: Install WP language nl_NL
+    command: wp core language install nl_NL
+    args:
+      chdir: "{{ deploy_helper.current_path }}"
+
+  - name: Update active language
+    command: wp core language update
+    args:
+      chdir: "{{ deploy_helper.current_path }}"
+
   - name: Update WP theme paths
     command: >
       wp option set {{ item[0].option }}
@@ -37,3 +47,5 @@
   shell: sudo service php7.1-fpm reload
   args:
     warn: false
+
+
