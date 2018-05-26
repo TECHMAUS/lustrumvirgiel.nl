@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2018-05-03 21:50+0200\n"
-"PO-Revision-Date: 2018-05-03 21:51+0200\n"
+"POT-Creation-Date: 2018-05-26 20:25+0200\n"
+"PO-Revision-Date: 2018-05-26 21:21+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -33,60 +33,64 @@ msgstr "Pagina’s:"
 msgid "Latest Posts"
 msgstr "Laatste berichten"
 
-#: app/controllers/App.php:31
+#: app/controllers/App.php:34
 #, php-format
 msgid "Search Results for %s"
 msgstr "Zoekresultaten voor %s"
 
-#: app/controllers/App.php:34
+#: app/controllers/App.php:37
 msgid "Not Found"
 msgstr "Niet gevonden"
 
-#: app/filters.php:55
+#: app/filters.php:51
 msgid "Continued"
 msgstr "Lees verder"
 
-#: app/setup.php:55
+#: app/filters.php:137
+msgid "Lustrumshop"
+msgstr ""
+
+#: app/setup.php:59
 msgid "Primary Navigation"
 msgstr "Hoofdnavigatie"
 
-#: app/setup.php:96
+#: app/setup.php:100
 msgid "Primary"
 msgstr "Primair"
 
-#: app/setup.php:100
+#: app/setup.php:104
 msgid "Lustrum Opening"
 msgstr ""
 
-#: app/setup.php:104
+#: app/setup.php:108
 msgid "Lustrum Gala"
 msgstr ""
 
-#: app/setup.php:108
+#: app/setup.php:112
 msgid "Lustrum Wintersport"
 msgstr ""
 
-#: app/setup.php:112
+#: app/setup.php:116
 msgid "Lustrum Lustrumweek"
 msgstr ""
 
-#: app/setup.php:116
+#: app/setup.php:120
 msgid "Lustrum Lustrum Productie"
 msgstr ""
 
-#: app/setup.php:120
+#: app/setup.php:124
 msgid "Lustrum Piekweek"
 msgstr ""
 
-#: app/setup.php:124
+#: app/setup.php:128
 msgid "Footer 1e column"
 msgstr "Voettekst 1e kolom"
 
-#: app/setup.php:128
+#: app/setup.php:132
 msgid "Footer 2e column"
 msgstr "Voettekst 2e kolom"
 
-#: app/setup.php:132
+#: app/setup.php:136
 msgid "Footer 3e column"
 msgstr "Voettekst 3e kolom"
 
