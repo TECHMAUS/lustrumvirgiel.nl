@@ -13,6 +13,10 @@
                     <h1 class="subtitle has-text-weight-bold"> {{ get_bloginfo('name', 'display') }} </h1>
                 </a>
 
+                <a class="header-announcement has-text-centered is-uppercase" href="{{ get_permalink( wc_get_page_id( 'shop' ) ) }}">
+                    <h1 class="subtitle has-text-weight-bold">🚨 Koop nu je Lustrumgadgets in de webshop! <i class="mdi mdi-arrow-right"></i></h1>
+                </a>
+
                 <div class="level-right">
                     <div class="buttons">
                         <a href="{{ the_permalink(244) }}" class="button is-outlined is-uppercase button-piekweek">Programma</a>
