@@ -207,6 +207,8 @@ body.woocommerce {
     }
 
     .related.products {
+      clear: both;
+
       h2.woocommerce-loop-product__title {
         border: none;
       }

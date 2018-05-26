@@ -178,3 +178,24 @@ add_filter( 'woocommerce_enqueue_styles', function ( $enqueue_styles ) {
 	return $enqueue_styles;
 } );
 
+add_filter( 'woocommerce_checkout_fields', function ( $fields ) {
+	unset($fields['billing']['billing_company']);
+	unset($fields['billing']['billing_address_1']);
+	unset($fields['billing']['billing_address_2']);
+	unset($fields['billing']['billing_city']);
+	unset($fields['billing']['billing_postcode']);
+	unset($fields['billing']['billing_country']);
+	unset($fields['billing']['billing_state']);
+	unset($fields['billing']['billing_phone']);
+
+	$fields['billing']['billing_options'] = array(
+		'label' => __('Debiteurnummer', 'woocommerce'), // Add custom field label
+		'placeholder' => _x('Vul je debiteurnummer in (zie mail kaartverkoop)', 'placeholder', 'woocommerce'), // Add custom field placeholder
+		'required' => true, // if field is required or not
+		'clear' => true, // add clear or not
+		'type' => 'text', // add field type
+	);
+
+	return $fields;
+} );
+
