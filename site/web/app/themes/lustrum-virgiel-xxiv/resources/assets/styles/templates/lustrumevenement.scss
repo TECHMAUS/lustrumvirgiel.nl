@@ -218,13 +218,17 @@ body.template-lustrumsubevenement {
 
         .sold-out {
           position: absolute;
-          right: 5px;
-          bottom: 40px;
+          right: 5%;
+          bottom: 45%;
           color: white;
           padding: 0.15em 0.3em;
           transform: rotate(-8deg);
           background-color: hsl(348, 100%, 61%);
           z-index: 2;
+
+          @include mobile {
+            font-size: 0.6em;
+          }
         }
 
         .event-read-more {

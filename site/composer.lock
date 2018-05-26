@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7753e7e66068d7f3d9b5176d62e2826e",
+    "content-hash": "10e05c629acf8464ec9d61d6b002a8e8",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -83,6 +83,17 @@
             "dist": {
                 "type": "zip",
                 "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/codecanyon-12664657-sepa-payment-gateway-for-woocommerce.zip",
+                "reference": null,
+                "shasum": null
+            },
+            "type": "wordpress-plugin"
+        },
+        {
+            "name": "codecanyon/woocommerce-extra-product-options",
+            "version": "4.7.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/woocommerce-tm-extra-product-options.zip",
                 "reference": null,
                 "shasum": null
             },
