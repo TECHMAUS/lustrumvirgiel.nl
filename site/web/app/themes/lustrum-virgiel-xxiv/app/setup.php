@@ -34,6 +34,10 @@ add_action('after_setup_theme', function () {
     add_theme_support('soil-nice-search');
     add_theme_support('soil-relative-urls');
 	add_theme_support('soil-google-analytics', 'UA-105674126-1');
+	add_theme_support('woocommerce');
+	add_theme_support('wc-product-gallery-zoom');
+	add_theme_support('wc-product-gallery-lightbox');
+	add_theme_support('wc-product-gallery-slider');
 
     /**
      * Enable plugins to manage the document title

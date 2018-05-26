@@ -88,11 +88,11 @@
 @mixin lustrum-buttons($prefix, $commissies...) {
   @each $i in $commissies {
     #{$prefix}#{nth($i, 1)} {
-      background-color: nth($i, 2);
-      color: findColorInvert(nth($i, 2));
+      background-color: nth($i, 2) !important;
+      color: findColorInvert(nth($i, 2)) !important;
 
       &:hover {
-        color: darken(nth($i, 2), 20%);
+        color: darken(nth($i, 2), 20%) !important;
       }
     }
   }

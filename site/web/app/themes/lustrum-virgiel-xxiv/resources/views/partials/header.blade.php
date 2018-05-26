@@ -16,7 +16,10 @@
                 <div class="level-right">
                     <div class="buttons">
                         <a href="{{ the_permalink(244) }}" class="button is-outlined is-uppercase button-piekweek">Programma</a>
-                        <a href="{!! the_field('tickets_url', 244) !!}" rel="noopener" class="button is-outlined is-uppercase button-gala">Tickets</a>
+                        <a href="{!! the_field('tickets_url', 244) !!}" class="button is-outlined is-uppercase button-gala">Tickets</a>
+                        @if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ))
+                            <a href="{!! wc_get_cart_url() !!}" class="mdi mdi-cart mdi-24px has-text-white shopping-cart-header" title="Bekijk je winkelwagen"><span class="cart-counter">{!! WC()->cart->get_cart_contents_count() !!}</span>{!! WC()->cart->get_cart_total() !!}</a>
+                        @endif
                     </div>
                 </div>
 
@@ -56,3 +59,4 @@
                     </nav>
                 </div>
     </header>
+

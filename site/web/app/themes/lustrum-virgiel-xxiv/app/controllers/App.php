@@ -24,6 +24,9 @@ class App extends Controller
             }
             return __('Latest Posts', 'sage');
         }
+        if (is_shop()) {
+        	return 'Lustrumshop';
+        }
         if (is_archive()) {
             return get_the_archive_title();
         }

@@ -396,7 +396,8 @@ body.error404 {
 }
 
 body.archive,
-body.template-media {
+body.template-media,
+body.woocommerce {
   .hero {
     @include touch {
       margin-top: 60px;

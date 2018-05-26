@@ -3,7 +3,7 @@
   top: 0;
   left: 0;
   right: 0;
-  z-index: 5;
+  z-index: 999;
   background-color: black;
   transition: all 0.5s ease-in;
   padding: 10px;
@@ -14,6 +14,7 @@
     .level-right {
       .buttons {
         display: flex;
+        align-items: center;
 
         @include mobile {
           .button {
@@ -24,6 +25,41 @@
 
         a:not(:last-of-type) {
           margin-right: 8px;
+        }
+      }
+
+      .shopping-cart-header {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        &::before {
+          margin-right: 10px;
+
+          @include mobile {
+            margin-right: 0;
+          }
+        }
+
+        .cart-counter {
+          position: absolute;
+          background: $wispo-primary;
+          font-weight: bold;
+          left: 12px;
+          z-index: 5;
+          top: 0;
+          font-size: 12px;
+          border-radius: 50%;
+          height: 16px;
+          width: 16px;
+          line-height: 16px;
+          text-align: center;
+        }
+
+        @include mobile {
+          .woocommerce-Price-amount {
+            display: none;
+          }
         }
       }
     }

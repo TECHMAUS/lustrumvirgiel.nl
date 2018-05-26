@@ -1,7 +1,8 @@
 body.single,
 body.page:not(.home),
 body.template-lustrumevenement,
-body.template-lustrumsubevenement {
+body.template-lustrumsubevenement,
+body.woocommerce {
   @include fullhd {
     .wrap.container,
     .hero-body .container {

@@ -124,3 +124,57 @@ add_filter('the_content', function ($content) {
 		return '<div class="table-overflow">' . $match[0] . '</div>';
 	}, $content);
 });
+
+
+
+add_filter( 'woocommerce_breadcrumb_defaults', function () {
+	return array(
+		'delimiter'   => '',
+		'wrap_before' => '<nav class="breadcrumb has-succeeds-separator has-text-weight-bold is-uppercase" aria-label="breadcrumbs"><ul class="is-marginless">',
+		'wrap_after'  => '</ul></nav>',
+		'before'      => '<li><span>',
+		'after'       => '</span></li>',
+		'home'        => _x( 'Lustrumshop', 'breadcrumb', 'woocommerce' ),
+	);
+} );
+
+add_filter('woocommerce_show_page_title', '__return_false');
+add_filter( 'wc_product_sku_enabled', '__return_false' );
+
+add_filter( 'woocommerce_product_tabs', function ( $tabs ) {
+
+	unset( $tabs['reviews'] ); 			// Remove the reviews tab
+	unset( $tabs['additional_information'] );  	// Remove the additional information tab
+
+	return $tabs;
+
+} );
+
+remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+//remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_title', 5 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+remove_action( 'woocommerce_before_shop_loop' , 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+add_filter( 'woocommerce_add_to_cart_fragments', function ( $fragments ) {
+	global $woocommerce;
+
+	ob_start();
+
+	?>
+	<a href="<?php echo wc_get_cart_url() ?>" class="mdi mdi-cart mdi-24px has-text-white shopping-cart-header" title="Bekijk je winkelwagen"><span class="cart-counter"><?php echo WC()->cart->get_cart_contents_count(); ?></span><?php echo WC()->cart->get_cart_total() ?></a>
+	<?php
+	$fragments['a.shopping-cart-header'] = ob_get_clean();
+	return $fragments;
+} );
+
+add_filter( 'woocommerce_breadcrumb_home_url', function () {
+	return get_permalink( wc_get_page_id( 'shop' ) );
+} );
+
+add_filter( 'woocommerce_enqueue_styles', function ( $enqueue_styles ) {
+//	unset( $enqueue_styles['woocommerce-general'] );	// Remove the gloss
+	return $enqueue_styles;
+} );
+
