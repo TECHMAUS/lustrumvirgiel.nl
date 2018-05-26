@@ -139,3 +139,11 @@
   }
 }
 
+body.woocommerce {
+  @include desktop {
+    .header-announcement {
+      display: none;
+    }
+  }
+}
+
