@@ -24,8 +24,10 @@ class App extends Controller
             }
             return __('Latest Posts', 'sage');
         }
-        if (is_shop()) {
-        	return 'Lustrumshop';
+	    if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) )) {
+	        if (is_shop()) {
+		        return 'Lustrumshop';
+	        }
         }
         if (is_archive()) {
             return get_the_archive_title();
