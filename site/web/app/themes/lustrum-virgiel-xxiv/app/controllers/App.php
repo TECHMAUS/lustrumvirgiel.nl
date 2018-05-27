@@ -64,4 +64,18 @@ class App extends Controller
 	{
 		return get_post_field('post_name');
 	}
+
+	public static function published_products() {
+		$args = array(
+			'post_type'      => 'product'
+		);
+		$sq   = new \WP_Query( $args );
+
+		if ($sq->post_count > 0 ) {
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
 }

@@ -13,7 +13,7 @@
                     <h1 class="subtitle has-text-weight-bold"> {{ get_bloginfo('name', 'display') }} </h1>
                 </a>
 
-                @if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ))
+                @if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) && App::published_products())
                     <a class="header-announcement has-text-centered is-uppercase" href="{{ get_permalink( wc_get_page_id( 'shop' ) ) }}">
                         <h1 class="subtitle has-text-weight-bold">🚨 Koop nu je Lustrumgadgets in de Lustrumshop! <i class="mdi mdi-arrow-right"></i></h1>
                     </a>
@@ -23,7 +23,7 @@
                     <div class="buttons">
                         <a href="{{ the_permalink(244) }}" class="button is-outlined is-uppercase button-piekweek">Programma</a>
                         <a href="{!! the_field('tickets_url', 244) !!}" class="button is-outlined is-uppercase button-gala">Tickets</a>
-                        @if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ))
+                        @if(in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) && App::published_products())
                             <a href="{!! wc_get_cart_url() !!}" class="mdi mdi-cart mdi-24px has-text-white shopping-cart-header" title="Bekijk je winkelwagen"><span class="cart-counter">{!! WC()->cart->get_cart_contents_count() !!}</span>{!! WC()->cart->get_cart_total() !!}</a>
                         @endif
                     </div>
