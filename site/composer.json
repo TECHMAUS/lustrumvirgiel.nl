@@ -187,7 +187,8 @@
     "wpackagist-plugin/woocommerce": "^3.3",
     "wpackagist-plugin/mollie-payments-for-woocommerce": "^3.0",
     "codecanyon/sepa-direct-debit": "^1.6.9",
-    "codecanyon/woocommerce-extra-product-options": "^4.7"
+    "codecanyon/woocommerce-extra-product-options": "^4.7",
+    "wpackagist-plugin/woo-order-export-lite": "^1.5"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
