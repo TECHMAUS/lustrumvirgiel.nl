@@ -4,8 +4,8 @@
     <section class="site-hero">
         <div class="container has-text-right">
             <div class="video-promo">
-                <video poster="{{ the_post_thumbnail_url(244) }}" playsinline preload="auto" loop id="hero-video">
-                    <source src="{!! get_field('event_background_video', 244) !!}" type="video/mp4">
+                <video poster="https://cdn.lustrumvirgiel.nl/wp-content/uploads/2018/06/13143029/poster-video-piekweek.jpg" playsinline preload="auto" loop id="hero-video">
+                    <source src="https://cdn.lustrumvirgiel.nl/wp-content/uploads/2018/06/13141046/2018-05-20_Piekweek-promo_5.0.mp4" type="video/mp4">
                 </video>
                 <div id="play-button" class="mdi mdi-play-circle"></div>
                 <div class="title-card has-text-left">
