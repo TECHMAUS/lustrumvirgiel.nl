@@ -3289,6 +3289,10 @@ gulp-rename@^1.2.0:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.2.3.tgz#37b75298e9d3e6c0fe9ac4eac13ce3be5434646b"
 
+gulp-rename@^1.2.2:
+  version "1.3.0"
+  resolved "https://registry.yarnpkg.com/gulp-rename/-/gulp-rename-1.3.0.tgz#2e789d8f563ab0c924eeb62967576f37ff4cb826"
+
 gulp-sourcemaps@1.6.0:
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz#b86ff349d801ceb56e1d9e7dc7bbcb4b7dee600c"
@@ -7630,6 +7634,12 @@ timers-browserify@^2.0.4:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.10.tgz#1d28e3d2aadf1d5a5996c4e9f95601cd053480ae"
   dependencies:
     setimmediate "^1.0.4"
+
+timetable.js@Grible/timetable.js:
+  version "0.8.3"
+  resolved "https://codeload.github.com/Grible/timetable.js/tar.gz/cacdc4b292fce9cd9b0d943ba3e8c69ca54cc90a"
+  dependencies:
+    gulp-rename "^1.2.2"
 
 timsort@^0.3.0:
   version "0.3.0"

@@ -19,7 +19,17 @@
     <div class="container is-fluid" role="document">
         <div class="content @hasSection ('sidebar') columns is-desktop @endif">
             <main class="main @hasSection ('sidebar') column is-two-thirds-desktop @endif">
-                {{  App::wps_yoast_breadcrumb_bulma() }}
+                <div class="level">
+                    <div class="level-left">
+                        {{  App::wps_yoast_breadcrumb_bulma() }}
+                    </div>
+
+                    <div class="level-right">
+                        @if(defined('ADROTATE_VERSION'))
+                            {!! adrotate_group(2) !!}
+                        @endif
+                    </div>
+                </div>
 
 
                 @while(have_posts()) @php(the_post())
