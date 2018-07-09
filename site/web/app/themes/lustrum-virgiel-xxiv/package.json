@@ -169,7 +169,6 @@
     "jquery": "1.12.4 - 3",
     "jquery-lazy": "^1.7.7",
     "lettering.js": "^0.8.2",
-    "tilt.js": "^1.2.1",
-    "timetable.js": "Grible/timetable.js"
+    "tilt.js": "^1.2.1"
   }
 }
