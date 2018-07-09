@@ -160,6 +160,18 @@
           "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/woocommerce-tm-extra-product-options.zip"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "codecanyon/woocommerce-timetable",
+        "version": "1.60.0",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/codecanyon-11498444-responsive-timetable-for-wordpress.zip"
+        }
+      }
     }
   ],
   "require": {
@@ -188,7 +200,8 @@
     "wpackagist-plugin/mollie-payments-for-woocommerce": "^3.0",
     "codecanyon/sepa-direct-debit": "^1.6.9",
     "codecanyon/woocommerce-extra-product-options": "^4.7",
-    "wpackagist-plugin/woo-order-export-lite": "^1.5"
+    "wpackagist-plugin/woo-order-export-lite": "^1.5",
+    "codecanyon/woocommerce-timetable": "^1.60"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2"
