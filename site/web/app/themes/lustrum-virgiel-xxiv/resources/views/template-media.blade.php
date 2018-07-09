@@ -25,7 +25,7 @@
                     </div>
 
                     <div class="level-right">
-                        @if(defined('ADROTATE_VERSION'))
+                        @if(defined('ADROTATE_VERSION') && 328 == $post->post_parent)
                             {!! adrotate_group(2) !!}
                         @endif
                     </div>
