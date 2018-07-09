@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "893a8d9593fb919a66db0a996a998abc",
+    "content-hash": "56db67ac3f46f8a33e42538daf0f544d",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
@@ -104,7 +104,7 @@
             "version": "1.60.0",
             "dist": {
                 "type": "zip",
-                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/codecanyon-11498444-responsive-timetable-for-wordpress.zip",
+                "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/rdv-timetable.zip",
                 "reference": null,
                 "shasum": null
             },

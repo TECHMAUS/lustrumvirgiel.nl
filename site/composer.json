@@ -169,7 +169,7 @@
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
-          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/codecanyon-11498444-responsive-timetable-for-wordpress.zip"
+          "url": "https://s3-eu-west-1.amazonaws.com/composer.lustrumvirgiel.nl/rdv-timetable.zip"
         }
       }
     }
