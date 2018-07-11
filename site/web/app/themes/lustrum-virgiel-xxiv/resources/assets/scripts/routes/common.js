@@ -30,6 +30,16 @@ export default {
 
         $(".sidebar .widget_media_video").fitVids();
 
+        $('ul.tabs li').click(function(){
+            var tab_id = $(this).attr('data-tab');
+
+            $('ul.tabs li').removeClass('current');
+            $('.dag-content').removeClass('current');
+
+            $(this).addClass('current');
+            $("#"+tab_id).addClass('current');
+        })
+
         fitty('.font-fit');
         fitty('.page-template.template-lustrumevenement .fancy_title', {
             maxSize: 250,

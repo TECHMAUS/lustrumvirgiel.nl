@@ -375,3 +375,30 @@ body.template-lustrumsubevenement {
     }
   }
 }
+
+ul.tabs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.tabs li {
+  background: #e11478;
+  color: white;
+  display: inline-block;
+  padding: 10px 15px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+ul.tabs li.current {
+  font-weight: bold;
+}
+
+.dag-content {
+  display: none;
+}
+
+.dag-content.current {
+  display: inherit;
+}
