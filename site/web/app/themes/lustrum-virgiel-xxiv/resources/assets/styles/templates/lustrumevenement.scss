@@ -383,7 +383,7 @@ ul.tabs {
 }
 
 ul.tabs li {
-  background: #e11478;
+  background: $gala-primary;
   color: white;
   display: inline-block;
   padding: 10px 15px;
@@ -393,6 +393,7 @@ ul.tabs li {
 
 ul.tabs li.current {
   font-weight: bold;
+  background: darken($gala-primary, 10%);
 }
 
 .dag-content {
@@ -401,4 +402,15 @@ ul.tabs li.current {
 
 .dag-content.current {
   display: inherit;
+}
+
+h2.sched-title {
+  border-width: 0 !important;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sched-list-column-title {
+  border-bottom: 2px solid white;
+  text-transform: uppercase;
 }
